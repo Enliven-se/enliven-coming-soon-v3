@@ -1,7 +1,10 @@
-node_modules/
-bower_components/
-*.log
-
-build/
-dist/
+.sass-cache
+.tmp
 .tmp/
+*.log
+bower_components
+bower_components/
+build/
+node_modules
+node_modules/
+test/bower_components
