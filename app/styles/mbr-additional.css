@@ -1,0 +1,144 @@
+#ext_menu-0 .mbr-brand__name {
+  font-size: 16px;
+}
+#ext_menu-0.mbr-navbar-stuck .mbr-navbar__section {
+  background: #c1c1c1;
+}
+#ext_menu-0 .mbr-navbar__section {
+  background: #c1c1c1;
+}
+#ext_menu-0 .mbr-navbar__hamburger {
+  color: #ffffff;
+}
+#main-container h1 {
+  color: #000000;
+  text-shadow: 0px 0px 1px #eee;
+}
+#msg-box4-3 .mbr-header__text {
+  color: #000000;
+  text-align: center;
+}
+#msg-box4-3 .mbr-header__subtext {
+  color: #ffffff;
+}
+#msg-box4-3 .mbr-article {
+  color: #ffffff;
+}
+#msg-box4-3 .mbr-article P {
+  color: #ffffff;
+}
+#msg-box4-3 .mbr-header__text DIV {
+  font-size: 25px;
+}
+#msg-box4-4 .mbr-header__text {
+  color: #ffffff;
+}
+#msg-box4-4 .mbr-header__subtext {
+  color: #ffffff;
+}
+#msg-box4-4 .mbr-article {
+  color: #ffffff;
+}
+
+
+#custom-html-123 {
+  /* Type valid CSS here */
+}
+#custom-html-123 .my-image {
+  width: 100%;
+}
+#header4-6 h1 {
+  color: white;
+    line-height: 20px;
+}
+#header4-6 h3 {
+  color: white;
+  line-height: 80px;
+}
+
+#custom-html-124 {
+  /* Type valid CSS here */
+  /* Type valid CSS here */
+}
+#custom-html-124 section {
+  background-color: #15447b;
+  padding-top: 40.8px;
+  padding-bottom: 40.8px;
+}
+#custom-html-124 h4 {
+  color: white;
+  word-break: normal;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+#custom-html-226 li {
+  font-size: 20px;
+  line-height: 55px;
+}
+#custom-html-226 a:hover,
+#custom-html-226 a:visited,
+#custom-html-226 a:link,
+#custom-html-226 a:active {
+  text-decoration: none;
+  color: #FFFFFF;
+}
+#custom-html-226 i {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#msg-box4-3 {
+	background-color: rgb(255, 255, 255);
+}
+#msg-box4-4 {
+	background-color: rgb(193, 193, 193);
+}
+#main-container {
+	background-color: rgb(193, 193, 193);
+}
+#social-buttons1-10 {
+  background-color: rgb(69, 66, 65);
+}
+
+.mbr-contacts.mbr-contacts--wysiwyg.row {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.mbr-footer.mbr-footer--wysiwyg.row {
+	padding-top: 36px;
+	padding-bottom: 36px;
+}
+.mbr-footer__copyright.mbr-editable-content {
+	text-align: center;
+}
+.mbr-header.mbr-header--inline.row {
+	padding-top: 40.8px;
+	padding-bottom: 2.8px;
+}
+.mbr-header__text.mbr-editable-content {
+	font-size: 21px;
+}
+.mbr-header__text.mbr-editable-content {
+	font-size: 32px;
+}
+.mbr-section.mbr-section--relative.mbr-section--fixed-size.mbr-parallax-background {
+	background-image: url(../images/bg-lynch-med.jpg) !important
+}
+.mbr-section.mbr-section--relative.mbr-section--fixed-size {
+	background-color: rgb(69,66,65);
+}
+.mbr-section__container.mbr-section__container--std-padding.container {
+	padding-top: 93px;
+	padding-bottom: 93px;
+}
+.mbr-section__container.mbr-section__container-isolated.container {
+	padding-top: 62px;
+	padding-bottom: 124px;
+}
+.mbr-section__container.mbr-section__container-isolated.container {
+	padding-top: 93px;
+	padding-bottom: 93px;
+}
