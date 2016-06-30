@@ -1,5 +1,5 @@
 body {
-  font-family: 'avenirnext-regular';
+  font-family: 'avenirnext-regular' !important;
   font-style: normal;
   /*font-weight: bold;*/
 }
@@ -14,7 +14,7 @@ small, .small {
 
 h1, h2, h3, h4, h5, h6, strong {
   color: #fff;
-  font-family: 'TheanoDidot-Regular';
+  font-family: 'TheanoDidot-Regular' !important;
   font-weight: 400;
 }
 
