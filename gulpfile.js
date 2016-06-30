@@ -114,7 +114,15 @@ gulp.task('extras', () => {
   }).pipe(gulp.dest('dist'));
 });
 
-gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+// gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
+gulp.task('clean', () => {
+  return del([
+    '.tmp',
+    'dist',
+    // don't want to clean CNAME
+    '!dist/CNAME'
+  ]);
+});
 
 gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
   browserSync({
