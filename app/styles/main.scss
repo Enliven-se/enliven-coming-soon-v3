@@ -4,14 +4,14 @@ $icon-font-path: '../fonts/';
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 @import "./default.scss";
-// endbower
 
 @import "../fonts/fonts.css";
 
-@import "./animate.min.css";
-@import "./socicon.min.css";
-@import "./background.css";
+@import "./animate.min.scss";
+@import "./socicon.min.scss";
+@import "./background.scss";
 
-@import "./mobirise.css";
-@import "./mbr-additional.css";
-@import "./typography.css";
+@import "./mobirise.scss";
+@import "./mbr-additional.scss";
+@import "./typography.scss";
+// endbower
