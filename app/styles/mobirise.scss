@@ -806,7 +806,8 @@ html {
   position: relative;
 }
 .mbr-hero__text {
-  font-size: 46px;
+  font-size: 54px;
+color: #000000;
   font-weight: bold;
   left: -2px;
   letter-spacing: 2px;
@@ -1076,10 +1077,11 @@ html {
 }
 .mbr-header__text {
   display: block;
-  font-size: 25px;
+  font-size: 48px;
   font-weight: bold;
   letter-spacing: 6px;
   line-height: 1.5em;
+  color: #000000;
   margin: 0;
 }
 .mbr-header__subtext {
@@ -1237,7 +1239,10 @@ html {
 }
 .mbr-buttons-right .mbr-buttons__btn,
 .mbr-buttons-right .mbr-buttons__link {
-  margin: 0 0 13px 10px;
+  margin: 0 0 38px 10px;
+  font-size: 18px;
+  color: #000000;
+
 }
 .mbr-buttons-right.mbr-buttons-only-links {
   left: 20px;
