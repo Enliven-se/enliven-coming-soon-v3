@@ -31,7 +31,7 @@
   font-size: 25px;
 }
 #msg-box4-4 .mbr-header__text {
-  color: #ffffff;
+  color: #000000;
 }
 #msg-box4-4 .mbr-header__subtext {
   color: #ffffff;
@@ -49,11 +49,12 @@
 }
 #header4-6 h1 {
   color: white;
-    line-height: 20px;
+    line-height: 80px;
 }
 #header4-6 h3 {
   color: white;
-  line-height: 80px;
+  line-height: 60px;
+  text-align: center;
 }
 
 #custom-html-124 {
@@ -66,11 +67,14 @@
   padding-bottom: 40.8px;
 }
 #custom-html-124 h4 {
-  color: white;
+  color: #FFFFFF;
+  font-size: 20px;
   word-break: normal;
   font-weight: bold;
   text-align: center;
 }
+
+
 
 
 #custom-html-226 li {
@@ -82,7 +86,9 @@
 #custom-html-226 a:link,
 #custom-html-226 a:active {
   text-decoration: none;
+  font-size: 18px;
   color: #FFFFFF;
+  white-space: nowrap;
 }
 #custom-html-226 i {
   display: block;
@@ -102,6 +108,8 @@
 #social-buttons1-10 {
   background-color: rgb(69, 66, 65);
 }
+
+
 
 .mbr-contacts.mbr-contacts--wysiwyg.row {
 	padding-top: 5px;
