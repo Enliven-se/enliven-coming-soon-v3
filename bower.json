@@ -8,7 +8,8 @@
     "jarallax": "^1.6.3",
     "Vimeofy": "vimeofy#*",
     "social-likes": "^3.1.0",
-    "jquery-placeholder": "^2.3.1"
+    "jquery-placeholder": "^2.3.1",
+    "pagePiling.js": "pagepiling.js#^1.5.3"
   },
   "overrides": {
     "bootstrap-sass": {

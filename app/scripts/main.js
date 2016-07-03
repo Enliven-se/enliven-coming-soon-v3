@@ -32,7 +32,7 @@
         timeout = setTimeout(delayed, threshold || 100);
       };
     }
-    // smartresize 
+    // smartresize
     jQuery.fn[sr] = function(fn) {
       return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
     };
@@ -66,6 +66,11 @@
     }
 
   })();
+
+  $(document).ready(function() {
+      $('#pagepiling').pagepiling();
+  });
+
 
   $.isMobile = function(type) {
     var reg = [];
@@ -416,7 +421,7 @@
               var useBody = /#bottom|#top/g.test(target.hash);
               $(useBody ? 'body' : target.hash).each(function() {
                 e.preventDefault();
-                // in css sticky navbar has height 64px 
+                // in css sticky navbar has height 64px
                 var stickyMenuHeight = $('.mbr-navbar-sticky').length ? 64 : 0;
                 var goTo = target.hash == '#bottom'
                   ? ($(this).height() - $(window).height())
