@@ -440,7 +440,6 @@ html {
 }
 .mbr-brand__name {
   display: block;
-  font-weight: bold;
   margin-top: 5px;
   text-align: center;
 }
@@ -807,10 +806,8 @@ html {
 }
 .mbr-hero__text {
   font-size: 54px;
-color: #000000;
-  font-weight: bold;
+  color: #000000;
   left: -2px;
-  letter-spacing: 2px;
   line-height: 50px;
   margin: -18px 0 1px 0;
   padding-bottom: 41px;
@@ -1030,7 +1027,6 @@ color: #000000;
 .mbr-reviews__author-name {
   color: #777;
   font-size: 14px;
-  font-weight: bold;
   position: relative;
   top: -3px;
 }
@@ -1078,9 +1074,6 @@ color: #000000;
 .mbr-header__text {
   display: block;
   font-size: 48px;
-  font-weight: bold;
-  letter-spacing: 6px;
-  line-height: 1.5em;
   color: #000000;
   margin: 0;
 }
@@ -1088,7 +1081,6 @@ color: #000000;
   color: #777;
   font-size: 14px;
   font-style: italic;
-  letter-spacing: 1px;
   margin: 8px 0 7px 0;
 }
 .mbr-header-inline {
@@ -1097,7 +1089,6 @@ color: #000000;
   top: 0;
 }
 .mbr-header-inline .mbr-header__text {
-  letter-spacing: 4px;
   line-height: 1em;
   margin: 15px 0 0 0;
 }
@@ -1122,7 +1113,6 @@ color: #000000;
   }
   .mbr-header-reduce .mbr-header__text {
     font-size: 16px;
-    letter-spacing: 1px;
     line-height: 1.1em;
     padding-top: 0.4em;
     margin-top: -0.4em;
@@ -1168,7 +1158,6 @@ color: #000000;
 .mbr-contacts__header {
   color: #fff;
   font-size: 14px;
-  letter-spacing: 1px;
   margin-bottom: 20px;
   margin-top: 3px;
 }
@@ -1192,7 +1181,6 @@ color: #000000;
 .mbr-footer {
   color: #9c9c9c;
   font-size: 13px;
-  letter-spacing: 1px;
   line-height: 1.5em;
   padding: 37px 0 39px;
   word-spacing: 1px;
@@ -1366,21 +1354,17 @@ color: #000000;
 .mbr-article-wysiwyg h6 {
   color: #252525;
   display: block;
-  font-weight: bold;
   line-height: 1.3em;
   text-align: left;
 }
 .mbr-article-wysiwyg h1 {
   font-size: 27px;
-  letter-spacing: 3px;
 }
 .mbr-article-wysiwyg h2 {
   font-size: 23px;
-  letter-spacing: 2px;
 }
 .mbr-article-wysiwyg h3 {
   font-size: 19px;
-  letter-spacing: 1px;
 }
 .mbr-article-wysiwyg h4 {
   font-size: 14px;
@@ -1552,7 +1536,6 @@ color: #000000;
 }
 .mbr-number__group {
   display: table-cell;
-  font-weight: bold;
   position: relative;
   vertical-align: middle;
 }
@@ -1609,4 +1592,157 @@ color: #000000;
 	text-indent: -2400px;
 	text-align: center;
 	padding: 0;
+}
+
+#ext_menu-0 .mbr-brand__name {
+  font-size: 16px;
+}
+#ext_menu-0.mbr-navbar-stuck .mbr-navbar__section {
+  background: #c1c1c1;
+}
+#ext_menu-0 .mbr-navbar__section {
+  background: #c1c1c1;
+}
+#ext_menu-0 .mbr-navbar__hamburger {
+  color: #ffffff;
+}
+#main-container h1 {
+  color: #000000;
+  text-shadow: 0px 0px 1px #eee;
+}
+#msg-box4-3 .mbr-header__text {
+  color: #000000;
+  text-align: center;
+}
+#msg-box4-3 .mbr-header__subtext {
+  color: #ffffff;
+}
+#msg-box4-3 .mbr-article {
+  color: #ffffff;
+}
+#msg-box4-3 .mbr-article P {
+  color: #ffffff;
+}
+#msg-box4-3 .mbr-header__text DIV {
+  font-size: 25px;
+}
+#msg-box4-4 .mbr-header__text {
+  color: #000000;
+}
+#msg-box4-4 .mbr-header__subtext {
+  color: #ffffff;
+}
+#msg-box4-4 .mbr-article {
+  color: #ffffff;
+}
+
+
+#custom-html-123 {
+  /* Type valid CSS here */
+}
+#custom-html-123 .my-image {
+  width: 100%;
+}
+#header4-6 h1 {
+  color: white;
+    line-height: 80px;
+}
+#header4-6 h3 {
+  color: white;
+  line-height: 60px;
+  text-align: center;
+}
+
+#custom-html-124 {
+  /* Type valid CSS here */
+  /* Type valid CSS here */
+}
+#custom-html-124 section {
+  background-color: #15447b;
+  padding-top: 40.8px;
+  padding-bottom: 40.8px;
+}
+#custom-html-124 h4 {
+  color: #FFFFFF;
+  font-size: 20px;
+  word-break: normal;
+  font-weight: bold;
+  text-align: center;
+}
+
+
+
+
+#custom-html-226 li {
+  font-size: 20px;
+  line-height: 55px;
+}
+#custom-html-226 a:hover,
+#custom-html-226 a:visited,
+#custom-html-226 a:link,
+#custom-html-226 a:active {
+  text-decoration: none;
+  font-size: 18px;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+#custom-html-226 i {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#msg-box4-3 {
+	background-color: rgb(255, 255, 255);
+}
+#msg-box4-4 {
+	background-color: rgb(193, 193, 193);
+}
+#main-container {
+	background-color: rgb(193, 193, 193);
+}
+#social-buttons1-10 {
+  background-color: rgb(69, 66, 65);
+}
+
+
+
+.mbr-contacts.mbr-contacts--wysiwyg.row {
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.mbr-footer.mbr-footer--wysiwyg.row {
+	padding-top: 36px;
+	padding-bottom: 36px;
+}
+.mbr-footer__copyright.mbr-editable-content {
+	text-align: center;
+}
+.mbr-header.mbr-header--inline.row {
+	padding-top: 40.8px;
+	padding-bottom: 2.8px;
+}
+.mbr-header__text.mbr-editable-content {
+	font-size: 21px;
+}
+.mbr-header__text.mbr-editable-content {
+	font-size: 32px;
+}
+.mbr-section.mbr-section--relative.mbr-section--fixed-size.mbr-parallax-background {
+	background-image: url(../images/bg-lynch-med.jpg) !important
+}
+.mbr-section.mbr-section--relative.mbr-section--fixed-size {
+	background-color: rgb(69,66,65);
+}
+.mbr-section__container.mbr-section__container--std-padding.container {
+	padding-top: 93px;
+	padding-bottom: 93px;
+}
+.mbr-section__container.mbr-section__container-isolated.container {
+	padding-top: 62px;
+	padding-bottom: 124px;
+}
+.mbr-section__container.mbr-section__container-isolated.container {
+	padding-top: 93px;
+	padding-bottom: 93px;
 }
