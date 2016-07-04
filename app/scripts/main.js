@@ -1,4 +1,4 @@
-(function($) {
+;(function($) {
 
   $.extend($.easing, {
     easeInOutCubic: function(x, t, b, c, d) {
@@ -9,9 +9,7 @@
 
   $.fn.outerFind = function(selector) {
     return this.find(selector).addBack(selector);
-  };
-
-  (function($, sr) {
+  };(function($, sr) {
     // debouncing function from John Hann
     // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
     var debounce = function(func, threshold, execAsap) {
@@ -37,9 +35,7 @@
       return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
     };
 
-  })(jQuery, 'smartresize');
-
-  (function() {
+  })(jQuery, 'smartresize');(function() {
 
     var scrollbarWidth = 0,
       originalMargin,
@@ -67,9 +63,9 @@
 
   })();
 
-  $(document).ready(function() {
-      $('#pagepiling').pagepiling();
-  });
+  // $(document).ready(function() {
+  //   $('#pagepiling').pagepiling();
+  // });
 
 
   $.isMobile = function(type) {
@@ -451,4 +447,3 @@
   })
 
 })(jQuery);
-!function() {}();
