@@ -2250,15 +2250,15 @@ html
 
     color: #fff;
 }
-#custom-html-226 li
+#section6 li
 {
     font-size: 20px;
     line-height: 55px;
 }
-#custom-html-226 a:hover,
-#custom-html-226 a:visited,
-#custom-html-226 a:link,
-#custom-html-226 a:active
+#section6 a:hover,
+#section6 a:visited,
+#section6 a:link,
+#section6 a:active
 {
     font-size: 18px;
 
@@ -2267,7 +2267,7 @@ html
 
     color: #fff;
 }
-#custom-html-226 i
+#section6 i
 {
     display: block;
 
@@ -2339,4 +2339,20 @@ html
 {
     padding-top: 93px;
     padding-bottom: 93px;
+}
+
+#section1 {
+  background-color: rgb(193, 193, 193);
+}
+#section2 {
+  background-color: rgb(255, 255, 255);
+}
+#section3 {
+  background-color: rgb(193, 193, 193);
+}
+#section5 {
+  background-image: url( images/bg-lynch-med.jpg);
+}
+#section6 {
+  background-color: rgb(69, 66, 65);
 }
