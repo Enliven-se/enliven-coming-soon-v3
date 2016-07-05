@@ -150,22 +150,23 @@
 
             <div class="mc_embed_signup custom-mc_embed_signup_scroll">
               <!-- Begin MailChimp Signup Form -->
-              <form action="//enliven.us13.list-manage.com/subscribe/post?u=26bdde73cd2b2aa42aceb57fe&amp;id=50bfc63b1c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-inline validate form-horizontal js-subscribe-form" target="_blank" novalidate>
+              <form action="//enliven.us13.list-manage.com/subscribe/post?u=26bdde73cd2b2aa42aceb57fe&amp;id=50bfc63b1c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-inline validate form-horizontal js-subscribe-form" novalidate>
                 <fieldset>
                   <div class="form-group mc-field-group">
                     <div class="row">
-                      <div class="col-md-4">
+                      <div class="col-sm-8">
                         <input id="textinput" type="email" value="" placeholder="Your email goes here" name="EMAIL" class="form-control required email input-md" id="mce-EMAIL"/>
                       </div>
-                      <div class="col-md-4">
-                        <input id="singlebutton" type="submit" value="Notify me" tabindex="0" name="subscribe" class="btn button btn-warning"/>
+                      <div class="col-sm-4">
+                        <button id="singlebutton" name="singlebutton" tabindex="0" name="subscribe" class="btn btn-warning">Notify Me</button>
                       </div>
                     </div>
                     <div class="mce-responses">
-                      <div class="response" id="mce-error-response" style="display:none"></div>
-                      <div class="response" id="mce-success-response" style="display:none"></div>
+                      <div class="response js-error-message" id="mce-error-response" style="display:none"></div>
+                      <div class="response js-success-message" id="mce-success-response" style="display:none"></div>
                     </div>
-                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_26bdde73cd2b2aa42aceb57fe_50bfc63b1c" tabindex="-1" value=""/></div>                  </div>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_26bdde73cd2b2aa42aceb57fe_50bfc63b1c" tabindex="-1" value=""/></div>
+                  </div>
                 </fieldset>
               </form><!--End mc_embed_signup-->
             </div>
@@ -269,7 +270,6 @@
   <noscript><p><img src="//duskywing.enliven.se/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
   <!-- End Piwik Code -->
 
-
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->
   <script src="/bower_components/jquery/dist/jquery.js"></script>
@@ -277,7 +277,6 @@
   <script src="/bower_components/jarallax/jarallax/jarallax.js"></script>
   <script src="/bower_components/Vimeofy/src/scripts/vimeofy.js"></script>
   <script src="/bower_components/jquery-placeholder/jquery.placeholder.js"></script>
-  <script src="/bower_components/mailchimp-subscribe-form/mailchimp-subscribe-form.js"></script>
   <!-- endbower -->
   <!-- endbuild -->
 
@@ -295,6 +294,8 @@
   <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js"></script>
   <script src="/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js"></script>
   <!-- endbuild -->
+
+  <script src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js" async></script>
 
   <!-- build:js scripts/main.js -->
   <script src="scripts/main.js"></script>

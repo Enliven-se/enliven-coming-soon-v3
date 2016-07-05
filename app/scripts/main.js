@@ -1,3 +1,4 @@
+var $mcj = {};
 (function($) {
 
   $.extend($.easing, {
@@ -453,10 +454,13 @@
   });
 
   // MailChimp
-  var elems = document.querySelectorAll('.js-subscribe-form');
-  for (var i = 0; i < elems.length; i++) {
-    new MailChimpSubscribeForm(elems[i]);
-  }
-
+  window.fnames = new Array();
+  window.ftypes = new Array();
+  fnames[0] = "EMAIL";
+  ftypes[0] = "email";
+  fnames[1] = "FNAME";
+  ftypes[1] = "text";
+  fnames[2] = "LNAME";
+  ftypes[2] = "text";
 
 })(jQuery);
