@@ -147,21 +147,28 @@
                 <h3 class="mbr-header__text mbr-editable-content" style="font-size: 30px;color: #FFFFFF; line-height: 3;">Sign-up and stay in the loop</h3>
               </div>
             </div>
-            <form class="form-horizontal">
-              <fieldset>
-                <!-- Text input-->
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-md-4">
-                      <input id="textinput" name="textinput" type="text" placeholder="Your email goes here" class="form-control input-md">
+
+            <div class="mc_embed_signup custom-mc_embed_signup_scroll">
+              <!-- Begin MailChimp Signup Form -->
+              <form action="//enliven.us13.list-manage.com/subscribe/post?u=26bdde73cd2b2aa42aceb57fe&amp;id=50bfc63b1c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="form-inline validate form-horizontal js-subscribe-form" target="_blank" novalidate>
+                <fieldset>
+                  <div class="form-group mc-field-group">
+                    <div class="row">
+                      <div class="col-md-4">
+                        <input id="textinput" type="email" value="" placeholder="Your email goes here" name="EMAIL" class="form-control required email input-md" id="mce-EMAIL"/>
+                      </div>
+                      <div class="col-md-4">
+                        <input id="singlebutton" type="submit" value="Notify me" tabindex="0" name="subscribe" class="btn button btn-warning"/>
+                      </div>
                     </div>
-                    <div class="col-md-4">
-                      <button id="singlebutton" name="singlebutton" class="btn btn-warning">Notify Me</button>
+                    <div class="mce-responses">
+                      <div class="response" id="mce-error-response" style="display:none"></div>
+                      <div class="response" id="mce-success-response" style="display:none"></div>
                     </div>
-                  </div>
-                </div>
-              </fieldset>
-            </form>
+                    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_26bdde73cd2b2aa42aceb57fe_50bfc63b1c" tabindex="-1" value=""/></div>                  </div>
+                </fieldset>
+              </form><!--End mc_embed_signup-->
+            </div>
           </div>
         </section>
       </div>
@@ -227,7 +234,7 @@
     </div>
   </div>
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
+  <!-- Google Analytics -->
   <script>
     (function(b, o, i, l, e, r) {
       b.GoogleAnalyticsObject = l;
@@ -241,9 +248,27 @@
       e.src = '//www.google-analytics.com/analytics.js';
       r.parentNode.insertBefore(e, r)
     }(window, document, 'script', 'ga'));
-    ga('create', 'UA-XXXXX-X');
+    ga('create', 'UA-72026616-1');
     ga('send', 'pageview');
   </script>
+  <!-- End Google Analytics Code -->
+  <!-- Piwik -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(["setDomains", ["*.www.enliven.se"]]);
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//duskywing.enliven.se/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 1]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <noscript><p><img src="//duskywing.enliven.se/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+  <!-- End Piwik Code -->
+
 
   <!-- build:js scripts/vendor.js -->
   <!-- bower:js -->

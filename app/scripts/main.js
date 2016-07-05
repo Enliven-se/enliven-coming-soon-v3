@@ -1,4 +1,3 @@
-;
 (function($) {
 
   $.extend($.easing, {
@@ -452,5 +451,12 @@
     loop: true,
     delay: 5e3
   });
+
+  // MailChimp
+  var elems = document.querySelectorAll('.js-subscribe-form');
+  for (var i = 0; i < elems.length; i++) {
+    new MailChimpSubscribeForm(elems[i]);
+  }
+
 
 })(jQuery);
