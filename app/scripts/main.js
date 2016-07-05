@@ -1,4 +1,5 @@
-;(function($) {
+;
+(function($) {
 
   $.extend($.easing, {
     easeInOutCubic: function(x, t, b, c, d) {
@@ -9,7 +10,8 @@
 
   $.fn.outerFind = function(selector) {
     return this.find(selector).addBack(selector);
-  };(function($, sr) {
+  };
+  (function($, sr) {
     // debouncing function from John Hann
     // http://unscriptable.com/index.php/2009/03/20/debouncing-javascript-methods/
     var debounce = function(func, threshold, execAsap) {
@@ -18,24 +20,26 @@
       return function debounced() {
         var obj = this,
           args = arguments;
+
         function delayed() {
           if (!execAsap) func.apply(obj, args);
           timeout = null;
         }
-        ;
 
         if (timeout) clearTimeout(timeout);
         else if (execAsap) func.apply(obj, args);
 
         timeout = setTimeout(delayed, threshold || 100);
       };
-    }
+    };
+
     // smartresize
     jQuery.fn[sr] = function(fn) {
       return fn ? this.bind('resize', debounce(fn)) : this.trigger(sr);
     };
 
-  })(jQuery, 'smartresize');(function() {
+  })(jQuery, 'smartresize');
+  (function() {
 
     var scrollbarWidth = 0,
       originalMargin,
@@ -359,7 +363,7 @@
               .css({
                 backgroundSize: 'cover',
                 backgroundPosition: 'center'
-              })
+              });
             $('.container:eq(0)', this).before($img);
 
             $('<img>').on('load', function() {
@@ -378,7 +382,7 @@
                 $img.css('background-image', 'url("' + this.src + '")')
                   .show();
               }
-            }).attr('src', previewURL)
+            }).attr('src', previewURL);
 
             if ($.fn.YTPlayer && !$.isMobile()) {
               var params = eval('(' + ($(this).data('bg-video-params') || '{}') + ')');
@@ -419,9 +423,9 @@
                 e.preventDefault();
                 // in css sticky navbar has height 64px
                 var stickyMenuHeight = $('.mbr-navbar-sticky').length ? 64 : 0;
-                var goTo = target.hash == '#bottom'
-                  ? ($(this).height() - $(window).height())
-                  : ($(this).offset().top - stickyMenuHeight);
+                var goTo = target.hash == '#bottom' ?
+                  ($(this).height() - $(window).height()) :
+                  ($(this).offset().top - stickyMenuHeight);
                 $('html, body').stop().animate({
                   scrollTop: goTo
                 }, 800, 'easeInOutCubic');
@@ -444,6 +448,6 @@
     autoplay: true,
     loop: true,
     delay: 5e3
-  })
+  });
 
 })(jQuery);
