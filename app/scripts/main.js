@@ -67,9 +67,12 @@
 
   })();
 
-  // $(document).ready(function() {
-  //   $('#pagepiling').pagepiling();
-  // });
+  // process pagepiling
+  $(document).ready(function() {
+    if ($.pagepiling) {
+      $('#pagepiling').pagepiling();
+    }
+  });
 
 
   $.isMobile = function(type) {

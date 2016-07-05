@@ -2,6 +2,7 @@ $icon-font-path: '../fonts/';
 
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
+// endbower
 
 @import "./default.scss";
 
@@ -13,4 +14,3 @@ $icon-font-path: '../fonts/';
 
 @import "./mobirise.scss";
 @import "./typography.scss";
-// endbower
