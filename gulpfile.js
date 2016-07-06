@@ -78,6 +78,9 @@ gulp.task('html', ['styles', 'scripts'], () => {
       safe: true,
       autoprefixer: false
     })))
+    .pipe($.if('*.js', $.rev()))
+    .pipe($.if('*.css', $.rev()))
+    .pipe($.revReplace())
     .pipe($.if('*.html', $.htmlmin({
       collapseWhitespace: true
     })))
