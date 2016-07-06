@@ -68,8 +68,8 @@ gulp.task('lint:test', () => {
     .pipe(gulp.dest('test/spec/**/*.js'));
 });
 
-gulp.task('html', ['styles', 'scripts'], () => {
-  return gulp.src('app/*.html')
+gulp.task('html', ['views', 'styles', 'scripts'], () => {
+  return gulp.src(['app/*.html', '.tmp/*.html'])
     .pipe($.useref({
       searchPath: ['.tmp', 'app', '.']
     }))
@@ -111,7 +111,8 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
-    '!app/*.html'
+    '!app/*.html',
+    '!app/*.jade'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
@@ -133,7 +134,7 @@ gulp.task('clean', () => {
   ]);
 });
 
-gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
+gulp.task('serve', ['views', 'styles', 'scripts', 'fonts'], () => {
   browserSync({
     notify: false,
     port: 9000,
@@ -151,6 +152,7 @@ gulp.task('serve', ['styles', 'scripts', 'fonts'], () => {
     '.tmp/fonts/**/*'
   ]).on('change', reload);
 
+  gulp.watch('app/**/*.jade', ['views']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
@@ -194,7 +196,7 @@ gulp.task('wiredep', () => {
     }))
     .pipe(gulp.dest('app/styles'));
 
-  gulp.src('app/*.html')
+  gulp.src('app/layouts/*.jade')
     .pipe(wiredep({
       exclude: ['bootstrap-sass'],
       ignorePath: /^(\.\.\/)*\.\./
@@ -202,11 +204,23 @@ gulp.task('wiredep', () => {
     .pipe(gulp.dest('app'));
 });
 
+gulp.task('views', () => {
+  return gulp.src('app/*.jade')
+    .pipe($.plumber())
+    .pipe($.jade({
+      pretty: true
+    }))
+    .pipe(gulp.dest('.tmp'))
+    .pipe(reload({
+      stream: true
+    }));
+});
+
 // deploy to Github pages
 gulp.task('deploy', ['build', 'cname'], () => {
   return gulp.src('dist')
-    .pipe(subtree());
-//.pipe(clean());
+    .pipe(subtree())
+    .pipe(clean());
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
