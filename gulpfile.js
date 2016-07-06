@@ -111,8 +111,15 @@ gulp.task('fonts', () => {
 gulp.task('extras', () => {
   return gulp.src([
     'app/*.*',
-    'app/CNAME',
     '!app/*.html'
+  ], {
+    dot: true
+  }).pipe(gulp.dest('dist'));
+});
+
+gulp.task('cname', () => {
+  return gulp.src([
+    'app/CNAME'
   ], {
     dot: true
   }).pipe(gulp.dest('dist'));
@@ -122,9 +129,7 @@ gulp.task('extras', () => {
 gulp.task('clean', () => {
   return del([
     '.tmp',
-    'dist',
-    // don't want to clean CNAME
-    '!dist/CNAME'
+    'dist'
   ]);
 });
 
@@ -198,10 +203,10 @@ gulp.task('wiredep', () => {
 });
 
 // deploy to Github pages
-gulp.task('deploy', ['build'], () => {
+gulp.task('deploy', ['build', 'cname'], () => {
   return gulp.src('dist')
-    .pipe(subtree())
-    .pipe(clean());
+    .pipe(subtree());
+//.pipe(clean());
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
