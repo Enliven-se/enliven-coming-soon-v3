@@ -1,7 +1,8 @@
 body {
   font-family: 'avenirnext-regular' !important;
   font-style: normal;
-  /*font-weight: bold;*/
+  
+  padding-top: 139px;
 }
 
 small, .small {
@@ -13,9 +14,18 @@ small, .small {
 }
 
 h1, h2, h3, h4, h5, h6, strong {
-  color: #fff;
   font-family: 'TheanoDidot-Regular' !important;
   font-weight: 400;
+}
+
+.front {
+  body {
+    padding-top: 20px;
+  }
+  
+  h1, h2, h3, h4, h5, h6, strong {
+    color: #fff;
+  }
 }
 
 em {
