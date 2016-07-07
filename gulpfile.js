@@ -156,6 +156,9 @@ gulp.task('serve', ['views', 'styles', 'scripts', 'fonts'], () => {
   ]).on('change', reload);
 
   gulp.watch('app/**/*.jade', ['views']);
+  gulp.watch('app/includes/**/*', ['views']);
+  gulp.watch('app/layouts/**/*', ['views']);
+  gulp.watch('app/templates/**/*', ['views']);
   gulp.watch('app/styles/**/*.scss', ['styles']);
   gulp.watch('app/scripts/**/*.js', ['scripts']);
   gulp.watch('app/fonts/**/*', ['fonts']);
