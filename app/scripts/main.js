@@ -445,7 +445,7 @@ var $mcj = {};
   });
 
   // vimeofy
-  $('#background').vimeofy({
+  $('.front #background').vimeofy({
     url: 'https://vimeo.com/170180787',
     color: '#00D8D8',
     autoplay: true,
