@@ -149,6 +149,18 @@ padding-top: 33px;
 
 }
 
+.bkg12 a{
+line-height: 80px;
+}
+
+.bkg14 a{
+line-height: 80px;
+}
+
+#singlebutton{
+  margin-top: 65px;
+}
+
 .features .glyphicon{
   font-size: 32px;
   display: block;
@@ -157,11 +169,24 @@ padding-top: 33px;
 
 }
 
+.features a{
+  line-height: 40px;
+}
+
 .features ul li{
 list-style-type: none;
 padding: 0;
-
+margin: 0;
 }
+
+#retain-your-copyrights{
+  margin-top: 133px;
+  padding-top: 33px;
+}
+
+#creative-work{
+  margin-bottom: 100px;
+  }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) {
