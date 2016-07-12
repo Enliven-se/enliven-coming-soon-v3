@@ -69,8 +69,11 @@ padding-left:15px;
 
 
 #join-a-global-community{
-  margin-top: 5px;
+  //margin-top: 5px;
   text-align: left;
+  border: 0;
+  margin: 0;
+  padding: 0;
 }
 
 #frequently-asked-questions{
@@ -89,6 +92,74 @@ padding-top: 50px;
 
 .contact1{
 padding-bottom: 200px;
+
+}
+
+#want-to-become-an-enliven-contributor{
+  color: #ffffff;
+  line-height: 43px;
+}
+
+#our-vision{
+margin-bottom:133px;
+line-height: 30px;
+
+}
+
+#build-your-brand{
+margin-top: 133px;
+padding-top: 33px;
+}
+
+#build-your-brand-and-connect-with-a-global-audience{
+  margin-bottom: 100px;
+}
+
+
+.bkg12{
+  background-color: #c1c1c1;
+  width: 100%;
+  margin: 0 auto;
+  //background-size:cover;
+  padding-bottom: 150px;
+
+}
+
+.features a{
+  margin-top: 20px;
+}
+
+#you-are-the-talent{
+margin-top: 133px;
+padding-top: 33px;
+}
+
+#we-share-the-revenue{
+    margin-bottom: 100px;
+}
+
+
+.bkg14{
+
+  background-color: white;
+  width: 100%;
+  margin: 0 auto;
+  //background-size:cover;
+  padding-bottom: 150px;
+
+}
+
+.features .glyphicon{
+  font-size: 32px;
+  display: block;
+  text-align: center;
+  padding-bottom: 20px;
+
+}
+
+.features ul li{
+list-style-type: none;
+padding: 0;
 
 }
 
