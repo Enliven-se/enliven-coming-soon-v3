@@ -1,49 +1,41 @@
-
 .browserupgrade {
   margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
   padding: 0.2em 0;
+  color: #000;
+  background: #ccc;
 }
-
 /* Space out content a bit */
 body {
   padding-top: 20px;
   padding-bottom: 20px;
 }
-
 /* Everything but the jumbotron gets side spacing for mobile first views */
+.footer,
 .header,
-.marketing,
-.footer {
-  padding-left: 15px;
+.marketing {
   padding-right: 15px;
+  padding-left: 15px;
 }
-
 /* Custom page header */
 .header {
   border-bottom: 1px solid #e5e5e5;
-
   /* Make the masthead heading the same height as the navigation */
   h3 {
+    line-height: 40px;
     margin-top: 0;
     margin-bottom: 0;
-    line-height: 40px;
     padding-bottom: 19px;
   }
 }
-
 /* Custom page footer */
 .footer {
   padding-top: 19px;
   color: #777;
   border-top: 1px solid #e5e5e5;
 }
-
 .container-narrow > hr {
   margin: 30px 0;
 }
-
 /* Main marketing message and sign up button */
 .jumbotron {
   text-align: center;
@@ -53,7 +45,6 @@ body {
     padding: 14px 24px;
   }
 }
-
 /* Supporting marketing content */
 .marketing {
   margin: 40px 0;
@@ -61,159 +52,136 @@ body {
     margin-top: 28px;
   }
 }
-
-#how-does-it-work{
-padding-left:15px;
-
+#how-does-it-work {
+  padding-left: 15px;
 }
-
-
-#join-a-global-community{
+#join-a-global-community {
+  margin: 0;
+  padding: 0;
   //margin-top: 5px;
   text-align: left;
   border: 0;
-  margin: 0;
-  padding: 0;
 }
-
-#frequently-asked-questions{
-  border-bottom: 1px solid #aaa;
+#frequently-asked-questions {
+  border-bottom: 2px solid #aaa;
 }
-
-#terms-conditions{
+#terms-conditions {
   padding-top: 200px;
   border-bottom: 1px solid #aaa;
 }
-
-#introduction{
-padding-top: 50px;
-
+#introduction {
+  padding-top: 50px;
 }
-
-.contact1{
-padding-bottom: 200px;
-
+.contact1 {
+  padding-bottom: 200px;
 }
-
-#want-to-become-an-enliven-contributor{
-  color: #ffffff;
+#want-to-become-an-enliven-contributor {
   line-height: 43px;
+  color: #fff;
 }
-
-#our-vision{
-margin-bottom:133px;
-line-height: 30px;
-
+#our-vision {
+  line-height: 30px;
+  margin-bottom: 80px;
 }
-
-#build-your-brand{
-margin-top: 133px;
-padding-top: 33px;
+.bkg12 {
+  background-color: #c1c1c1;
+  padding: 33px 0 100px 0;
+  width: 100%;
 }
-
-#build-your-brand-and-connect-with-a-global-audience{
+#build-your-brand-and-connect-with-a-global-audience {
   margin-bottom: 100px;
 }
 
 
-.bkg12{
-  background-color: #c1c1c1;
+#we-share-the-revenue {
+  margin-bottom: 100px;
+}
+.bkg14 {
   width: 100%;
-  margin: 0 auto;
-  //background-size:cover;
-  padding-bottom: 150px;
-
-}
-
-.features a{
-  margin-top: 20px;
-}
-
-#you-are-the-talent{
-margin-top: 133px;
-padding-top: 33px;
-}
-
-#we-share-the-revenue{
-    margin-bottom: 100px;
-}
-
-
-.bkg14{
-
+  padding: 33px 0 100px 0;
   background-color: white;
-  width: 100%;
-  margin: 0 auto;
-  //background-size:cover;
-  padding-bottom: 150px;
-
+}
+.bkg14 a {
+  line-height: 80px;
+}
+.bkg12 a {
+  line-height: 80px;
+}
+#singlebutton {
+  margin-top: 45px;
 }
 
-.bkg12 a{
-line-height: 80px;
+.features{
+  padding-bottom: 30px;
+  padding-left:  0px;
 }
-
-.bkg14 a{
-line-height: 80px;
-}
-
-#singlebutton{
-  margin-top: 65px;
-}
-
-.features .glyphicon{
+.features .glyphicon {
   font-size: 32px;
   display: block;
   text-align: center;
   padding-bottom: 20px;
-
 }
 
-.features a{
-  line-height: 40px;
-}
 
-.features ul li{
-list-style-type: none;
-padding: 0;
-margin: 0;
+.features a {
+  margin-top: 20px;
+    line-height: 40px;
+    text-decoration: underline;
+    color: grey;
+    font-size: 14px;
+    text-align: center;
 }
-
-#retain-your-copyrights{
-  margin-top: 133px;
-  padding-top: 33px;
-}
-
-#creative-work{
-  margin-bottom: 100px;
+  #creative-work {
+    margin-bottom: 100px;
   }
 
-/* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
-  .container {
-    max-width: 730px;
-  }
-
-  /* Remove the padding we set earlier */
-  .header,
-  .marketing,
-  .footer {
-    padding-left: 0;
-    padding-right: 0;
-  }
-
-  /* Space out the masthead */
-  .header {
-    margin-bottom: 30px;
-  }
-
-  /* Remove the bottom border on the jumbotron for visual effect */
-  .jumbotron {
-    border-bottom: 0;
-  }
+.connections{
+padding-top: 110px;
+padding-bottom: 110px;
 }
 
-// mailchimp
-.response, div.mce_inline_error {
-  color: #fff;
+#below{
+  padding-top: 30px;
+  padding-bottom: 30px;
 }
+
+.newt{
+  border-bottom: 2px solid #aaa;
+}
+
+#singlebutton2 {
+  margin-top: 45px;
+  margin-bottom: 45px;
+}
+
+.faq h2{
+  font-size: 14px;
+  font-weight: bold;
+  }
+  /* Responsive: Portrait tablets and up */
+  @media screen and (min-width: 768px) {
+    .container {
+      max-width: 730px;
+    }
+    /* Remove the padding we set earlier */
+    .footer,
+    .header,
+    .marketing {
+      padding-right: 0;
+      padding-left: 0;
+    }
+    /* Space out the masthead */
+    .header {
+      margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+      border-bottom: 0;
+    }
+  }
+
+  // mailchimp
+  .response,
+  div.mce_inline_error {
+    color: #fff;
+  }
