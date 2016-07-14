@@ -65,15 +65,43 @@ body {
 #frequently-asked-questions {
   border-bottom: 2px solid #aaa;
 }
-#terms-conditions {
-  padding-top: 200px;
-  border-bottom: 1px solid #aaa;
+
+.teco{
+  margin-bottom: 30px;
 }
+.teco h2{
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 30px;
+
+}
+
+#submission-guidelines{
+  padding-top: 100px;
+  border-bottom: 1px solid #aaa;
+
+}
+#privacy-security{
+  padding-top: 100px;
+  border-bottom: 1px solid #aaa;
+
+}
+#terms-conditions {
+  padding-top: 100px;
+  border-bottom: 1px solid #aaa;
+
+}
+
+#overview{
+  padding-top: 30px;
+}
+
+
 #introduction {
-  padding-top: 50px;
+  padding-top: 30px;
 }
 .contact1 {
-  padding-bottom: 200px;
+  padding-bottom: 30px;
 }
 #want-to-become-an-enliven-contributor {
   line-height: 43px;
@@ -158,6 +186,33 @@ padding-bottom: 110px;
   font-size: 14px;
   font-weight: bold;
   }
+
+
+//about enliven
+.bkg15 {
+  background-color: #c1c1c1;
+  padding: 33px 0 33px 0;
+  width: 100%;
+}
+
+.bkg16 {
+  background-color: white;
+  padding: 16px 0 33px 0;
+  width: 100%;
+}
+
+
+.bkg17 {
+  background-color: white;
+  padding: 33px 0 33px 0;
+  width: 100%;
+}
+
+#our-mission-is-to-inspire-and-activate-your-life{
+  padding-bottom: 50px;
+}
+
+
   /* Responsive: Portrait tablets and up */
   @media screen and (min-width: 768px) {
     .container {
