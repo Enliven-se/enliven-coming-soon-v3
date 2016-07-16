@@ -54,6 +54,7 @@ body {
 }
 #how-does-it-work {
   padding-left: 15px;
+  position: relative;
 }
 #join-a-global-community {
   margin: 0;
@@ -64,6 +65,12 @@ body {
 }
 #frequently-asked-questions {
   border-bottom: 2px solid #aaa;
+}
+
+#finalh h2{
+  font-family: AvenirNext-MediumItalic;
+  font-size: 20px;
+  color: #000000;
 }
 
 .teco{
@@ -137,6 +144,8 @@ body {
 }
 #singlebutton {
   margin-top: 45px;
+  width: 155px;
+  white-space: normal;
 }
 
 .features{
@@ -180,11 +189,15 @@ padding-bottom: 110px;
 #singlebutton2 {
   margin-top: 45px;
   margin-bottom: 45px;
-}
+  width: 155px;
+  white-space: normal;
+  }
 
 .faq h2{
-  font-size: 14px;
-  font-weight: bold;
+  font-family: AvenirNext-MediumItalic;
+font-size: 20px;
+color: #000000;
+line-height: 25px;
   }
 
 
@@ -193,6 +206,20 @@ padding-bottom: 110px;
   background-color: #c1c1c1;
   padding: 33px 0 33px 0;
   width: 100%;
+}
+
+.bkg15 blockquote{
+      border-left: 0;
+  padding: 0;
+}
+
+.agrey{
+  text-decoration: underline;
+  color: grey;
+}
+
+.bkg15 h2{
+  font-size: 36px;
 }
 
 .bkg16 {
