@@ -7,7 +7,7 @@
 /* Space out content a bit */
 body {
   padding-top: 20px;
-  padding-bottom: 20px;
+
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .footer,
@@ -148,6 +148,19 @@ body {
   white-space: normal;
 }
 
+
+.faq ol li{
+padding-left: 0px;
+}
+
+.teco h2{
+  font-family: AvenirNext-MediumItalic;
+  font-size: 20px;
+  color: #000000;
+  font-weight: normal;
+
+}
+
 .features{
   padding-bottom: 30px;
   padding-left:  0px;
@@ -192,6 +205,11 @@ padding-bottom: 110px;
   width: 155px;
   white-space: normal;
   }
+
+#singlebutton3{
+  width: 100px;
+  white-space: normal;
+}
 
 .faq h2{
   font-family: AvenirNext-MediumItalic;
