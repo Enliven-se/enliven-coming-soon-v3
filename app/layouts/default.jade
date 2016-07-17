@@ -1,8 +1,9 @@
 doctype html
 html.no-js(lang='en')
+  block vars
   include ../includes/head.jade
 
-  body
+  body(class=body_classes)
     include ../includes/browserupgrade.html
     include ../includes/navigation.jade
     
