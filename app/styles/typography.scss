@@ -1,8 +1,12 @@
 body {
-  font-family: 'avenirnext-regular' !important;
+  font-family: 'avenirnext-regular';
   font-style: normal;
   
-  padding-top: 139px;
+  padding-top: 98px;
+  
+  @media screen and (min-width: 992px) {
+    padding-top: 114px;
+  }
 }
 
 small, .small {
@@ -14,7 +18,7 @@ small, .small {
 }
 
 h1, h2, h3, h4, h5, h6, strong {
-  font-family: 'TheanoDidot-Regular' !important;
+  font-family: 'TheanoDidot-Regular';
   font-weight: 400;
 }
 

@@ -1,18 +1,20 @@
 $icon-font-path: '../fonts/';
 
+@import "../fonts/fonts.css";
+@import "./typography.scss";
+
+@import "./_variables.scss";
+
 // bower:scss
 @import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
 
 @import "./default.scss";
 
-@import "../fonts/fonts.css";
-
 @import "./animate.min.scss";
 @import "./socicon.min.scss";
 @import "./background.scss";
 
 @import "./mobirise.scss";
-@import "./typography.scss";
 
 @import "./pages.scss";
