@@ -1,287 +1,314 @@
 .browserupgrade {
-  margin: 0.2em 0;
-  padding: 0.2em 0;
-  color: #000;
-  background: #ccc;
+    margin: .2em 0;
+    padding: .2em 0;
+
+    color: #000;
+    background: #ccc;
 }
 /* Space out content a bit */
 body {
-  padding-top: 20px;
-
+    padding-top: 20px;
 }
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .footer,
 .header,
 .marketing {
-  padding-right: 15px;
-  padding-left: 15px;
+    padding-right: 15px;
+    padding-left: 15px;
 }
 /* Custom page header */
 .header {
-  border-bottom: 1px solid #e5e5e5;
-  /* Make the masthead heading the same height as the navigation */
-  h3 {
-    line-height: 40px;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 19px;
-  }
+    border-bottom: 1px solid #e5e5e5;
+    /* Make the masthead heading the same height as the navigation */
+    h3 {
+        line-height: 40px;
+
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-bottom: 19px;
+    }
 }
 /* Custom page footer */
 .footer {
-  padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+    padding-top: 19px;
+
+    color: #777;
+    border-top: 1px solid #e5e5e5;
 }
 .container-narrow > hr {
-  margin: 30px 0;
+    margin: 30px 0;
 }
 /* Main marketing message and sign up button */
 .jumbotron {
-  text-align: center;
-  border-bottom: 1px solid #e5e5e5;
-  .btn {
-    font-size: 21px;
-    padding: 14px 24px;
-  }
+    text-align: center;
+
+    border-bottom: 1px solid #e5e5e5;
+    .btn {
+        font-size: 21px;
+
+        padding: 14px 24px;
+    }
 }
 /* Supporting marketing content */
 .marketing {
-  margin: 40px 0;
-  p + h4 {
-    margin-top: 28px;
-  }
+    margin: 40px 0;
+    p + h4 {
+        margin-top: 28px;
+    }
 }
 #how-does-it-work {
-  padding-left: 15px;
-  position: relative;
+    position: relative;
+
+    padding-left: 15px;
 }
 #join-a-global-community {
-  margin: 0;
-  padding: 0;
-  //margin-top: 5px;
-  text-align: left;
-  border: 0;
+    margin: 0;
+    padding: 0;
+    //margin-top: 5px;
+
+    text-align: left;
+
+    border: 0;
 }
 #frequently-asked-questions {
-  border-bottom: 2px solid #aaa;
+    border-bottom: 2px solid #aaa;
 }
 
-#finalh h2{
-  font-family: AvenirNext-MediumItalic;
-  font-size: 20px;
-  color: #000000;
+#finalh h2 {
+    font-family: AvenirNext-MediumItalic;
+    font-size: 20px;
+
+    color: #000;
 }
 
-.teco{
-  margin-bottom: 30px;
+.teco {
+    margin-bottom: 30px;
 }
-.teco h2{
-  font-size: 16px;
-  font-weight: bold;
-  margin-top: 30px;
+.teco h2 {
+    font-size: 16px;
+    font-weight: bold;
 
+    margin-top: 30px;
 }
 
-#submission-guidelines{
-  padding-top: 100px;
-  border-bottom: 1px solid #aaa;
+#submission-guidelines {
+    padding-top: 100px;
 
+    border-bottom: 1px solid #aaa;
 }
-#privacy-security{
-  padding-top: 100px;
-  border-bottom: 1px solid #aaa;
+#privacy-security {
+    padding-top: 100px;
 
+    border-bottom: 1px solid #aaa;
 }
 #terms-conditions {
-  padding-top: 100px;
-  border-bottom: 1px solid #aaa;
+    padding-top: 100px;
 
+    border-bottom: 1px solid #aaa;
 }
 
-#overview{
-  padding-top: 30px;
+#overview {
+    padding-top: 30px;
 }
 
 
 #introduction {
-  padding-top: 30px;
+    padding-top: 30px;
 }
 .contact1 {
-  padding-bottom: 30px;
+    padding-bottom: 30px;
 }
 #want-to-become-an-enliven-contributor {
-  line-height: 43px;
-  color: #fff;
+    line-height: 43px;
+
+    color: #fff;
 }
 #our-vision {
-  line-height: 30px;
-  margin-bottom: 80px;
+    line-height: 30px;
+
+    margin-bottom: 80px;
 }
 .bkg12 {
-  background-color: #c1c1c1;
-  padding: 33px 0 100px 0;
-  width: 100%;
+    width: 100%;
+    padding: 33px 0 100px 0;
+
+    background-color: #c1c1c1;
 }
 #build-your-brand-and-connect-with-a-global-audience {
-  margin-bottom: 100px;
+    margin-bottom: 100px;
 }
 
 
 #we-share-the-revenue {
-  margin-bottom: 100px;
+    margin-bottom: 100px;
 }
 .bkg14 {
-  width: 100%;
-  padding: 33px 0 100px 0;
-  background-color: white;
+    width: 100%;
+    padding: 33px 0 100px 0;
+
+    background-color: white;
 }
 .bkg14 a {
-  line-height: 80px;
+    line-height: 80px;
 }
 .bkg12 a {
-  line-height: 80px;
+    line-height: 80px;
 }
 #singlebutton {
-  margin-top: 45px;
-  width: 155px;
-  white-space: normal;
+    width: 155px;
+    margin-top: 45px;
+
+    white-space: normal;
 }
 
 
 .faq ol {
-  padding-left: 0px;
+    padding-left: 0;
 }
 
-.teco h2{
-  font-family: AvenirNext-MediumItalic;
-  font-size: 20px;
-  color: #000000;
-  font-weight: normal;
+.teco h2 {
+    font-family: AvenirNext-MediumItalic;
+    font-size: 20px;
+    font-weight: normal;
 
+    color: #000;
 }
 
-.features{
-  padding-bottom: 30px;
-  padding-left:  0px;
+.features {
+    padding-bottom: 30px;
+    padding-left: 0;
 }
 .features .glyphicon {
-  font-size: 32px;
-  display: block;
-  text-align: center;
-  padding-bottom: 20px;
+    font-size: 32px;
+
+    display: block;
+
+    padding-bottom: 20px;
+
+    text-align: center;
 }
 
 
 .features a {
-  margin-top: 20px;
-    line-height: 40px;
-    text-decoration: underline;
-    color: grey;
     font-size: 14px;
+    line-height: 40px;
+
+    margin-top: 20px;
+
     text-align: center;
+    text-decoration: underline;
+
+    color: grey;
 }
-  #creative-work {
+#creative-work {
     margin-bottom: 100px;
-  }
-
-.connections{
-padding-top: 110px;
-padding-bottom: 110px;
 }
 
-#below{
-  padding-top: 30px;
-  padding-bottom: 30px;
+.connections {
+    padding-top: 110px;
+    padding-bottom: 110px;
 }
 
-.newt{
-  border-bottom: 2px solid #aaa;
+#below {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.newt {
+    border-bottom: 2px solid #aaa;
 }
 
 #singlebutton2 {
-  margin-top: 45px;
-  margin-bottom: 45px;
-  width: 155px;
-  white-space: normal;
-  }
+    width: 155px;
+    margin-top: 45px;
+    margin-bottom: 45px;
 
-#singlebutton3{
-  width: 100px;
-  white-space: normal;
+    white-space: normal;
 }
 
-.faq h2{
-  font-family: AvenirNext-MediumItalic;
-font-size: 20px;
-color: #000000;
-line-height: 25px;
-  }
+#singlebutton3 {
+    width: 100px;
+
+    white-space: normal;
+}
+
+.faq h2 {
+    font-family: AvenirNext-MediumItalic;
+    font-size: 20px;
+    line-height: 25px;
+
+    color: #000;
+}
 
 
 //about enliven
 .bkg15 {
-  background-color: #c1c1c1;
-  padding: 33px 0 33px 0;
-  width: 100%;
+    width: 100%;
+    padding: 33px 0 33px 0;
+
+    background-color: #c1c1c1;
 }
 
-.bkg15 blockquote{
-      border-left: 0;
-  padding: 0;
+.bkg15 blockquote {
+    padding: 0;
+
+    border-left: 0;
 }
 
-.agrey{
-  text-decoration: underline;
-  color: grey;
+.agrey {
+    text-decoration: underline;
+
+    color: grey;
 }
 
-.bkg15 h2{
-  font-size: 36px;
+.bkg15 h2 {
+    font-size: 36px;
 }
 
 .bkg16 {
-  background-color: white;
-  padding: 16px 0 33px 0;
-  width: 100%;
+    width: 100%;
+    padding: 16px 0 33px 0;
+
+    background-color: white;
 }
 
 
 .bkg17 {
-  background-color: white;
-  padding: 33px 0 33px 0;
-  width: 100%;
+    width: 100%;
+    padding: 33px 0 33px 0;
+
+    background-color: white;
 }
 
-#our-mission-is-to-inspire-and-activate-your-life{
-  padding-bottom: 50px;
+#our-mission-is-to-inspire-and-activate-your-life {
+    padding-bottom: 50px;
 }
 
 
-  /* Responsive: Portrait tablets and up */
-  @media screen and (min-width: 768px) {
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
     .container {
-      max-width: 730px;
+        max-width: 730px;
     }
     /* Remove the padding we set earlier */
     .footer,
     .header,
     .marketing {
-      padding-right: 0;
-      padding-left: 0;
+        padding-right: 0;
+        padding-left: 0;
     }
     /* Space out the masthead */
     .header {
-      margin-bottom: 30px;
+        margin-bottom: 30px;
     }
     /* Remove the bottom border on the jumbotron for visual effect */
     .jumbotron {
-      border-bottom: 0;
+        border-bottom: 0;
     }
-  }
+}
 
-  // mailchimp
-  .response,
-  div.mce_inline_error {
+// mailchimp
+.response,
+div.mce_inline_error {
     color: #fff;
-  }
+}
