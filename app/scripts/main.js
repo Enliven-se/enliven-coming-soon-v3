@@ -67,14 +67,6 @@ var $mcj = {};
 
   })();
 
-  // process pagepiling
-  $(document).ready(function() {
-    if ($.pagepiling) {
-      $('#pagepiling').pagepiling();
-    }
-  });
-
-
   $.isMobile = function(type) {
     var reg = [];
     var any = {
@@ -116,21 +108,6 @@ var $mcj = {};
       });
     });
 
-    // .mbr-hamburger
-    $(document).on('add.cards change.cards', function(event) {
-      $(event.target).outerFind('.mbr-hamburger:not(.mbr-added)').each(function() {
-        $(this).addClass('mbr-added')
-          .click(function() {
-            $(this)
-              .toggleClass('mbr-hamburger-open')
-              .parents('.mbr-navbar')
-              .toggleClass('mbr-navbar-open')
-              .removeClass('mbr-navbar-short');
-          }).parents('.mbr-navbar').find('a:not(.mbr-hamburger)').click(function() {
-          $('.mbr-hamburger-open').click();
-        });
-      });
-    });
     $(window).smartresize(function() {
       if ($(window).width() > 991)
         $('.mbr-navbar-auto-collapse .mbr-hamburger-open').click();
@@ -154,10 +131,6 @@ var $mcj = {};
       $(window).smartresize(function() {
         $('.mbr-section-full-height').css('height', $(window).height() + 'px');
       });
-      $(document).on('add.cards', function(event) {
-        if ($('html').hasClass('mbr-site-loaded') && $(event.target).outerFind('.mbr-section-full-height').length)
-          $(window).resize();
-      });
     }
 
     // .mbr-section-16by9 (16 by 9 blocks autoheight)
@@ -167,19 +140,6 @@ var $mcj = {};
     $(window).smartresize(function() {
       $('.mbr-section-16by9').each(calculate16by9);
     });
-    $(document).on('add.cards change.cards', function(event) {
-      var enabled = $(event.target).outerFind('.mbr-section-16by9');
-      if (enabled.length) {
-        enabled
-          .attr('data-16by9', 'true')
-          .each(calculate16by9);
-      } else {
-        $(event.target).outerFind('[data-16by9]')
-          .css('height', '')
-          .removeAttr('data-16by9');
-      }
-    });
-
 
     // .mbr-parallax-background
     if ($.fn.jarallax && !$.isMobile()) {
@@ -187,22 +147,6 @@ var $mcj = {};
         $(event.target).outerFind('.mbr-parallax-background')
           .jarallax('destroy')
           .css('position', '');
-      });
-      $(document).on('add.cards change.cards', function(event) {
-        $(event.target).outerFind('.mbr-parallax-background')
-          .jarallax()
-          .css('position', 'relative');
-      });
-    }
-
-    // .mbr-social-likes
-    if ($.fn.socialLikes) {
-      $(document).on('add.cards', function(event) {
-        $(event.target).outerFind('.mbr-social-likes:not(.mbr-added)').on('counter.social-likes', function(event, service, counter) {
-          if (counter > 999) $('.social-likes-counter', event.target).html(Math.floor(counter / 1000) + 'k');
-        }).socialLikes({
-          initHtml: false
-        });
       });
     }
 
@@ -237,174 +181,8 @@ var $mcj = {};
         }
       }
     });
-    $(document).on('add.cards delete.cards', function(event) {
-      if (fixedTopTimeout) clearTimeout(fixedTopTimeout);
-      fixedTopTimeout = setTimeout(function() {
-        if (fixedTop) {
-          fixedTop.fixed = false;
-          $(fixedTop.elm).removeClass('is-fixed');
-        }
-        $('.mbr-fixed-top:first').each(function() {
-          fixedTop = {
-            breakPoint: $(this).offset().top + $(this).height() * 3,
-            fixed: false,
-            elm: this
-          };
-          $(window).scroll();
-        });
-      }, 650);
-    });
-
-    // .mbr-google-map
-    var loadGoogleMap = function() {
-      var $this = $(this),
-        markers = [],
-        coord = function(pos) {
-          return new google.maps.LatLng(pos[0], pos[1]);
-        };
-      var params = $.extend({
-        zoom: 14,
-        type: 'ROADMAP',
-        center: null,
-        markerIcon: null,
-        showInfo: true
-      }, eval('(' + ($this.data('google-map-params') || '{}') + ')'));
-      $this.find('.mbr-google-map-marker').each(function() {
-        var coord = $(this).data('coordinates');
-        if (coord) {
-          markers.push({
-            coord: coord.split(/\s*,\s*/),
-            icon: $(this).data('icon') || params.markerIcon,
-            content: $(this).html(),
-            template: $(this).html('{{content}}').removeAttr('data-coordinates data-icon')[0].outerHTML
-          });
-        }
-      }).end().html('').addClass('mbr-google-map-loaded');
-      if (markers.length) {
-        var map = this.Map = new google.maps.Map(this, {
-          scrollwheel: false,
-          // prevent draggable on mobile devices
-          draggable: !$.isMobile(),
-          zoom: params.zoom,
-          mapTypeId: google.maps.MapTypeId[params.type],
-          center: coord(params.center || markers[0].coord)
-        });
-        $(window).smartresize(function() {
-          var center = map.getCenter();
-          google.maps.event.trigger(map, 'resize');
-          map.setCenter(center);
-        });
-        map.Geocoder = new google.maps.Geocoder;
-        map.Markers = [];
-        $.each(markers, function(i, item) {
-          var marker = new google.maps.Marker({
-            map: map,
-            position: coord(item.coord),
-            icon: item.icon,
-            animation: google.maps.Animation.DROP
-          });
-          var info = marker.InfoWindow = new google.maps.InfoWindow();
-          info._setContent = info.setContent;
-          info.setContent = function(content) {
-            return this._setContent(content ? item.template.replace('{{content}}', content) : '');
-          };
-          info.setContent(item.content);
-          google.maps.event.addListener(marker, 'click', function() {
-            if (info.anchor && info.anchor.visible) info.close();
-            else if (info.getContent()) info.open(map, marker);
-          });
-          if (item.content && params.showInfo) {
-            google.maps.event.addListenerOnce(marker, 'animation_changed', function() {
-              setTimeout(function() {
-                info.open(map, marker);
-              }, 350);
-            });
-          }
-          map.Markers.push(marker);
-        });
-      }
-    };
-    $(document).on('add.cards', function(event) {
-      if (window.google && google.maps) {
-        $(event.target).outerFind('.mbr-google-map').each(function() {
-          loadGoogleMap.call(this);
-        });
-      }
-    });
-
-    // embedded videos
-    $(window).smartresize(function() {
-      $('.mbr-embedded-video').each(function() {
-        $(this).height(
-          $(this).width() *
-          parseInt($(this).attr('height') || 315) /
-          parseInt($(this).attr('width') || 560)
-        );
-      });
-    });
-    $(document).on('add.cards', function(event) {
-      if ($('html').hasClass('mbr-site-loaded') && $(event.target).outerFind('iframe').length)
-        $(window).resize();
-    });
-
-    $(document).on('add.cards', function(event) {
-      $(event.target).outerFind('[data-bg-video]').each(function() {
-        var result,
-          videoURL = $(this).data('bg-video'),
-          patterns = [
-            /\?v=([^&]+)/,
-            /(?:embed|\.be)\/([-a-z0-9_]+)/i,
-            /^([-a-z0-9_]+)$/i
-          ];
-        for (var i = 0; i < patterns.length; i++) {
-          if (result = patterns[i].exec(videoURL)) {
-            var previewURL = 'http' + ('https:' == location.protocol ? 's' : '') + ':';
-            previewURL += '//img.youtube.com/vi/' + result[1] + '/maxresdefault.jpg';
-
-            var $img = $('<div class="mbr-background-video-preview">')
-              .hide()
-              .css({
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
-              });
-            $('.container:eq(0)', this).before($img);
-
-            $('<img>').on('load', function() {
-              if (120 == (this.naturalWidth || this.width)) {
-                // selection of preview in the best quality
-                var file = this.src.split('/').pop();
-                switch (file) {
-                  case 'maxresdefault.jpg':
-                    this.src = this.src.replace(file, 'sddefault.jpg');
-                    break;
-                  case 'sddefault.jpg':
-                    this.src = this.src.replace(file, 'hqdefault.jpg');
-                    break;
-                }
-              } else {
-                $img.css('background-image', 'url("' + this.src + '")')
-                  .show();
-              }
-            }).attr('src', previewURL);
-
-            if ($.fn.YTPlayer && !$.isMobile()) {
-              var params = eval('(' + ($(this).data('bg-video-params') || '{}') + ')');
-              $('.container:eq(0)', this).before('<div class="mbr-background-video"></div>').prev()
-                .YTPlayer($.extend({
-                  videoURL: result[1],
-                  containment: 'self',
-                  showControls: false,
-                  mute: true
-                }, params));
-            }
-            break;
-          }
-        }
-      });
-    });
 
     // init
-    $('body > *:not(style, script)').trigger('add.cards');
     $('html').addClass('mbr-site-loaded');
     $(window).resize().scroll();
 
