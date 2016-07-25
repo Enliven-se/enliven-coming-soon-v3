@@ -1,20 +1,14 @@
 $icon-font-path: '../fonts/';
-
-@import "../fonts/fonts.css";
-@import "./typography.scss";
-
-@import "./_variables.scss";
+@import '../fonts/fonts.css';
+@import 'typography';
+@import '_variables';
 
 // bower:scss
-@import "bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 // endbower
-
-@import "./default.scss";
-
-@import "./animate.min.scss";
-@import "./socicon.min.scss";
-@import "./background.scss";
-
-@import "./mobirise.scss";
-
-@import "./pages.scss";
+@import 'bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import 'default';
+@import 'animate.min';
+@import 'socicon.min';
+@import 'background';
+@import 'mobirise';
+@import 'pages';

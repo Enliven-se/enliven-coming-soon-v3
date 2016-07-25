@@ -1,7 +1,7 @@
 .browserupgrade {
-  margin: 0.2em 0;
-  padding: 0.2em 0;
-  color: #000;
+  margin    : 0.2em 0;
+  padding   : 0.2em 0;
+  color     : #000;
   background: #ccc;
 }
 // Space out content a bit
@@ -15,7 +15,7 @@ body {
 .header,
 .marketing {
   padding-right: 15px;
-  padding-left: 15px;
+  padding-left : 15px;
 }
 // Custom page header
 
@@ -23,9 +23,9 @@ body {
   border-bottom: 1px solid #e5e5e5;
   // Make the masthead heading the same height as the navigation
   h3 {
-    line-height: 40px;
-    margin-top: 0;
-    margin-bottom: 0;
+    line-height   : 40px;
+    margin-top    : 0;
+    margin-bottom : 0;
     padding-bottom: 19px;
   }
 }
@@ -33,8 +33,8 @@ body {
 
 .footer {
   padding-top: 19px;
-  color: #777;
-  border-top: 1px solid #e5e5e5;
+  color      : #777;
+  border-top : 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {
@@ -43,12 +43,12 @@ body {
 // Main marketing message and sign up button
 
 .jumbotron {
-  text-align: center;
+  text-align   : center;
   border-bottom: 1px solid #e5e5e5;
 
   .btn {
     font-size: 21px;
-    padding: 14px 24px;
+    padding  : 14px 24px;
   }
 }
 // Supporting marketing content
@@ -63,21 +63,20 @@ body {
 
 .btn {
   margin-bottom: 1em;
-  max-width: 200px;
-  white-space: normal;
+  max-width    : 200px;
+  white-space  : normal;
 }
 
 #how-does-it-work {
-  position: relative;
+  position    : relative;
   padding-left: 15px;
 }
 
 #join-a-global-community {
-  margin: 0;
-  padding: 0;
-  //margin-top: 5px;
+  margin    : 0;
+  padding   : 0;
   text-align: left;
-  border: 0;
+  border    : 0;
 }
 
 #frequently-asked-questions {
@@ -86,8 +85,8 @@ body {
 
 #finalh h2 {
   font-family: AvenirNext-MediumItalic;
-  font-size: 20px;
-  color: #000;
+  font-size  : 20px;
+  color      : #000;
 }
 
 .teco {
@@ -95,23 +94,23 @@ body {
 }
 
 .teco h2 {
-  font-size: 16px;
+  font-size  : 16px;
   font-weight: bold;
-  margin-top: 30px;
+  margin-top : 30px;
 }
 
 #submission-guidelines {
-  padding-top: 100px;
+  padding-top  : 100px;
   border-bottom: 1px solid #aaa;
 }
 
 #privacy-security {
-  padding-top: 100px;
+  padding-top  : 100px;
   border-bottom: 1px solid #aaa;
 }
 
 #terms-conditions {
-  padding-top: 100px;
+  padding-top  : 100px;
   border-bottom: 1px solid #aaa;
 }
 
@@ -129,17 +128,17 @@ body {
 
 #want-to-become-an-enliven-contributor {
   line-height: 43px;
-  color: #fff;
+  color      : #fff;
 }
 
 #our-vision {
-  line-height: 30px;
+  line-height  : 30px;
   margin-bottom: 80px;
 }
 
 .bkg12 {
-  width: 100%;
-  padding: 33px 0 100px;
+  width           : 100%;
+  padding         : 33px 0 100px;
   background-color: $gray-lighter;
 }
 
@@ -152,14 +151,14 @@ body {
 }
 
 .bkg14 {
-  width: 100%;
-  padding: 33px 0 100px;
+  width           : 100%;
+  padding         : 33px 0 100px;
   background-color: white;
 }
 
 #singlebutton {
-  width: 155px;
-  margin-top: 45px;
+  width      : 155px;
+  margin-top : 45px;
   white-space: normal;
 }
 
@@ -169,30 +168,30 @@ body {
 
 .teco h2 {
   font-family: AvenirNext-MediumItalic;
-  font-size: 20px;
+  font-size  : 20px;
   font-weight: normal;
-  color: #000;
+  color      : #000;
 }
 
 .features {
   padding-bottom: 30px;
-  padding-left: 0;
+  padding-left  : 0;
 }
 
 .features .glyphicon {
-  font-size: 32px;
-  display: block;
+  font-size     : 32px;
+  display       : block;
   padding-bottom: 20px;
-  text-align: center;
+  text-align    : center;
 }
 
 .features a {
-  font-size: 14px;
-  line-height: 40px;
-  margin-top: 20px;
-  text-align: center;
+  font-size      : 14px;
+  line-height    : 40px;
+  margin-top     : 20px;
+  text-align     : center;
   text-decoration: underline;
-  color: grey;
+  color          : grey;
 }
 
 #creative-work {
@@ -200,12 +199,12 @@ body {
 }
 
 .connections {
-  padding-top: 110px;
+  padding-top   : 110px;
   padding-bottom: 110px;
 }
 
 #below {
-  padding-top: 30px;
+  padding-top   : 30px;
   padding-bottom: 30px;
 }
 
@@ -214,39 +213,39 @@ body {
 }
 
 #singlebutton2 {
-  width: 155px;
-  margin-top: 45px;
+  width        : 155px;
+  margin-top   : 45px;
   margin-bottom: 45px;
-  white-space: normal;
+  white-space  : normal;
 }
 
 #singlebutton3 {
-  width: 100px;
+  width      : 100px;
   white-space: normal;
 }
 
 .faq h2 {
   font-family: AvenirNext-MediumItalic;
-  font-size: 20px;
+  font-size  : 20px;
   line-height: 25px;
-  color: #000;
+  color      : #000;
 }
 //about enliven
 
 .bkg15 {
-  width: 100%;
-  padding: 33px 0;
+  width           : 100%;
+  padding         : 33px 0;
   background-color: $gray-lighter;
 }
 
 .bkg15 blockquote {
-  padding: 0;
+  padding    : 0;
   border-left: 0;
 }
 
 .agrey {
   text-decoration: underline;
-  color: grey;
+  color          : grey;
 }
 
 .bkg15 h2 {
@@ -254,14 +253,14 @@ body {
 }
 
 .bkg16 {
-  width: 100%;
-  padding: 16px 0 33px;
+  width           : 100%;
+  padding         : 16px 0 33px;
   background-color: white;
 }
 
 .bkg17 {
-  width: 100%;
-  padding: 33px 0;
+  width           : 100%;
+  padding         : 33px 0;
   background-color: white;
 }
 
@@ -278,7 +277,7 @@ body {
   .header,
   .marketing {
     padding-right: 0;
-    padding-left: 0;
+    padding-left : 0;
   }
   // Space out the masthead
   .header {

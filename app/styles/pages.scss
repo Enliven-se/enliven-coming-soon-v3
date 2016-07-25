@@ -1,24 +1,24 @@
 .hero {
-  background: transparent no-repeat scroll 0 0;
+  background     : transparent no-repeat scroll 0 0;
   background-size: cover;
-  margin-top: 119px;
-  min-height: 50vmin;
-  position: relative;
+  margin-top     : 119px;
+  min-height     : 50vmin;
+  position       : relative;
 
   &.contributor-faq {
-    background-image: url(../images/heroes/hero-contributor-faq.jpg);
+    background-image: url("../images/heroes/hero-contributor-faq.jpg");
   }
-  
+
   &.about {
-    background-image: url(../images/heroes/hero-about-enliven.jpg);
+    background-image: url("../images/heroes/hero-about-enliven.jpg");
   }
 
   &.become-a-contributor {
-    background-image: url(../images/heroes/hero-become-a-contributor.jpg);
+    background-image: url("../images/heroes/hero-become-a-contributor.jpg");
   }
-  
+
   .title {
     position: absolute;
-    bottom: 0;
+    bottom  : 0;
   }
 }
