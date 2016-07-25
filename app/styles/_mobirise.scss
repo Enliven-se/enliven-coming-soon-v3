@@ -55,13 +55,13 @@ html {
 .mbr-navbar-brand-img,
 .mbr-navbar-brand-link:after {
   max-height: 88px;
-  @media screen and (max-width: 767px) {
+  @media screen and (max-width: $screen-xs-max) {
     max-height: 74px;
   }
 }
 
-.mbr-navbar:before,
-.mbr-navbar-container {
+.mbr-navbar-container,
+.mbr-navbar:before {
   height: 98px;
 }
 
@@ -125,45 +125,48 @@ html {
   height: 152px;
 }
 
-.mbr-navbar-short .mbr-navbar-brand-img,
-.mbr-navbar-short .mbr-navbar-brand-link:after {
-  height: 40px;
-}
+// short navbar
 
-.mbr-navbar-short .mbr-navbar-container,
-.mbr-navbar-short:before {
-  height: 64px;
-}
-
-.mbr-navbar-short .mbr-navbar-container {
-  padding: 12px 0;
-}
-@media (max-width:767px) {
-  .mbr-navbar-short .mbr-navbar-brand-img,
-  .mbr-navbar-short .mbr-navbar-brand-link:after {
-    height: 31px;
+.mbr-navbar-short {
+  .mbr-navbar-brand-img,
+  .mbr-navbar-brand-link:after {
+    height: 75px;
   }
 
-  .mbr-navbar-short .mbr-navbar-container,
-  .mbr-navbar-short:before {
-    height: 45px;
+  &:before,
+  .mbr-navbar-container {
+    height: 64px;
   }
 
-  .mbr-navbar-short .mbr-navbar-container {
-    padding: 7px 0;
+  .mbr-navbar-container {
+    padding: 0;
+  }
+  @media (max-width:$screen-xs-max) {
+    .mbr-navbar-brand-img,
+    .mbr-navbar-brand-link:after {
+      height: 31px;
+    }
+
+    &:before,
+    .mbr-navbar-container {
+      height: 45px;
+    }
+
+    .mbr-navbar-container {
+      padding: 7px 0;
+    }
   }
 }
 
 .mbr-navbar-brand-img {
+  height  : 100%;
   position: relative;
 }
 
 .mbr-navbar-brand-img,
 .mbr-navbar-container,
 .mbr-navbar-section {
-  -webkit-transition: all 300ms ease-in-out 0s;
-  -o-transition     : all 300ms ease-in-out 0s;
-  transition        : all 300ms ease-in-out 0s;
+  transition: all 300ms ease-in-out 0s;
 }
 
 .mbr-navbar-section {
@@ -176,9 +179,10 @@ html {
 }
 
 .mbr-navbar-container {
-  display: table;
-  width  : 100%;
-  padding: 12px 0;
+  display  : table;
+  min-width: 250px;
+  width    : 100%;
+  padding  : 12px 0;
 }
 
 .mbr-navbar-menu-box {
@@ -264,7 +268,7 @@ html {
   top       : 50%;
   right     : 28px;
   display   : none;
-  margin-top: -11px;
+  margin-top: -12px;
 }
 
 .mbr-navbar-collapsed .mbr-navbar-container {
@@ -327,9 +331,7 @@ html {
 
 .mbr-navbar-collapsed.mbr-navbar-open .mbr-navbar-brand-img,
 .mbr-navbar-collapsed.mbr-navbar-open .mbr-navbar-container {
-  -webkit-transition: none;
-  -o-transition     : none;
-  transition        : none;
+  transition: none;
 }
 
 .mbr-navbar-freeze.mbr-navbar-collapsed.mbr-navbar-open .mbr-navbar-hamburger,
@@ -343,9 +345,10 @@ html {
 
 .mbr-navbar-absolute {
   position: absolute;
+  top     : 0;
 }
 // fix for popup menu conflict
-@media (max-width:480px) {
+@media (max-width:$screen-xs-min) {
   .mbr-navbar-absolute.mbr-navbar[id^=menu-] {
     position: absolute;
   }
@@ -359,7 +362,7 @@ html {
 .mbr-navbar-stuck .mbr-navbar-section {
   background: #2c2c2c;
 }
-@media (max-width:991px) {
+@media (max-width:$screen-sm-max) {
   .mbr-navbar-auto-collapse .mbr-navbar-container {
     position: relative;
   }
@@ -430,9 +433,7 @@ html {
 
   .mbr-navbar-auto-collapse.mbr-navbar-open .mbr-navbar-brand-img,
   .mbr-navbar-auto-collapse.mbr-navbar-open .mbr-navbar-container {
-    -webkit-transition: none;
-    -o-transition     : none;
-    transition        : none;
+    transition: none;
   }
 }
 
@@ -481,8 +482,7 @@ html {
 .mbr-hamburger-line,
 .mbr-hamburger-line:after,
 .mbr-hamburger-line:before {
-  -webkit-transition: all 300ms ease-in-out;
-  transition        : all 300ms ease-in-out;
+  transition: all 300ms ease-in-out;
 }
 
 .mbr-hamburger-open .mbr-hamburger-line {
@@ -506,7 +506,7 @@ html {
   -ms-transform    : translatey(-10px) rotate(-45deg);
   transform        : translatey(-10px) rotate(-45deg);
 }
-@media (max-width:767px) {
+@media (max-width:$screen-xs-max) {
   .mbr-hamburger {
     width : 27px;
     height: 23px;
@@ -743,7 +743,7 @@ html {
   margin     : -10px 0 0;
   text-align : center;
 }
-@media (min-width:768px) {
+@media (min-width:$screen-sm-min) {
   .mbr-section-short-paddings .mbr-section-container-std-padding {
     padding: 59px 0;
   }
@@ -786,7 +786,7 @@ html {
     padding-bottom: 59px;
   }
 }
-@media (max-width:767px) {
+@media (max-width:$screen-xs-max) {
   .mbr-section-left {
     padding-right: 15px;
   }
@@ -877,7 +877,7 @@ html {
 .mbr-arrow-dark .mbr-arrow-link:hover {
   color: #252525;
 }
-@media (max-width:767px) {
+@media (max-width:$screen-xs-max) {
   .mbr-arrow {
     bottom: 41px;
   }
@@ -948,7 +948,7 @@ html {
 .mbr-box-container {
   height: 50%;
 }
-@media (max-width:767px) {
+@media (max-width:$screen-xs-max) {
   .mbr-box-container {
     height: 100%;
   }
@@ -991,11 +991,16 @@ html {
 .mbr-hero-text {
   color         : #000;
   font-size     : 54px;
-  line-height   : 50px;
+  line-height   : 120%;
   margin        : 20px auto;
   max-width     : 400px;
   padding-bottom: 41px;
   text-shadow   : 0 0 1px #eee;
+}
+
+.front .mbr-hero-text,
+.title {
+  font-size: 64px;
 }
 
 .mbr-hero-subtext {
@@ -1106,7 +1111,7 @@ html {
   z-index   : 2;
   background: none;
 }
-@media (min-width:768px) {
+@media (min-width:$screen-sm-min) {
   .mbr-figure-caption-std-grid {
     left       : 50%;
     width      : 715px;
@@ -1114,7 +1119,7 @@ html {
     padding    : 17px 0;
   }
 }
-@media (min-width:992px) {
+@media (min-width:$screen-md-min) {
   .mbr-figure-caption-std-grid {
     width      : 935px;
     margin-left: -467.5px;
@@ -1153,7 +1158,7 @@ html {
 .mbr-figure-no-bg.mbr-figure-caption-outside-top .mbr-figure-caption-small {
   color: #777;
 }
-@media (max-width:767px) {
+@media (max-width:$screen-xs-max) {
   .mbr-figure-adapted {
     display: block;
     width  : 100%;
@@ -1252,7 +1257,7 @@ html {
   font-size: 12px;
   color    : #999;
 }
-@media (max-width:767px) {
+@media (max-width:$screen-xs-max) {
   .mbr-reviews-author {
     padding-bottom: 32px;
   }
@@ -1261,17 +1266,17 @@ html {
     padding-bottom: 1px;
   }
 }
-@media (min-width:768px) and (max-width:991px) {
+@media (min-width:$screen-sm-min) and (max-width:$screen-sm-max) {
   .mbr-reviews-item:nth-of-type(2n+1) {
     clear: left;
   }
 }
-@media (min-width:992px) {
+@media (min-width:$screen-md-min) {
   .mbr-reviews-item:nth-of-type(3n+1) {
     clear: left;
   }
 }
-@media (max-width:991px) {
+@media (max-width:$screen-sm-max) {
   .mbr-header-reduce .mbr-header-text {
     margin-top : -1em;
     padding-top: 1em;
@@ -1300,8 +1305,7 @@ html {
 }
 
 .text-sign-up {
-  font-size  : 30px;
-  color      : #FFFFFF;
+  font-size  : 30px !important;
   line-height: 3em;
 }
 
@@ -1329,7 +1333,7 @@ html {
   line-height: 1em;
   margin     : 15px 0 0;
 }
-@media (max-width:767px) {
+@media (max-width:$screen-xs-max) {
   .mbr-header-inline {
     padding: 47px 0 38px;
   }
@@ -1345,7 +1349,7 @@ html {
     text-align: center !important;
   }
 }
-@media (min-width:768px) {
+@media (min-width:$screen-sm-min) {
   .mbr-header-reduce {
     top       : 2px;
     margin-top: -5px;
@@ -1360,19 +1364,17 @@ html {
 }
 
 .mbr-social-icons-icon {
-  font-size         : 29px;
-  line-height       : 61px;
-  position          : relative;
-  display           : inline-block;
-  width             : 56px;
-  height            : 56px;
-  margin            : 0 10px 13px 0;
-  cursor            : pointer;
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  -o-transition     : all 0.2s ease-in-out 0s;
-  transition        : all 0.2s ease-in-out 0s;
-  text-align        : center;
-  color             : #fff;
+  font-size  : 29px;
+  line-height: 61px;
+  position   : relative;
+  display    : inline-block;
+  width      : 56px;
+  height     : 56px;
+  margin     : 0 10px 13px 0;
+  cursor     : pointer;
+  transition : all 0.2s ease-in-out 0s;
+  text-align : center;
+  color      : #fff;
 }
 
 .mbr-social-icons-icon:hover {
@@ -1392,7 +1394,6 @@ html {
 
 .mbr-contacts-img {
   max-width: 100%;
-  margin   : 0 0 5px 5px;
 }
 
 .mbr-contacts-img-left {
@@ -1415,7 +1416,7 @@ html {
   padding   : 0;
   list-style: none;
 }
-@media (max-width:767px) {
+@media (max-width:$screen-xs-max) {
   .mbr-contacts-img {
     margin-bottom: 10px;
   }
@@ -1432,8 +1433,8 @@ html {
 
 .mbr-footer {
   font-size   : 13px;
-  line-height : 1.5em;
-  padding     : 37px 0 39px;
+  line-height : 1em;
+  padding     : 20px 0;
   word-spacing: 1px;
   color       : #9c9c9c;
 }
@@ -1444,14 +1445,13 @@ html {
 
 .mbr-buttons {
   position  : relative;
-  top       : 26px;
-  margin    : 0 0 13px;
+  margin    : 0;
   text-align: left;
 }
 
 .mbr-buttons-btn,
 .mbr-buttons-link {
-  margin: 0 10px 13px 0;
+  margin: 0;
 }
 
 .mbr-buttons-btn,
@@ -1491,11 +1491,13 @@ html {
 .mbr-buttons-right .mbr-buttons-btn,
 .mbr-buttons-right .mbr-buttons-link {
   font-size  : 18px;
-  margin     : 0 0 38px 10px;
+  margin     : 0;
   color      : #000;
-  max-width  : 116px;
   text-align : left;
   white-space: normal;
+  @media (min-width:$screen-sm-max) {
+    max-width: 116px;
+  }
 }
 
 .mbr-buttons-right.mbr-buttons-only-links {
@@ -1536,7 +1538,7 @@ html {
 .mbr-buttons-freeze.mbr-buttons-activated .mbr-buttons-btn {
   font-size: 15px !important;
 }
-@media (max-width:991px) {
+@media (max-width:$screen-sm-max) {
   .mbr-buttons {
     top: 0;
   }
@@ -1584,7 +1586,7 @@ html {
     font-size: 15px !important;
   }
 }
-@media (max-width:767px) {
+@media (max-width:$screen-xs-max) {
   .mbr-buttons-auto-align {
     top       : 26px;
     left      : 5px;
@@ -1601,10 +1603,10 @@ html {
     left: 0;
   }
 
-  .mbr-buttons-right .mbr-buttons-btn,
-  .mbr-buttons-right .mbr-buttons-link,
   .mbr-buttons-btn,
-  .mbr-buttons-link {
+  .mbr-buttons-link,
+  .mbr-buttons-right .mbr-buttons-btn,
+  .mbr-buttons-right .mbr-buttons-link {
     display   : inline-block;
     width     : 100%;
     margin    : 0 0 13px;
@@ -1681,7 +1683,7 @@ html {
   font-size   : 17px;
   border-color: #f97352;
 }
-@media (max-width:767px) {
+@media (max-width:$screen-xs-max) {
   .mbr-article-auto-align,
   .mbr-article-auto-align.mbr-article-wysiwyg p {
     text-align: left !important;
@@ -1689,20 +1691,18 @@ html {
 }
 
 .social-likes-counter {
-  font-size         : 12px;
-  line-height       : 24px;
-  position          : absolute;
-  top               : -7px;
-  right             : -7px;
-  min-width         : 23px;
-  height            : 23px;
-  padding           : 0 5px;
-  -webkit-transition: all 0.2s ease-in-out 0s;
-  -o-transition     : all 0.2s ease-in-out 0s;
-  transition        : all 0.2s ease-in-out 0s;
-  text-align        : center;
-  border-radius     : 23px;
-  background        : #3c3c3c;
+  font-size    : 12px;
+  line-height  : 24px;
+  position     : absolute;
+  top          : -7px;
+  right        : -7px;
+  min-width    : 23px;
+  height       : 23px;
+  padding      : 0 5px;
+  transition   : all 0.2s ease-in-out 0s;
+  text-align   : center;
+  border-radius: 23px;
+  background   : #3c3c3c;
 }
 
 .social-likes-counter_empty {
@@ -1828,7 +1828,7 @@ html {
 .mbr-plan-danger .mbr-plan-header {
   background: #f97352;
 }
-@media (max-width:767px) {
+@media (max-width:$screen-xs-max) {
   .mbr-plan,
   .mbr-plan-first,
   .mbr-plan:first-child {
@@ -1935,16 +1935,12 @@ html {
   font-size: 16px;
 }
 
-#ext_menu-0.mbr-navbar-stuck .mbr-navbar-section {
-  background: $gray-lighter;
-}
-
 #ext_menu-0 .mbr-navbar-section {
-  background: $gray-lighter;
+  background: #fff;
 }
 
 #ext_menu-0 .mbr-navbar-hamburger {
-  color: #fff;
+  color: $hamburger-color;
 }
 
 #msg-box4-3 .mbr-header-text {
@@ -2038,6 +2034,7 @@ html {
 
 #social-buttons1-10 {
   background-color: $gray-darker;
+  padding-top     : 20px;
 }
 
 .mbr-contacts.mbr-contacts--wysiwyg.row {
@@ -2045,39 +2042,31 @@ html {
   padding-bottom: 5px;
 }
 
-.mbr-footer.mbr-footer--wysiwyg.row {
-  padding-top   : 36px;
-  padding-bottom: 36px;
-}
-
-.mbr-footer-copyright.mbr-editable-content {
+.mbr-footer-copyright {
   text-align: center;
 }
 
 .mbr-header.mbr-header--inline.row {
-  padding-top   : 40.8px;
-  padding-bottom: 2.8px;
+  padding-top: 20px;
 }
 
-.mbr-header-text.mbr-editable-content {
-  font-size: 21px;
-}
-
-.mbr-header-text.mbr-editable-content {
-  font-size: 32px;
+.mbr-header-text {
+  font-size  : 36px;
+  line-height: 110%;
 }
 
 .mbr-section.mbr-section--relative.mbr-section--fixed-size.mbr-parallax-background {
-  background-image: url('../images/bg-lynch-med.jpg') !important;
+  background-image: url('../images/bg-lynch-hidef.jpg') !important;
 }
 
 .mbr-section.mbr-section--relative.mbr-section--fixed-size {
   background-color: $gray-darker;
 }
 
+// lnch
 .mbr-section-container.mbr-section-container--std-padding.container {
-  padding-top   : 93px;
-  padding-bottom: 93px;
+  padding-top   : 160px;
+  padding-bottom: 160px;
 }
 
 .mbr-section-container.mbr-section-container-isolated.container {

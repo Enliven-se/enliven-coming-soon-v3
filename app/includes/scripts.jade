@@ -21,7 +21,10 @@ script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scroll
 script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
 script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
 // endbuild
-script(src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js', async='')
+
+if is_front
+  script(src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js', async='')
+  
 // build:js scripts/main.js
 script(src='scripts/main.js')
 // endbuild

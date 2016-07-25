@@ -63,8 +63,19 @@ body {
 
 .btn {
   margin-bottom: 1em;
-  max-width    : 200px;
   white-space  : normal;
+  @media (min-width:$screen-sm-max) {
+    max-width: 200px;
+  }
+}
+
+#textinput {
+  width: 100%;
+}
+
+.form-group-email {
+  width        : 300px;
+  padding-right: 35px;
 }
 
 #how-does-it-work {
@@ -126,9 +137,12 @@ body {
   padding-bottom: 30px;
 }
 
+.cta {
+  padding: 20px 0;
+}
+
 #want-to-become-an-enliven-contributor {
-  line-height: 43px;
-  color      : #fff;
+  color: #fff;
 }
 
 #our-vision {
@@ -220,8 +234,9 @@ body {
 }
 
 #singlebutton3 {
-  width      : 100px;
-  white-space: normal;
+  margin-bottom: 0;
+  width        : 100px;
+  white-space  : normal;
 }
 
 .faq h2 {
@@ -268,7 +283,7 @@ body {
   padding-bottom: 50px;
 }
 // Responsive: Portrait tablets and up
-@media screen and (min-width: 768px) {
+@media screen and (min-width: $screen-sm-min) {
   .container {
     max-width: 730px;
   }
