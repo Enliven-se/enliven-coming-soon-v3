@@ -445,13 +445,13 @@ var $mcj = {};
   });
 
   // vimeofy
-  $('.front #background').vimeofy({
-    url: 'https://vimeo.com/170180787',
-    color: '#00D8D8',
-    autoplay: true,
-    loop: true,
-    delay: 5e3
-  });
+  // $('.front #background').vimeofy({
+  //   url: 'https://vimeo.com/170180787',
+  //   color: '#00D8D8',
+  //   autoplay: true,
+  //   loop: true,
+  //   delay: 5e3
+  // });
 
   // MailChimp
   window.fnames = new Array();
