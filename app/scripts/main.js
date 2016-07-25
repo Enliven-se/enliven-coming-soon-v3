@@ -199,7 +199,7 @@ var $mcj = {};
     if ($.fn.socialLikes) {
       $(document).on('add.cards', function(event) {
         $(event.target).outerFind('.mbr-social-likes:not(.mbr-added)').on('counter.social-likes', function(event, service, counter) {
-          if (counter > 999) $('.social-likes__counter', event.target).html(Math.floor(counter / 1000) + 'k');
+          if (counter > 999) $('.social-likes-counter', event.target).html(Math.floor(counter / 1000) + 'k');
         }).socialLikes({
           initHtml: false
         });
@@ -269,7 +269,7 @@ var $mcj = {};
         markerIcon: null,
         showInfo: true
       }, eval('(' + ($this.data('google-map-params') || '{}') + ')'));
-      $this.find('.mbr-google-map__marker').each(function() {
+      $this.find('.mbr-google-map-marker').each(function() {
         var coord = $(this).data('coordinates');
         if (coord) {
           markers.push({
