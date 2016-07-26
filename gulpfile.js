@@ -85,7 +85,9 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
       collapseWhitespace: true
     })))
     .pipe(gulp.dest('dist'))
-    .pipe(reload());
+/*
+    .pipe(reload())
+*/ ;
 });
 
 gulp.task('images', () => {

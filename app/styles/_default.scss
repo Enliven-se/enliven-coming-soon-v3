@@ -110,26 +110,15 @@ body {
   margin-top : 30px;
 }
 
-#submission-guidelines {
-  padding-top  : 100px;
-  border-bottom: 1px solid #aaa;
-}
-
-#privacy-security {
-  padding-top  : 100px;
-  border-bottom: 1px solid #aaa;
-}
-
+#privacy-security,
+#submission-guidelines,
 #terms-conditions {
   padding-top  : 100px;
   border-bottom: 1px solid #aaa;
 }
 
+#introduction,
 #overview {
-  padding-top: 30px;
-}
-
-#introduction {
   padding-top: 30px;
 }
 
@@ -145,28 +134,19 @@ body {
   color: #fff;
 }
 
-#our-vision {
-  line-height  : 30px;
-  margin-bottom: 80px;
+.become-a-contributor h4 {
+  margin: 20px 0;
 }
 
 .bkg12 {
   width           : 100%;
-  padding         : 33px 0 100px;
+  padding         : 30px 0;
   background-color: $gray-lighter;
-}
-
-#build-your-brand-and-connect-with-a-global-audience {
-  margin-bottom: 100px;
-}
-
-#we-share-the-revenue {
-  margin-bottom: 100px;
 }
 
 .bkg14 {
   width           : 100%;
-  padding         : 33px 0 100px;
+  padding         : 30px 0;
   background-color: white;
 }
 
@@ -206,10 +186,6 @@ body {
   text-align     : center;
   text-decoration: underline;
   color          : grey;
-}
-
-#creative-work {
-  margin-bottom: 100px;
 }
 
 .connections {
