@@ -19,7 +19,9 @@
   }
 
   .title {
-    position: absolute;
-    bottom  : 0;
+    @media (min-width: $screen-md) {
+      position: absolute;
+      bottom  : 0;
+    }
   }
 }

@@ -661,6 +661,10 @@ html {
   z-index : 3;
 }
 
+.mbr-navbar-section .mbr-section-container {
+  padding-left: 0;
+}
+
 .mbr-section-container-center {
   text-align: center;
 }
@@ -988,7 +992,10 @@ html {
 
 .front .mbr-hero-text,
 .title {
-  font-size: 64px;
+  font-size: 42px;
+  @media (min-width: $screen-md) {
+    font-size: 64px;
+  }
 }
 
 .mbr-hero-subtext {
@@ -1293,8 +1300,9 @@ html {
 }
 
 .text-sign-up {
-  font-size  : 30px !important;
-  line-height: 3em;
+  font-size    : 30px;
+  line-height  : 1.5em;
+  margin-bottom: 1em;
 }
 
 .mbr-header-text {
