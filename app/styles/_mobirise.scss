@@ -1987,6 +1987,9 @@ html {
   text-align: center;
   word-break: normal;
   color     : #fff;
+  @media (max-width: $screen-sm) {
+    font-size: 24px;
+  }
 }
 
 #section6 li {
