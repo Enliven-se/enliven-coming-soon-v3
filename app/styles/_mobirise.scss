@@ -989,7 +989,11 @@ html {
 .front .mbr-hero-text,
 .title {
   font-size: 64px;
-}
+  @media (max-width:$screen-xs-min) {
+           font-size: 54px;
+         }
+  }
+
 
 .mbr-hero-subtext {
   font-size  : 21px;
@@ -1980,6 +1984,10 @@ html {
   padding-top     : 40.8px;
   padding-bottom  : 40.8px;
   background-color: #15447b;
+  @media (max-width:$screen-md-min) {
+    padding-top     : 0;
+    padding-bottom  : 0;
+           }
 }
 
 #section4 h4 {
@@ -1987,9 +1995,12 @@ html {
   text-align: center;
   word-break: normal;
   color     : #fff;
-  @media (max-width: $screen-sm) {
-    font-size: 24px;
-  }
+  @media (max-width:$screen-xs-min) {
+    margin-bottom: 40px;
+           }
+
+
+
 }
 
 #section6 li {
