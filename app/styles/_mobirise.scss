@@ -266,7 +266,7 @@ html {
   position  : absolute;
   z-index   : 10000;
   top       : 50%;
-  right     : 28px;
+  right     : 10px;
   display   : none;
   margin-top: -12px;
 }
@@ -444,7 +444,7 @@ html {
 }
 
 .mbr-hamburger {
-  width : 30px;
+  width : 20px;
   height: 23px;
   cursor: pointer;
 }
@@ -456,33 +456,23 @@ html {
 .mbr-hamburger-line,
 .mbr-hamburger-line:after,
 .mbr-hamburger-line:before {
-  position: absolute;
-  display : block;
-  height  : 1px;
-  content : '';
-  cursor  : pointer;
-}
-
-.mbr-hamburger-line,
-.mbr-hamburger-line:after,
-.mbr-hamburger-line:before {
+  border-bottom: 2px solid;
+  content      : '';
+  cursor       : pointer;
+  display      : block;
+  height       : 1px;
+  position     : absolute;
   top          : 9px;
+  transition   : all 300ms ease-in-out;
   width        : 30px;
-  border-bottom: 5px solid;
 }
 
 .mbr-hamburger-line:before {
-  top: -9px;
+  top: -5px;
 }
 
 .mbr-hamburger-line:after {
-  top: 9px;
-}
-
-.mbr-hamburger-line,
-.mbr-hamburger-line:after,
-.mbr-hamburger-line:before {
-  transition: all 300ms ease-in-out;
+  top: 5px;
 }
 
 .mbr-hamburger-open .mbr-hamburger-line {
@@ -508,24 +498,23 @@ html {
 }
 @media (max-width:$screen-xs-max) {
   .mbr-hamburger {
-    width : 27px;
+    width : 20px;
     height: 23px;
   }
 
   .mbr-hamburger-line,
   .mbr-hamburger-line:after,
   .mbr-hamburger-line:before {
-    top          : 9px;
-    width        : 27px;
-    border-bottom: 4px solid;
+    top  : 10px;
+    width: 27px;
   }
 
   .mbr-hamburger-line:before {
-    top: -9px;
+    top: -5px;
   }
 
   .mbr-hamburger-line:after {
-    top: 9px;
+    top: 5px;
   }
 }
 
@@ -670,7 +659,6 @@ html {
 .mbr-section-container {
   position: relative;
   z-index : 3;
-  padding : 0;
 }
 
 .mbr-section-container-center {
@@ -1936,7 +1924,9 @@ html {
 }
 
 #ext_menu-0 .mbr-navbar-section {
-  background: #fff;
+  background   : #fff;
+  padding-right: 0;
+  box-sizing   : border-box;
 }
 
 #ext_menu-0 .mbr-navbar-hamburger {
