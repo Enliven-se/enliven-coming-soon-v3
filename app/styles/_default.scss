@@ -258,6 +258,9 @@ body {
 
 #our-mission-is-to-inspire-and-activate-your-life {
   padding-bottom: 50px;
+  @media (max-width:$screen-md-min) {
+    padding-bottom: 20px;
+           }
 }
 // Responsive: Portrait tablets and up
 @media screen and (min-width: $screen-sm-min) {
