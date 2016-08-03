@@ -25,3 +25,25 @@
     }
   }
 }
+
+.responsive-table {
+  .table-cell {
+    position: relative;
+
+    .align-bottom {
+      position  : absolute;
+      bottom    : 0;
+      width     : 100%;
+      text-align: center;
+    }
+  }
+}
+
+.become-a-contributor .responsive-table {
+  .table-cell {
+    padding-bottom: 2em;
+    @media (min-width:$screen-sm-max) {
+      min-height: 200px;
+    }
+  }
+}
