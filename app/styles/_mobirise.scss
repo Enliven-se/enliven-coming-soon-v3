@@ -992,7 +992,7 @@ html {
 
 .front .mbr-hero-text,
 .title {
-  font-size: 64px;
+  font-size: 52px;
   @media (max-width:$screen-xs-min) {
     font-size: 42px;
   }
@@ -1985,8 +1985,6 @@ html {
 }
 
 #section4 {
-  padding-top     : 40.8px;
-  padding-bottom  : 40.8px;
   background-color: #15447b;
   @media (max-width:$screen-md-min) {
     padding-top   : 0;
@@ -1995,7 +1993,7 @@ html {
 }
 
 #section4 h4 {
-  font-size : 20px;
+  font-size : 24px;
   text-align: center;
   word-break: normal;
   color     : #fff;
