@@ -29,10 +29,11 @@ export default function($) {
   };
 
   // vimeofy
+  var autoplay = (self.location.port != 9000);
   $('.front #background').vimeofy({
     url: 'https://vimeo.com/170180787',
     color: '#00D8D8',
-    autoplay: true,
+    autoplay: autoplay,
     loop: true,
     delay: 5e3
   });
