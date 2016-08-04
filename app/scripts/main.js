@@ -4,7 +4,6 @@ import init from './_init';
 import ready from './_ready';
 
 import isSupportViewportUnits from './_isSupportViewportUnits';
-import smartresize from './_smartresize';
 // import scrollbarWidth from './_scrollbarWidth';
 import mobirise from './_mobirise';
 
@@ -13,8 +12,6 @@ import mobirise from './_mobirise';
 (function($) {
 
   init($);
-
-  smartresize($, 'smartresize');
 
   // scrollbarWidth();
 

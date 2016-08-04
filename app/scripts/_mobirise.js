@@ -63,8 +63,8 @@ export default function($, isSupportViewportUnits) {
     });
   });
 
-  // smartresize
-  $(window).smartresize(function() {
+  // smartResize
+  $(window).smartResize(function() {
     if ($(window).width() > 991) {
       $('.mbr-navbar-auto-collapse .mbr-hamburger-open').click();
     }
@@ -81,7 +81,7 @@ export default function($, isSupportViewportUnits) {
       var deviceSize = [width, width];
       deviceSize[height > width ? 0 : 1] = height;
 
-      $(window).smartresize(function() {
+      $(window).smartResize(function() {
         var windowHeight = $(window).height();
         if ($.inArray(windowHeight, deviceSize) < 0)
           windowHeight = deviceSize[$(window).width() > windowHeight ? 1 : 0];
@@ -89,7 +89,7 @@ export default function($, isSupportViewportUnits) {
       });
     })($(window).width(), $(window).height());
   } else if (!isSupportViewportUnits) { // fallback for .mbr-section-full-height
-    $(window).smartresize(function() {
+    $(window).smartResize(function() {
       $('.mbr-section-full-height').css('height', $(window).height() + 'px');
     });
     $(document).on('add.cards', function(event) {
@@ -150,32 +150,30 @@ export default function($, isSupportViewportUnits) {
   $(window).resize().scroll();
 
   // smooth scroll
-  if (!$('html').hasClass('is-builder')) {
-    $(document).click(function(e) {
-      try {
-        var target = e.target;
+  $(document).click(function(e) {
+    try {
+      var target = e.target;
 
-        do {
-          if (target.hash) {
-            var useBody = /#bottom|#top/g.test(target.hash);
-            $(useBody ? 'body' : target.hash).each(function() {
-              e.preventDefault();
-              // in css sticky navbar has height 64px
-              var stickyMenuHeight = $('.mbr-navbar-sticky').length ? 64 : 0;
-              var goTo = target.hash == '#bottom' ?
-                ($(this).height() - $(window).height()) :
-                ($(this).offset().top - stickyMenuHeight);
-              $('html, body').stop().animate({
-                scrollTop: goTo
-              }, 800, 'easeInOutCubic');
-            });
-            break;
-          }
-        } while (target = target.parentNode);
-      } catch (e) {
-        // throw e;
-      }
-    });
-  }
+      do {
+        if (target.hash) {
+          var useBody = /#bottom|#top/g.test(target.hash);
+          $(useBody ? 'body' : target.hash).each(function() {
+            e.preventDefault();
+            // in css sticky navbar has height 64px
+            var stickyMenuHeight = $('.mbr-navbar-sticky').length ? 64 : 0;
+            var goTo = target.hash == '#bottom' ?
+              ($(this).height() - $(window).height()) :
+              ($(this).offset().top - stickyMenuHeight);
+            $('html, body').stop().animate({
+              scrollTop: goTo
+            }, 800, 'easeInOutCubic');
+          });
+          break;
+        }
+      } while (target = target.parentNode);
+    } catch (e) {
+      // throw e;
+    }
+  });
 
 }
