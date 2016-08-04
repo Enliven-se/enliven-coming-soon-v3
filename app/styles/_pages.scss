@@ -91,11 +91,6 @@
   width: 100%;
 }
 
-.form-group-email {
-  width        : 300px;
-  padding-right: 35px;
-}
-
 #how-does-it-work {
   position: relative;
 }
@@ -118,12 +113,13 @@
 
 .teco {
   margin-bottom: 30px;
-}
 
-.teco h2 {
-  font-size  : 16px;
-  font-weight: bold;
-  margin-top : 30px;
+  h2 {
+    margin-top : 30px;
+    font-size  : 20px;
+    font-weight: normal;
+    color      : #000;
+  }
 }
 
 #privacy-security,
@@ -163,6 +159,11 @@
   margin-bottom: 1em;
 }
 
+.form-group-email {
+  width        : 300px;
+  padding-right: 35px;
+}
+
 .bkg12 {
   width           : 100%;
   padding         : 30px 0;
@@ -181,36 +182,25 @@
   white-space: normal;
 }
 
-.faq ol {
-  padding-left: 0;
-}
-
-.teco h2 {
-  // font-family: AvenirNext-MediumItalic;
-  font-size  : 20px;
-  font-weight: normal;
-  color      : #000;
-}
-
 .features {
   padding-bottom: 30px;
   padding-left  : 0;
-}
 
-.features .glyphicon {
-  font-size     : 32px;
-  display       : block;
-  padding-bottom: 20px;
-  text-align    : center;
-}
+  .glyphicon {
+    font-size     : 32px;
+    display       : block;
+    padding-bottom: 20px;
+    text-align    : center;
+  }
 
-.features a {
-  font-size      : 14px;
-  line-height    : 40px;
-  margin-top     : 20px;
-  text-align     : center;
-  text-decoration: underline;
-  color          : grey;
+  a {
+    font-size      : 14px;
+    line-height    : 40px;
+    margin-top     : 20px;
+    text-align     : center;
+    text-decoration: underline;
+    color          : grey;
+  }
 }
 
 .connections {
@@ -240,33 +230,42 @@
   white-space  : normal;
 }
 
-.faq h2 {
-  // font-family: AvenirNext-MediumItalic;
-  font-size  : 20px;
-  line-height: 25px;
-  color      : #000;
+.faq {
+  ol {
+    padding-left: 0;
+  }
+
+  h2 {
+    // font-family: AvenirNext-MediumItalic;
+    font-size  : 20px;
+    line-height: 25px;
+    color      : #000;
+  }
 }
+
 //about enliven
-
-.bkg15 {
-  width           : 100%;
-  padding         : 33px 0;
-  background-color: $gray-lighter;
-}
-
-.bkg15 blockquote {
-  padding    : 0;
-  border-left: 0;
-}
 
 .agrey {
   text-decoration: underline;
   color          : grey;
 }
 
-.bkg15 h2 {
-  font-size : 36px;
-  margin-top: 0;
+.bkg15 {
+  width           : 100%;
+  padding         : 33px 0;
+  background-color: $gray-lighter;
+
+  blockquote {
+    padding    : 0;
+    border-left: 0;
+    margin     : 20px 0;
+    text-align : center;
+  }
+
+  h2 {
+    font-size : 36px;
+    margin-top: 0;
+  }
 }
 
 .bkg16 {
@@ -285,6 +284,28 @@
   padding-bottom: 50px;
   @media (max-width:$screen-md-min) {
     padding-bottom: 20px;
+  }
+}
+
+.revenue-share-model {
+  .list,
+  .row {
+    margin: 20px 0;
+  }
+
+  .avatars,
+  .guide-col-1,
+  .guide-col-2 {
+    padding-top: 16px;
+  }
+
+  .avatars {
+    max-width: 130px;
+    height   : auto;
+  }
+
+  .divider {
+    margin: 10px;
   }
 }
 
