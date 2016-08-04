@@ -31,6 +31,8 @@
 }
 
 .responsive-table {
+  margin: 20px 0;
+
   .table-cell {
     position: relative;
 
@@ -44,11 +46,21 @@
   }
 }
 
-.become-a-contributor .responsive-table {
-  .table-cell {
-    padding-bottom: 2em;
-    @media (min-width:$screen-sm-max) {
-      min-height: 200px;
+.become-a-contributor {
+  #our-vision {
+    font-size: 20px;
+  }
+
+  h4 {
+    margin: 10px 0 22px;
+  }
+
+  .responsive-table {
+    .table-cell {
+      padding-bottom: 2em;
+      @media (min-width:$screen-sm-max) {
+        min-height: 200px;
+      }
     }
   }
 }
@@ -133,10 +145,6 @@
 #contact-us,
 #want-to-become-an-enliven-contributor {
   color: #fff;
-}
-
-.become-a-contributor h4 {
-  margin: 20px 0;
 }
 
 // front
