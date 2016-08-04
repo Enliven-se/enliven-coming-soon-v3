@@ -4,6 +4,9 @@
   margin-top     : 92px;
   min-height     : 50vmin;
   position       : relative;
+  @media (min-width: $screen-md) {
+    min-height: 450px;
+  }
 
   &.contributor-faq {
     background-image: url("../images/heroes/hero-contributor-faq.jpg");
@@ -19,6 +22,7 @@
   }
 
   .title {
+    letter-spacing: -1px;
     @media (min-width: $screen-md) {
       position: absolute;
       bottom  : 0;
