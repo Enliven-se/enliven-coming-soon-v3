@@ -1,5 +1,5 @@
 - var link_classes = ['mbr-buttons-link', 'btn', 'text-black']
-- var navbar_items = [ { title: 'About Enliven', url: 'about.html' }, { title: '<span class="text-nowrap">Become a</span> Contributor', url: 'become-a-contributor.html' }, { title: 'Beta <span class="text-nowrap">Sign-In</span>', url: '//cms.enliven.se/' } ]
+- var navbar_items = [ { title: 'About Enliven', className: 'about', url: '/about.html' }, { title: '<span class="text-nowrap">Become a</span> Contributor', className: 'become-a-contributor', url: '/become-a-contributor.html' }, { title: 'Beta <span class="text-nowrap">Sign-In</span>', className: 'cms', url: '///cms.enliven.se/' } ]
 section#ext_menu-0.mbr-navbar.mbr-navbar-freeze.mbr-navbar-absolute.mbr-navbar-sticky.mbr-navbar-auto-collapse
   .mbr-navbar-section.mbr-section
     .mbr-section-container.container
@@ -19,5 +19,5 @@ section#ext_menu-0.mbr-navbar.mbr-navbar-freeze.mbr-navbar-absolute.mbr-navbar-s
               ul.mbr-navbar-items.mbr-navbar-items-right.float-left.mbr-buttons.mbr-buttons-freeze.mbr-buttons-right.btn-decorator.mbr-buttons-active.mbr-buttons-only-links
                 each item in navbar_items
                   li.mbr-navbar-item
-                    a(class=link_classes class=(title == item.title) ? [item.title] : [], href=item.url)
+                    a(class=link_classes class={active: item.className === page}, href=item.url)
                       | !{item.title}
