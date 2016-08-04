@@ -32,6 +32,7 @@
     "gulp-subtree": "^0.1.0",
     "gulp-uglify": "^1.1.0",
     "gulp-useref": "^3.0.0",
+    "guppy-pre-commit": "^0.3.0",
     "main-bower-files": "^2.5.0",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.1.0",

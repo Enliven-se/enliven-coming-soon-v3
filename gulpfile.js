@@ -33,18 +33,6 @@ gulp.task('styles', () => {
     }));
 });
 
-/*
-
-+
-     .pipe($.plumber())
--    .pipe($.sourcemaps.init())
--    .pipe($.babel())
-     .pipe($.sourcemaps.write('.'))
-     .pipe(gulp.dest('.tmp/scripts'))
-     .pipe(reload({stream: true}));
-});
-
- */
 gulp.task('scripts', () => {
   const b = browserify({
     entries: 'app/scripts/main.js',
@@ -267,6 +255,8 @@ gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
     gzip: true
   }));
 });
+
+gulp.task('pre-commit', ['lint', 'styles', 'scripts']);
 
 gulp.task('default', ['clean'], () => {
   gulp.start('build');
