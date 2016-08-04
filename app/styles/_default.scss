@@ -84,7 +84,7 @@ body {
 }
 
 #join-a-global-community {
-  margin    : 0;
+  margin-bottom   :30px;;
   padding   : 0;
   text-align: left;
   border    : 0;
@@ -168,6 +168,12 @@ body {
 }
 
 .features {
+  padding-bottom: 30px;
+  padding-left  : 0;
+}
+
+.features2 {
+  margin-top: 20px;
   padding-bottom: 30px;
   padding-left  : 0;
 }
