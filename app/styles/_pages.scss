@@ -65,6 +65,12 @@
   }
 }
 
+.contributor-faq {
+  .responsive-table {
+    margin: 40px 0;
+  }
+}
+
 #section1 {
   background-color: $gray-lighter;
 }
@@ -91,15 +97,13 @@
 }
 
 #how-does-it-work {
-  position    : relative;
-  padding-left: 15px;
+  position: relative;
 }
 
 #join-a-global-community {
-  margin    : 30px 0;
-  padding   : 0;
-  text-align: left;
-  border    : 0;
+  margin : 30px 0;
+  padding: 0;
+  border : 0;
 }
 
 #frequently-asked-questions {
