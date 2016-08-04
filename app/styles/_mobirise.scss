@@ -3,11 +3,6 @@
   animation-name        : none !important;
 }
 
-html {
-  position  : relative;
-  min-height: 100%;
-}
-
 .mbr-embedded-video {
   position: relative;
 }
@@ -250,10 +245,6 @@ html {
 .mbr-navbar-items-right {
   left : 0;
   float: right;
-}
-
-.float-left {
-  float: left;
 }
 
 .mbr-navbar-item {
@@ -990,14 +981,6 @@ html {
   text-shadow   : 0 0 1px #eee;
 }
 
-.front .mbr-hero-text,
-.title {
-  font-size: 52px;
-  @media (max-width:$screen-xs-min) {
-    font-size: 42px;
-  }
-}
-
 .mbr-hero-subtext {
   font-size  : 21px;
   line-height: 29px;
@@ -1292,17 +1275,6 @@ html {
 
 .mbr-header-center {
   text-align: center;
-}
-
-.text-coming-soon {
-  font-size: 54px;
-  color    : #FFFFFF;
-}
-
-.text-sign-up {
-  font-size    : 30px;
-  line-height  : 1.5em;
-  margin-bottom: 1em;
 }
 
 .mbr-header-text {
@@ -2081,20 +2053,4 @@ html {
 .mbr-section-container.mbr-section-container-isolated.container {
   padding-top   : 93px;
   padding-bottom: 93px;
-}
-
-#section1 {
-  background-color: $gray-lighter;
-}
-
-#section2 {
-  background-color: #fff;
-}
-
-#section3 {
-  background-color: $gray-lighter;
-}
-
-#section6 {
-  background-color: $gray-darker;
 }

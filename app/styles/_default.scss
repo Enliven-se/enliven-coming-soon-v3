@@ -4,7 +4,11 @@
   color     : #000;
   background: #ccc;
 }
-// Space out content a bit
+
+html {
+  position  : relative;
+  min-height: 100%;
+}
 
 body {
   padding-top: 20px;
@@ -51,6 +55,19 @@ body {
     padding  : 14px 24px;
   }
 }
+
+.front .mbr-hero-text,
+.title {
+  font-size: 52px;
+  @media (max-width:$screen-xs-min) {
+    font-size: 42px;
+  }
+}
+
+.float-left {
+  float: left;
+}
+
 // Supporting marketing content
 
 .marketing {
@@ -69,199 +86,6 @@ body {
   }
 }
 
-#textinput {
-  width: 100%;
-}
-
-.form-group-email {
-  width        : 300px;
-  padding-right: 35px;
-}
-
-#how-does-it-work {
-  position    : relative;
-  padding-left: 15px;
-}
-
-#join-a-global-community {
-  margin    : 0;
-  padding   : 0;
-  text-align: left;
-  border    : 0;
-}
-
-#frequently-asked-questions {
-  border-bottom: 2px solid #aaa;
-}
-
-#finalh h2 {
-  // font-family: AvenirNext-MediumItalic;
-  font-size: 20px;
-  color    : #000;
-}
-
-.teco {
-  margin-bottom: 30px;
-}
-
-.teco h2 {
-  font-size  : 16px;
-  font-weight: bold;
-  margin-top : 30px;
-}
-
-#privacy-security,
-#submission-guidelines,
-#terms-conditions {
-  padding-top  : 100px;
-  border-bottom: 1px solid #aaa;
-}
-
-#introduction,
-#overview {
-  padding-top: 30px;
-}
-
-.contact1 {
-  padding-bottom: 30px;
-}
-
-.cta {
-  padding: 20px 0;
-}
-
-#want-to-become-an-enliven-contributor {
-  color: #fff;
-}
-
-.become-a-contributor h4 {
-  margin: 20px 0;
-}
-
-.bkg12 {
-  width           : 100%;
-  padding         : 30px 0;
-  background-color: $gray-lighter;
-}
-
-.bkg14 {
-  width           : 100%;
-  padding         : 30px 0;
-  background-color: white;
-}
-
-#singlebutton {
-  width      : 155px;
-  margin-top : 45px;
-  white-space: normal;
-}
-
-.faq ol {
-  padding-left: 0;
-}
-
-.teco h2 {
-  // font-family: AvenirNext-MediumItalic;
-  font-size  : 20px;
-  font-weight: normal;
-  color      : #000;
-}
-
-.features {
-  padding-bottom: 30px;
-  padding-left  : 0;
-}
-
-.features .glyphicon {
-  font-size     : 32px;
-  display       : block;
-  padding-bottom: 20px;
-  text-align    : center;
-}
-
-.features a {
-  font-size      : 14px;
-  line-height    : 40px;
-  margin-top     : 20px;
-  text-align     : center;
-  text-decoration: underline;
-  color          : grey;
-}
-
-.connections {
-  padding-top   : 110px;
-  padding-bottom: 110px;
-}
-
-#below {
-  padding-top   : 30px;
-  padding-bottom: 30px;
-}
-
-.newt {
-  border-bottom: 2px solid #aaa;
-}
-
-#singlebutton2 {
-  width        : 155px;
-  margin-top   : 45px;
-  margin-bottom: 45px;
-  white-space  : normal;
-}
-
-#singlebutton3 {
-  margin-bottom: 0;
-  width        : 100px;
-  white-space  : normal;
-}
-
-.faq h2 {
-  // font-family: AvenirNext-MediumItalic;
-  font-size  : 20px;
-  line-height: 25px;
-  color      : #000;
-}
-//about enliven
-
-.bkg15 {
-  width           : 100%;
-  padding         : 33px 0;
-  background-color: $gray-lighter;
-}
-
-.bkg15 blockquote {
-  padding    : 0;
-  border-left: 0;
-}
-
-.agrey {
-  text-decoration: underline;
-  color          : grey;
-}
-
-.bkg15 h2 {
-  font-size : 36px;
-  margin-top: 0;
-}
-
-.bkg16 {
-  width           : 100%;
-  padding         : 16px 0 33px;
-  background-color: white;
-}
-
-.bkg17 {
-  width           : 100%;
-  padding         : 33px 0;
-  background-color: white;
-}
-
-#our-mission-is-to-inspire-and-activate-your-life {
-  padding-bottom: 50px;
-  @media (max-width:$screen-md-min) {
-    padding-bottom: 20px;
-  }
-}
 // Responsive: Portrait tablets and up
 @media screen and (min-width: $screen-sm-min) {
   .container {
@@ -282,10 +106,4 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
-}
-// mailchimp
-
-.response,
-div.mce_inline_error {
-  color: #fff;
 }
