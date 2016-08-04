@@ -1,12 +1,12 @@
 var $mcj = {};
 
-import init from './init';
-import ready from './ready';
+import init from './_init';
+import ready from './_ready';
 
-import isSupportViewportUnits from './isSupportViewportUnits';
-import smartresize from './smartresize';
-// import scrollbarWidth from './scrollbarWidth';
-import mobirise from './mobirise';
+import isSupportViewportUnits from './_isSupportViewportUnits';
+import smartresize from './_smartresize';
+// import scrollbarWidth from './_scrollbarWidth';
+import mobirise from './_mobirise';
 
 // open main closure
 
