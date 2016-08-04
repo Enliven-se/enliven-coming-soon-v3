@@ -49,6 +49,7 @@
 .become-a-contributor {
   #our-vision {
     font-size: 20px;
+    max-width: 666px;
   }
 
   h4 {
@@ -236,7 +237,6 @@
   }
 
   h2 {
-    // font-family: AvenirNext-MediumItalic;
     font-size  : 20px;
     line-height: 25px;
     color      : #000;
@@ -256,15 +256,16 @@
   background-color: $gray-lighter;
 
   blockquote {
-    padding    : 0;
-    border-left: 0;
-    margin     : 20px 0;
-    text-align : center;
+    padding   : 10px 0;
+    margin    : 0;
+    text-align: center;
   }
 
   h2 {
-    font-size : 36px;
-    margin-top: 0;
+    font-size     : 36px;
+    margin        : 0;
+    line-height   : 114%;
+    letter-spacing: -1px;
   }
 }
 
@@ -281,9 +282,20 @@
 }
 
 #our-mission-is-to-inspire-and-activate-your-life {
-  padding-bottom: 50px;
+  padding-bottom: 20px;
   @media (max-width:$screen-md-min) {
     padding-bottom: 20px;
+  }
+}
+
+.mission {
+  display: block;
+  @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+    display   : inline;
+    text-align: right;
+  }
+  @media (min-width: $screen-md) {
+    text-align: right;
   }
 }
 
