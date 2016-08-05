@@ -10,31 +10,38 @@
   }, {
     "title": "Contact",
     "className": "contact",
+    "extra_classes" : ["hidden-md", "hidden-lg"],
     "url": "/contact.html"
   }, {
     "title": "Contributor FAQ",
     "className": "contributor-faq",
-    "url": "/contributor_faq.html"
+    "extra_classes" : ["hidden-md", "hidden-lg"],
+    "url": "/contributor-faq.html"
   }, {
     "title": "Submission Guidelines",
     "className": "submission-guidelines",
-    "url": "/submission_guidelines.html"
+    "extra_classes" : ["hidden-md", "hidden-lg"],
+    "url": "/submission-guidelines.html"
   }, {
     "title": "Contributor Application Form",
     "className": "contributor-application-form",
-    "url": "/contributor_application_form.html"
+    "extra_classes" : ["hidden-md", "hidden-lg"],
+    "url": "/contributor-application-form.html"
   }, {
     "title": "Join ENLIVEN",
     "className": "join-enliven",
-    "url": "/join_enliven.html"
+    "extra_classes" : ["hidden-md", "hidden-lg"],
+    "url": "/join-enliven.html"
   }, {
     "title": "Privacy and Security",
     "className": "privacy-security",
-    "url": "/privacy_security.html"
+    "extra_classes" : ["hidden-md", "hidden-lg"],
+    "url": "/privacy-security.html"
   }, {
     "title": "Terms and Conditions",
     "className": "terms-conditions",
-    "url": "/terms_conditions.html"
+    "extra_classes" : ["hidden-md", "hidden-lg"],
+    "url": "/terms-conditions.html"
   }, {
     "title": "Beta <span class=\"text-nowrap\">Sign-In</span>",
     "className": "cms",

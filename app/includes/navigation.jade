@@ -19,5 +19,5 @@ section#ext_menu-0.mbr-navbar.mbr-navbar-freeze.mbr-navbar-absolute.mbr-navbar-s
               ul.mbr-navbar-items.mbr-navbar-items-right.float-left.mbr-buttons.mbr-buttons-freeze.mbr-buttons-right.btn-decorator.mbr-buttons-active.mbr-buttons-only-links
                 each item in navbar_items
                   li.mbr-navbar-item
-                    a(class=link_classes class={active: item.className === page}, href=item.url)
+                    a(class=link_classes class=item.extra_classes class={active: item.className === page}, href=item.url)
                       | !{item.title}

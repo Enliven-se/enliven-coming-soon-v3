@@ -94,8 +94,8 @@ blockquote {
 
 .btn.active,
 .btn:active {
-  box-shadow      : none;
-  background-color: lighten($gray-lighter, 20%);
+  box-shadow  : none;
+  border-color: lighten($gray-lighter, 20%);
 }
 
 .footer .active {
