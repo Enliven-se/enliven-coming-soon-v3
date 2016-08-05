@@ -1,11 +1,10 @@
 // generated on 2016-06-08 using generator-webapp 2.1.0
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
+const fs = require('fs');
 const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
-const subtree = require('gulp-subtree');
-const clean = require('gulp-clean');
 const browserify = require('browserify');
 const babelify = require('babelify');
 const buffer = require('vinyl-buffer');
@@ -232,6 +231,11 @@ gulp.task('wiredep', () => {
 
 gulp.task('views', () => {
   return gulp.src('app/*.jade')
+    .pipe($.data(function(file) {
+      return {
+        "data": JSON.parse(fs.readFileSync('app/includes/data.json'))
+      };
+    }))
     .pipe($.plumber())
     .pipe($.jade({
       pretty: true
@@ -245,8 +249,8 @@ gulp.task('views', () => {
 // deploy to Github pages
 gulp.task('deploy', ['build', 'cname'], () => {
   return gulp.src('dist')
-    .pipe(subtree())
-    .pipe(clean());
+    .pipe($.subtree())
+    .pipe($.clean());
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {

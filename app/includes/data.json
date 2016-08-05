@@ -1,0 +1,43 @@
+{
+  "navbar_items": [{
+    "title": "About Enliven",
+    "className": "about",
+    "url": "/about.html"
+  }, {
+    "title": "<span class=\"text-nowrap\">Become a</span> Contributor",
+    "className": "become-a-contributor",
+    "url": "/become-a-contributor.html"
+  }, {
+    "title": "Contact",
+    "className": "contact",
+    "url": "/contact.html"
+  }, {
+    "title": "Contributor FAQ",
+    "className": "contributor-faq",
+    "url": "/contributor_faq.html"
+  }, {
+    "title": "Submission Guidelines",
+    "className": "submission-guidelines",
+    "url": "/submission_guidelines.html"
+  }, {
+    "title": "Contributor Application Form",
+    "className": "contributor-application-form",
+    "url": "/contributor_application_form.html"
+  }, {
+    "title": "Join ENLIVEN",
+    "className": "join-enliven",
+    "url": "/join_enliven.html"
+  }, {
+    "title": "Privacy and Security",
+    "className": "privacy-security",
+    "url": "/privacy_security.html"
+  }, {
+    "title": "Terms and Conditions",
+    "className": "terms-conditions",
+    "url": "/terms_conditions.html"
+  }, {
+    "title": "Beta <span class=\"text-nowrap\">Sign-In</span>",
+    "className": "cms",
+    "url": "//cms.enliven.se/"
+  }]
+}
