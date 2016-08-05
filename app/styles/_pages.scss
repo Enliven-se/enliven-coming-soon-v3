@@ -112,7 +112,6 @@
   color    : #000;
 }
 
-
 .teco {
   margin-bottom: 30px;
 
@@ -241,7 +240,7 @@
     font-size  : 20px;
     line-height: 25px;
     color      : #000;
-    padding : 0px;
+    padding    : 0;
   }
 }
 
@@ -269,8 +268,8 @@
     line-height   : 114%;
     letter-spacing: -1px;
   }
-  @media (max-width:$screen-xs-min) {
-    p: 16px;
+  @media (max-width:$screen-xs-max) {
+    font-size: 16px;
   }
 
 }
