@@ -296,11 +296,7 @@
 .mission {
   display: block;
   @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
-    display   : inline;
-    text-align: right;
-  }
-  @media (min-width: $screen-md) {
-    text-align: right;
+    display: inline;
   }
 }
 
