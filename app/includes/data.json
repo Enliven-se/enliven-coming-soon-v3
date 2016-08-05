@@ -18,11 +18,6 @@
     "extra_classes" : ["hidden-md", "hidden-lg"],
     "url": "/contributor-faq.html"
   }, {
-    "title": "Submission Guidelines",
-    "className": "submission-guidelines",
-    "extra_classes" : ["hidden-md", "hidden-lg"],
-    "url": "/submission-guidelines.html"
-  }, {
     "title": "Contributor Application Form",
     "className": "contributor-application-form",
     "extra_classes" : ["hidden-md", "hidden-lg"],
@@ -32,16 +27,6 @@
     "className": "join-enliven",
     "extra_classes" : ["hidden-md", "hidden-lg"],
     "url": "/join-enliven.html"
-  }, {
-    "title": "Privacy and Security",
-    "className": "privacy-security",
-    "extra_classes" : ["hidden-md", "hidden-lg"],
-    "url": "/privacy-security.html"
-  }, {
-    "title": "Terms and Conditions",
-    "className": "terms-conditions",
-    "extra_classes" : ["hidden-md", "hidden-lg"],
-    "url": "/terms-conditions.html"
   }, {
     "title": "Beta <span class=\"text-nowrap\">Sign-In</span>",
     "className": "cms",
