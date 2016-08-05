@@ -95,8 +95,11 @@ blockquote {
 .btn.active,
 .btn:active {
   box-shadow      : none;
-  background-color: $gray-light;
-  color           : #fff !important;
+  background-color: lighten($gray-lighter, 20%);
+}
+
+.footer .active {
+  text-decoration: underline;
 }
 
 // Responsive: Portrait tablets and up

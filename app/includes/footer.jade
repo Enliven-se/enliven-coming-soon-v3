@@ -1,4 +1,7 @@
-#section6.section
+- var link_classes = ['mbr-contacts-link', 'text-gray']
+- var navbar_items = [ { title: 'About Enliven', className: 'about', url: '/about.html' }, { title: '<span class="text-nowrap">Become a</span> Contributor', className: 'become-a-contributor', url: '/become-a-contributor.html' }, { title: 'Contact Us', className: 'contact-us', url: '/contact.html' } ]
+
+footer#section6.section.footer
   #custom-html-226
     section#social-buttons1-10.mbr-section.mbr-section-relative.mbr-section-fixed-size
       .mbr-section-container.container
@@ -22,18 +25,11 @@
                   img.mbr-contacts-img.mbr-contacts-img--left(src='/images/enliven-logo-320x132-320x132-95.png')
           |           
           .col-sm-3
-            p.mbr-contacts-text
-              br
-            |             
             ul.mbr-contacts-list
-              li
-                a.mbr-contacts-link.text-gray(href='/about.html') About Enliven
-              |               
-              li
-                a.mbr-contacts-link.text-gray(href='/become-a-contributor.html') Become a contributor
-              |               
-              li
-                a(href='/contact.html') Contact Us
+              each item in navbar_items
+                li
+                  a(class=link_classes class={active: item.className === page}, href=item.url)
+                    | !{item.title}
 
 footer.mbr-section.mbr-section--relative.mbr-section--fixed-size
   .mbr-section-container.container
