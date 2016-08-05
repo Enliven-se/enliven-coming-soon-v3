@@ -2,31 +2,31 @@
   "navbar_items": [{
     "title": "About Enliven",
     "className": "about",
-    "url": "/about.html"
+    "url": "/about"
   }, {
     "title": "<span class=\"text-nowrap\">Become a</span> Contributor",
     "className": "become-a-contributor",
-    "url": "/become-a-contributor.html"
+    "url": "/become-a-contributor"
   }, {
     "title": "Contact",
     "className": "contact",
     "extra_classes" : ["hidden-md", "hidden-lg"],
-    "url": "/contact.html"
+    "url": "/contact"
   }, {
     "title": "Contributor FAQ",
     "className": "contributor-faq",
     "extra_classes" : ["hidden-md", "hidden-lg"],
-    "url": "/contributor-faq.html"
+    "url": "/contributor-faq"
   }, {
     "title": "Contributor Application Form",
     "className": "contributor-application-form",
     "extra_classes" : ["hidden-md", "hidden-lg"],
-    "url": "/contributor-application-form.html"
+    "url": "/contributor-application-form"
   }, {
     "title": "Join ENLIVEN",
     "className": "join-enliven",
     "extra_classes" : ["hidden-md", "hidden-lg"],
-    "url": "/join-enliven.html"
+    "url": "/join-enliven"
   }, {
     "title": "Beta <span class=\"text-nowrap\">Sign-In</span>",
     "className": "cms",

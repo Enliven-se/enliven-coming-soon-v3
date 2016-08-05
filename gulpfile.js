@@ -240,6 +240,14 @@ gulp.task('views', () => {
     .pipe($.jade({
       pretty: true
     }))
+    .pipe($.rename(function(path) {
+      if (path.extname == '.html' && path.basename != 'index') {
+        // rename from about.html => about/index.html
+        path.dirname += '/' + path.basename;
+        path.basename = 'index';
+      }
+      return path;
+    }))
     .pipe(gulp.dest('.tmp'))
     .pipe(reload({
       stream: true
