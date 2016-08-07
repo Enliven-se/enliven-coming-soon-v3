@@ -85,7 +85,7 @@ gulp.task('lint:test', () => {
 });
 
 gulp.task('html', ['views', 'styles', 'scripts'], () => {
-  return gulp.src(['app/*.html', '.tmp/*.html'])
+  return gulp.src(['app/*.html', '.tmp/**/*.html'])
     .pipe($.useref({
       searchPath: ['.tmp', 'app', '.']
     }))
@@ -96,7 +96,9 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
     })))
     .pipe($.if('*.js', $.rev()))
     .pipe($.if('*.css', $.rev()))
-    .pipe($.revReplace())
+    .pipe($.revReplace({
+      prefix: '/' // absolute URLs
+    }))
     .pipe($.if('*.html', $.htmlmin({
       collapseWhitespace: true
     })))
@@ -145,7 +147,6 @@ gulp.task('cname', () => {
   }).pipe(gulp.dest('dist'));
 });
 
-// gulp.task('clean', del.bind(null, ['.tmp', 'dist']));
 gulp.task('clean', () => {
   return del([
     '.tmp',
@@ -262,10 +263,11 @@ gulp.task('deploy', ['build', 'cname'], () => {
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
-  return gulp.src('dist/**/*').pipe($.size({
-    title: 'build',
-    gzip: true
-  }));
+  return gulp.src('dist/**/*')
+    .pipe($.size({
+      title: 'build',
+      gzip: true
+    }));
 });
 
 gulp.task('pre-commit', ['lint', 'styles', 'scripts']);
