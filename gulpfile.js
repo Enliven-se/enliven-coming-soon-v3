@@ -1,6 +1,8 @@
 // generated on 2016-06-08 using generator-webapp 2.1.0
 const gulp = require('gulp');
 const gulpLoadPlugins = require('gulp-load-plugins');
+const $ = gulpLoadPlugins();
+
 const fs = require('fs');
 const browserSync = require('browser-sync');
 const del = require('del');
@@ -10,8 +12,9 @@ const babelify = require('babelify');
 const buffer = require('vinyl-buffer');
 const source = require('vinyl-source-stream');
 
-const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
+
+const destination = 'dist';
 
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
@@ -102,7 +105,7 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
     .pipe($.if('*.html', $.htmlmin({
       collapseWhitespace: true
     })))
-    .pipe(gulp.dest('dist'))
+    .pipe(gulp.dest(destination))
 /*
     .pipe(reload())
 */ ;
@@ -119,14 +122,14 @@ gulp.task('images', () => {
         cleanupIDs: false
       }]
     })))
-    .pipe(gulp.dest('dist/images'));
+    .pipe(gulp.dest(destination + '/images'));
 });
 
 gulp.task('fonts', () => {
   return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function(err) {})
     .concat('app/fonts/**/*'))
     .pipe(gulp.dest('.tmp/fonts'))
-    .pipe(gulp.dest('dist/fonts'));
+    .pipe(gulp.dest(destination + '/fonts'));
 });
 
 gulp.task('extras', () => {
@@ -136,7 +139,7 @@ gulp.task('extras', () => {
     '!app/*.jade'
   ], {
     dot: true
-  }).pipe(gulp.dest('dist'));
+  }).pipe(gulp.dest(destination));
 });
 
 gulp.task('cname', () => {
@@ -144,13 +147,13 @@ gulp.task('cname', () => {
     'app/CNAME'
   ], {
     dot: true
-  }).pipe(gulp.dest('dist'));
+  }).pipe(gulp.dest(destination));
 });
 
 gulp.task('clean', () => {
   return del([
     '.tmp',
-    'dist'
+    destination
   ]);
 });
 
@@ -190,7 +193,7 @@ gulp.task('serve:dist', () => {
     notify: false,
     port: 9000,
     server: {
-      baseDir: ['dist']
+      baseDir: [destination]
     }
   });
 });
@@ -257,13 +260,13 @@ gulp.task('views', () => {
 
 // deploy to Github pages
 gulp.task('deploy', ['build', 'cname'], () => {
-  return gulp.src('dist')
+  return gulp.src(destination)
     .pipe($.subtree())
     .pipe($.clean());
 });
 
 gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
-  return gulp.src('dist/**/*')
+  return gulp.src(destination + '/**/*')
     .pipe($.size({
       title: 'build',
       gzip: true
