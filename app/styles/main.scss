@@ -1,11 +1,8 @@
-$icon-font-path: '../fonts/';
-@import '_variables';
-@import '../fonts/fonts.css';
-@import 'typography';
-
 // bower:scss
-// endbower
+@import 'bower_components/enliven-bootswatch/_variables.scss';
 @import 'bower_components/bootstrap-sass/assets/stylesheets/_bootstrap.scss';
+@import 'bower_components/enliven-bootswatch/_bootswatch.scss';
+// endbower
 @import 'default';
 @import 'animate.min';
 @import 'socicon.min';

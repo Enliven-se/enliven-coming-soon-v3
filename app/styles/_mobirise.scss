@@ -1,3 +1,5 @@
+$hamburger-color: $gray-darker;
+
 .is-builder .animated {
   -webkit-animation-name: none !important;
   animation-name        : none !important;
@@ -40,6 +42,10 @@
 .mbr-navbar {
   position: relative;
   width   : 100%;
+}
+
+.navbar-header {
+  float: none;
 }
 
 .mbr-navbar:before {
@@ -1608,57 +1614,8 @@
   text-align : left;
   color      : #777;
 }
-
-.mbr-article-wysiwyg h1,
-.mbr-article-wysiwyg h2,
-.mbr-article-wysiwyg h3,
-.mbr-article-wysiwyg h4,
-.mbr-article-wysiwyg h5,
-.mbr-article-wysiwyg h6 {
-  line-height: 1.3em;
-  display    : block;
-  text-align : left;
-  color      : #252525;
-}
-
-.mbr-article-wysiwyg h1 {
-  font-size: 27px;
-}
-
-.mbr-article-wysiwyg h2 {
-  font-size: 23px;
-}
-
-.mbr-article-wysiwyg h3 {
-  font-size: 19px;
-}
-
-.mbr-article-wysiwyg h4 {
-  font-size: 14px;
-}
-
-.mbr-article-wysiwyg h5 {
-  font-size: 11px;
-}
-
-.mbr-article-wysiwyg h6 {
-  font-size: 10px;
-}
-
-.mbr-article-wysiwyg blockquote,
-.mbr-article-wysiwyg ol,
-.mbr-article-wysiwyg p,
-.mbr-article-wysiwyg ul {
-  margin: 0 0 10px;
-}
-
-.mbr-article-wysiwyg blockquote {
-  font-size   : 17px;
-  border-color: #f97352;
-}
 @media (max-width:$screen-xs-max) {
-  .mbr-article-auto-align,
-  .mbr-article-auto-align.mbr-article-wysiwyg p {
+  .mbr-article-auto-align {
     text-align: left !important;
   }
 }
@@ -1909,9 +1866,8 @@
 }
 
 #ext_menu-0 .mbr-navbar-section {
-  background   : #fff;
-  padding-right: 0;
-  box-sizing   : border-box;
+  background: #fff;
+  box-sizing: border-box;
 }
 
 #ext_menu-0 .mbr-navbar-hamburger {

@@ -1,9 +1,9 @@
-- var link_classes = ['mbr-buttons-link', 'btn', 'text-black']
+- var link_classes = ['mbr-buttons-link', 'text-black']
 - var navbar_items = data.navbar_items
 section#ext_menu-0.mbr-navbar.mbr-navbar-freeze.mbr-navbar-absolute.mbr-navbar-sticky.mbr-navbar-auto-collapse
-  .mbr-navbar-section.mbr-section
-    .mbr-section-container.container
-      .mbr-navbar-container
+  nav.mbr-navbar-section.mbr-section.navbar.navbar-default
+    .mbr-section-container
+      .mbr-navbar-container.navbar-header.container
         .mbr-navbar-column.mbr-navbar-column-s.mbr-navbar-brand
           span.mbr-navbar-brand-link.mbr-brand.mbr-brand-inline
             span.mbr-brand-logo
@@ -16,7 +16,7 @@ section#ext_menu-0.mbr-navbar.mbr-navbar-freeze.mbr-navbar-absolute.mbr-navbar-s
         .mbr-navbar-column.mbr-navbar-menu
           nav.mbr-navbar-menu-box.mbr-navbar-menu-box-inline-right
             .mbr-navbar-column
-              ul.mbr-navbar-items.mbr-navbar-items-right.float-left.mbr-buttons.mbr-buttons-freeze.mbr-buttons-right.btn-decorator.mbr-buttons-active.mbr-buttons-only-links
+              ul.mbr-navbar-items.mbr-navbar-items-right.float-left.mbr-buttons.mbr-buttons-freeze.mbr-buttons-right.btn-decorator.mbr-buttons-active.mbr-buttons-only-links.nav.navbar-nav.navbar-right
                 each item in navbar_items
                   li.mbr-navbar-item
                     a(class=link_classes class=item.extra_classes class={active: item.className === page}, href=item.url)
