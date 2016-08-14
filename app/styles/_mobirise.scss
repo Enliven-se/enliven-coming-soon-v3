@@ -309,6 +309,19 @@ $hamburger-color: $gray-darker;
   display: block;
 }
 
+.mbr-navbar-open {
+  .mbr-navbar-items {
+    float: none !important;
+  }
+
+  .mbr-buttons-right {
+    .mbr-buttons-btn,
+    .mbr-buttons-link {
+      text-align: center;
+    }
+  }
+}
+
 .mbr-navbar-collapsed.mbr-navbar-open .mbr-navbar-menu {
   display: table;
 }

@@ -31,7 +31,7 @@ export default function($) {
   // vimeofy
   var autoplay = (self.location.port != 9000);
   $('.front #background').vimeofy({
-    url: 'https://vimeo.com/170180787',
+    url: 'https://vimeo.com/178568007',
     color: '#00D8D8',
     autoplay: autoplay,
     loop: true,
