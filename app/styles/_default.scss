@@ -4,12 +4,6 @@ html {
 }
 
 body {
-  // padding-top: 98px;
-
-  padding-top: 20px;
-  // @media screen and (min-width: 992px) {
-  //   padding-top: 114px;
-  // }
   @media (max-width:$screen-xs-max) {
     font-size: 16px;
   }
@@ -52,7 +46,6 @@ blockquote {
 .footer {
   padding-top: 19px;
   color      : #777;
-  border-top : 1px solid #e5e5e5;
 }
 
 .container-narrow > hr {

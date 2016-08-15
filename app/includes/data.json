@@ -8,11 +8,6 @@
     "className": "become-a-contributor",
     "url": "/become-a-contributor"
   }, {
-    "title": "Contact",
-    "className": "contact",
-    "extra_classes" : ["hidden-md", "hidden-lg"],
-    "url": "/contact"
-  }, {
     "title": "Contributor FAQ",
     "className": "contributor-faq",
     "extra_classes" : ["hidden-md", "hidden-lg"],
@@ -31,5 +26,10 @@
     "title": "Beta <span class=\"text-nowrap\">Sign-In</span>",
     "className": "cms",
     "url": "//cms.enliven.se/"
+  }, {
+    "title": "Contact",
+    "className": "contact",
+    "extra_classes" : ["hidden-md", "hidden-lg"],
+    "url": "/contact"
   }]
 }

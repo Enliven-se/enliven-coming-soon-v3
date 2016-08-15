@@ -42,15 +42,27 @@ $hamburger-color: $gray-darker;
 .mbr-navbar {
   position: relative;
   width   : 100%;
+
+  &:before {
+    display: block;
+    content: '';
+  }
+
+  .mbr-brand-name {
+    font-size: 16px;
+  }
+
+  .mbr-navbar-section {
+    box-sizing: border-box;
+  }
+
+  .mbr-navbar-hamburger {
+    color: $hamburger-color;
+  }
 }
 
 .navbar-header {
   float: none;
-}
-
-.mbr-navbar:before {
-  display: block;
-  content: '';
 }
 
 .mbr-navbar-brand-img,
@@ -171,12 +183,11 @@ $hamburger-color: $gray-darker;
 }
 
 .mbr-navbar-section {
-  position  : absolute;
-  z-index   : 1000;
-  top       : 0;
-  width     : 100%;
-  height    : auto;
-  background: #2c2c2c;
+  position: absolute;
+  z-index : 1000;
+  top     : 0;
+  width   : 100%;
+  height  : auto;
 }
 
 .mbr-navbar-container {
@@ -366,11 +377,6 @@ $hamburger-color: $gray-darker;
 
 .mbr-navbar-transparent .mbr-navbar-section {
   background: none;
-}
-
-.mbr-navbar-relative .mbr-navbar-section,
-.mbr-navbar-stuck .mbr-navbar-section {
-  background: #2c2c2c;
 }
 @media (max-width:$screen-sm-max) {
   .mbr-navbar-auto-collapse .mbr-navbar-container {
@@ -732,9 +738,7 @@ $hamburger-color: $gray-darker;
   padding-left : 24px;
 }
 
-.mbr-section-left {
-  padding-right: 40px;
-}
+.mbr-section-left {}
 
 .mbr-section-right {
   padding-left: 15px;
@@ -746,46 +750,48 @@ $hamburger-color: $gray-darker;
   text-align : center;
 }
 @media (min-width:$screen-sm-min) {
-  .mbr-section-short-paddings .mbr-section-container-std-padding {
-    padding: 59px 0;
-  }
+  .mbr-section-short-paddings {
+    .mbr-section-container-std-padding {
+      padding: 59px 0;
+    }
 
-  .mbr-section-short-paddings .mbr-section-container-std-top-padding {
-    padding-top: 59px;
-  }
+    .mbr-section-container-std-top-padding {
+      padding-top: 59px;
+    }
 
-  .mbr-section-short-paddings .mbr-section-container-std-bot-padding {
-    padding-bottom: 59px;
-  }
+    .mbr-section-container-std-bot-padding {
+      padding-bottom: 59px;
+    }
 
-  .mbr-section-short-paddings .mbr-section-container-sm-padding {
-    padding: 41px 0;
-  }
+    .mbr-section-container-sm-padding {
+      padding: 41px 0;
+    }
 
-  .mbr-section-short-paddings .mbr-section-container-sm-top-padding {
-    padding-top: 41px;
-  }
+    .mbr-section-container-sm-top-padding {
+      padding-top: 41px;
+    }
 
-  .mbr-section-short-paddings .mbr-section-container-sm-bot-padding {
-    padding-bottom: 41px;
-  }
+    .mbr-section-container-sm-bot-padding {
+      padding-bottom: 41px;
+    }
 
-  .mbr-section-short-paddings .mbr-section-container-isolated {
-    padding-top   : 59px;
-    padding-bottom: 59px;
-  }
+    .mbr-section-container-isolated {
+      padding-top   : 59px;
+      padding-bottom: 59px;
+    }
 
-  .mbr-section-short-paddings .mbr-section-container-first {
-    padding-top   : 59px;
-    padding-bottom: 41px;
-  }
+    .mbr-section-container-first {
+      padding-top   : 59px;
+      padding-bottom: 41px;
+    }
 
-  .mbr-section-short-paddings .mbr-section-container-middle {
-    padding-bottom: 41px;
-  }
+    .mbr-section-container-middle {
+      padding-bottom: 41px;
+    }
 
-  .mbr-section-short-paddings .mbr-section-container-last {
-    padding-bottom: 59px;
+    .mbr-section-container-last {
+      padding-bottom: 59px;
+    }
   }
 }
 @media (max-width:$screen-xs-max) {
@@ -995,7 +1001,7 @@ $hamburger-color: $gray-darker;
   font-size     : 54px;
   line-height   : 120%;
   margin        : 20px auto;
-  max-width     : 400px;
+  // max-width     : 400px;
   padding-bottom: 41px;
   text-shadow   : 0 0 1px #eee;
 }
@@ -1373,10 +1379,8 @@ $hamburger-color: $gray-darker;
 }
 
 .mbr-contacts {
-  font-size  : 14px;
-  line-height: 1.7em;
-  padding    : 45px 0 46px;
-  color      : #9c9c9c;
+  font-size: 14px;
+  color    : #9c9c9c;
 }
 
 .mbr-contacts-img {
@@ -1874,19 +1878,6 @@ $hamburger-color: $gray-darker;
   text-indent: -2400px;
 }
 
-#ext_menu-0 .mbr-brand-name {
-  font-size: 16px;
-}
-
-#ext_menu-0 .mbr-navbar-section {
-  background: #fff;
-  box-sizing: border-box;
-}
-
-#ext_menu-0 .mbr-navbar-hamburger {
-  color: $hamburger-color;
-}
-
 #msg-box4-3 .mbr-header-text {
   color: #000;
 }
@@ -1939,10 +1930,13 @@ $hamburger-color: $gray-darker;
 }
 
 #section4 h4 {
-  font-size : 24px;
-  text-align: center;
-  word-break: normal;
-  color     : #fff;
+  font-family: $font-family-sans-serif;
+  padding    : 0 20px;
+
+  font-size  : 24px;
+  text-align : center;
+  word-break : normal;
+  color      : #fff;
   @media (max-width:$screen-xs-min) {
     margin-bottom: 40px;
   }
@@ -1951,7 +1945,7 @@ $hamburger-color: $gray-darker;
 
 #section6 li {
   font-size  : 20px;
-  line-height: 55px;
+  line-height: 2em;
 }
 
 #section6 a:active,
@@ -1983,12 +1977,6 @@ $hamburger-color: $gray-darker;
 
 #social-buttons1-10 {
   background-color: $gray-darker;
-  padding-top     : 20px;
-}
-
-.mbr-contacts.mbr-contacts--wysiwyg.row {
-  padding-top   : 5px;
-  padding-bottom: 5px;
 }
 
 .mbr-header.mbr-header--inline.row {
@@ -2015,11 +2003,6 @@ $hamburger-color: $gray-darker;
 }
 
 .mbr-section-container.mbr-section-container-isolated.container {
-  padding-top   : 62px;
-  padding-bottom: 124px;
-}
+  padding: 40px 0;
 
-.mbr-section-container.mbr-section-container-isolated.container {
-  padding-top   : 93px;
-  padding-bottom: 93px;
 }

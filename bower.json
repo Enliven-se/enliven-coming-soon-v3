@@ -23,6 +23,6 @@
   "devDependencies": {
     "chai": "^3.5.0",
     "mocha": "^2.5.3",
-    "enliven-bootswatch": "https://github.com/Enliven-se/enliven-bootswatch.git#0.0.6"
+    "enliven-bootswatch": "https://github.com/Enliven-se/enliven-bootswatch.git#0.0.7"
   }
 }
