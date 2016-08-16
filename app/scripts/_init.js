@@ -36,7 +36,8 @@ export default function($) {
       color: '#ffffff',
       autoplay: autoplay,
       loop: true,
-      delay: 5e3
+      delay: 0,
+      background: 1
     });
 
     // waypoint

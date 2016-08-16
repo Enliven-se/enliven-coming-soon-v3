@@ -6,7 +6,7 @@
     "modernizr": "~2.8.1",
     "smoothscroll": "^0.3.3",
     "jarallax": "^1.6.3",
-    "Vimeofy": "vimeofy#*",
+    "Vimeofy": "https://github.com/klokie/Vimeofy.git#*",
     "social-likes": "^3.1.0",
     "jquery-placeholder": "^2.3.1",
     "jquery.smartresize": "^1.0.0",
