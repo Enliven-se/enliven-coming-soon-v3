@@ -65,85 +65,51 @@ $hamburger-color: $gray-darker;
   float: none;
 }
 
-.mbr-navbar-brand-img,
-.mbr-navbar-brand-link:after {
-  max-height: 88px;
-  @media screen and (max-width: $screen-xs-max) {
-    max-height: 74px;
+.mbr-navbar {
+  .navbar {
+    background-color: rgba(255,255,255,0.95);
   }
 }
 
-.mbr-navbar-container,
-.mbr-navbar:before {
-  height: 98px;
+.front .mbr-navbar {
+  .navbar {
+    background-color: rgba(255,255,255,0);
+  }
+
+  // &.top {
+  //   .text-black {
+  //     color      : $black-forest !important;
+  //     text-shadow: 0 0 1px #eee;
+  //   }
+  // }
+
+  &.going-down {
+    .navbar {
+      background-color: rgba(255,255,255,0.95);
+    }
+  }
 }
 
-.mbr-navbar-ss .mbr-navbar-brand-img,
-.mbr-navbar-ss .mbr-navbar-brand-link:after {
-  height: 74px;
+// navbar height
+.mbr-navbar-brand-img,
+.mbr-navbar-brand-link:after {
+  max-height: 32px;
+  @media screen and (max-width:$screen-xs-max) {
+    max-height: 20px;
+  }
 }
 
-.mbr-navbar-ss .mbr-navbar-container,
-.mbr-navbar-ss:before {
-  height: 98px;
-}
-
-.mbr-navbar-xs .mbr-navbar-brand-img,
-.mbr-navbar-xs .mbr-navbar-brand-link:after {
-  height: 32px;
-}
-
-.mbr-navbar-xs .mbr-navbar-container,
-.mbr-navbar-xs:before {
-  height: 56px;
-}
-
-.mbr-navbar-s .mbr-navbar-brand-img,
-.mbr-navbar-s .mbr-navbar-brand-link:after {
-  height: 48px;
-}
-
-.mbr-navbar-s .mbr-navbar-container,
-.mbr-navbar-s:before {
-  height: 72px;
-}
-
-.mbr-navbar-m .mbr-navbar-brand-img,
-.mbr-navbar-m .mbr-navbar-brand-link:after {
-  height: 64px;
-}
-
-.mbr-navbar-m .mbr-navbar-container,
-.mbr-navbar-m:before {
-  height: 88px;
-}
-
-.mbr-navbar-l .mbr-navbar-brand-img,
-.mbr-navbar-l .mbr-navbar-brand-link:after {
-  height: 96px;
-}
-
-.mbr-navbar-l .mbr-navbar-container,
-.mbr-navbar-l:before {
-  height: 120px;
-}
-
-.mbr-navbar-xl .mbr-navbar-brand-img,
-.mbr-navbar-xl .mbr-navbar-brand-link:after {
-  height: 128px;
-}
-
-.mbr-navbar-xl .mbr-navbar-container,
-.mbr-navbar-xl:before {
-  height: 152px;
-}
+// .mbr-navbar-container,
+// .mbr-navbar:before {
+//   height: 98px;
+// }
 
 // short navbar
 
 .mbr-navbar-short {
   .mbr-navbar-brand-img,
   .mbr-navbar-brand-link:after {
-    height: 75px;
+    height: 20px;
   }
 
   &:before,
@@ -157,7 +123,7 @@ $hamburger-color: $gray-darker;
   @media (max-width:$screen-xs-max) {
     .mbr-navbar-brand-img,
     .mbr-navbar-brand-link:after {
-      height: 31px;
+      height: 20px;
     }
 
     &:before,
@@ -1931,8 +1897,6 @@ $hamburger-color: $gray-darker;
 
 #section4 h4 {
   font-family: $font-family-sans-serif;
-  padding    : 0 20px;
-
   font-size  : 24px;
   text-align : center;
   word-break : normal;
@@ -1952,7 +1916,6 @@ $hamburger-color: $gray-darker;
 #section6 a:hover,
 #section6 a:link,
 #section6 a:visited {
-  font-size  : 18px;
   white-space: nowrap;
   color      : #fff;
 }
@@ -2004,5 +1967,4 @@ $hamburger-color: $gray-darker;
 
 .mbr-section-container.mbr-section-container-isolated.container {
   padding: 40px 0;
-
 }

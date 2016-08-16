@@ -5,7 +5,7 @@
   min-height     : 50vmin;
   position       : relative;
   @media (min-width: $screen-md) {
-    margin-top: 92px;
+    margin-top: 113px;
     min-height: 450px;
   }
 
@@ -37,9 +37,8 @@
   }
 
   .navbar {
-    box-shadow      : none;
-    // background-color: transparent;
-    background-color: #fff;
+    box-shadow   : none;
+    margin-bottom: 0;
   }
 
   h1,
@@ -116,7 +115,9 @@
 }
 
 #textinput {
-  width: 100%;
+  width  : 100%;
+  height : 37px;
+  padding: 0 10px;
 }
 
 #how-does-it-work {
@@ -323,12 +324,12 @@
   }
 }
 
-.mission {
-  display: block;
-  @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
-    display: inline;
-  }
-}
+// .mission {
+//   display: block;
+//   @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
+//     display: inline;
+//   }
+// }
 
 .revenue-share-model {
   .list,

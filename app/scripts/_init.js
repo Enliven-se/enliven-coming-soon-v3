@@ -28,14 +28,28 @@ export default function($) {
     return !!(reg.length && navigator.userAgent.match(new RegExp(reg.join('|'), 'i')));
   };
 
-  // vimeofy
-  var autoplay = (self.location.port != 9000);
-  $('.front #background').vimeofy({
-    url: 'https://vimeo.com/178568007',
-    color: '#ffffff',
-    autoplay: autoplay,
-    loop: true,
-    delay: 5e3
+  $('.front').each(function() {
+    // vimeofy
+    var autoplay = (self.location.port != 9000);
+    $('#background').vimeofy({
+      url: 'https://vimeo.com/178568007',
+      color: '#ffffff',
+      autoplay: autoplay,
+      loop: true,
+      delay: 5e3
+    });
+
+    // waypoint
+    var waypoint = new Waypoint({
+      element: document.getElementById('section2'),
+      handler: function(direction) {
+        if (direction == 'down') {
+          $('.mbr-navbar').addClass('going-down').removeClass('top');
+        } else {
+          $('.mbr-navbar').addClass('top').removeClass('going-down');
+        }
+      }
+    });
   });
 
   // MailChimp
