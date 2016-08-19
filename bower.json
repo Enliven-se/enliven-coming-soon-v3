@@ -10,7 +10,8 @@
     "social-likes": "^3.1.0",
     "jquery-placeholder": "^2.3.1",
     "jquery.smartresize": "^1.0.0",
-    "waypoints": "^4.0.0"
+    "waypoints": "^4.0.0",
+    "flexslider": "^2.6.2"
   },
   "overrides": {
     "bootstrap-sass": {

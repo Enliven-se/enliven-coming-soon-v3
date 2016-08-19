@@ -103,6 +103,21 @@ blockquote {
   text-decoration: underline;
 }
 
+.flex-slider-slide {
+  list-style-type: none;
+  display        : inline-block;
+
+  blockquote {
+    @extend .mbr-header-text;
+    color : #fff !important;
+    margin: 0;
+
+    small {
+      font-size: 20px;
+    }
+  }
+}
+
 // Responsive: Portrait tablets and up
 @media screen and (min-width: $screen-sm-min) {
   .container {

@@ -40,6 +40,15 @@ export default function($) {
       background: 1
     });
 
+    $('.flex-slider').flexslider({
+      animation: "fade",
+      direction: "horizontal",
+      pauseOnHover: false,
+      controlNav: false,
+      directionNav: false,
+      randomize: true,
+    });
+
     // waypoint
     var waypoint = new Waypoint({
       element: document.getElementById('section2'),
