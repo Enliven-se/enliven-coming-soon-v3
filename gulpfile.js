@@ -245,10 +245,12 @@ gulp.task('views', () => {
       pretty: true
     }))
     .pipe($.rename(function(path) {
-      if (path.extname == '.html' && path.basename != 'index') {
-        // rename from about.html => about/index.html
-        path.dirname += '/' + path.basename;
-        path.basename = 'index';
+      if (path.extname == '.html') {
+        if (path.basename != 'index' && path.basename != '404') {
+          // rename from about.html => about/index.html
+          path.dirname += '/' + path.basename;
+          path.basename = 'index';
+        }
       }
       return path;
     }))
