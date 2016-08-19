@@ -49,7 +49,8 @@ export default function($) {
         } else {
           $('.mbr-navbar').addClass('top').removeClass('going-down');
         }
-      }
+      },
+      offset: 100
     });
   });
 
