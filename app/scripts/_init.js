@@ -41,8 +41,8 @@ export default function($) {
     });
 
     $('.flex-slider').flexslider({
-      animation: "fade",
-      direction: "horizontal",
+      animation: 'fade',
+      direction: 'horizontal',
       pauseOnHover: false,
       controlNav: false,
       directionNav: false,
