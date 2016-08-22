@@ -2,10 +2,12 @@
   "navbar_items": [{
     "title": "About Enliven",
     "className": "about",
+    "extra_classes" : ["about-link"],
     "url": "/about"
   }, {
     "title": "<span class=\"text-nowrap\">Become a</span> Contributor",
     "className": "become-a-contributor",
+    "extra_classes" : ["become-link"],
     "url": "/become-a-contributor"
   }, {
     "title": "Contributor FAQ",
@@ -25,6 +27,7 @@
   }, {
     "title": "Beta <span class=\"text-nowrap\">Sign-In</span>",
     "className": "cms",
+    "extra_classes" : ["beta-link"],
     "url": "//cms.enliven.se/"
   }, {
     "title": "Contact",
