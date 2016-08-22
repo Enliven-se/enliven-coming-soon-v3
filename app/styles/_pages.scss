@@ -70,8 +70,7 @@
 
 .become-a-contributor {
   #our-vision {
-    font-size: 22px;
-    max-width: 666px;
+  max-width: 666px;
   }
 
   h4 {
@@ -126,9 +125,15 @@
 
 #join-a-global-community {
   margin   : 0.5em 0;
-  padding  : 0;
+  padding-top: 15px;
+  padding-bottom  : 15px ;
   border   : 0;
-  font-size: 42px;
+  font-size: 34px;
+}
+
+#frequently-asked-questions {
+  padding-top: 15px;
+  border-bottom: none;
 }
 
 #finalh h2 {
@@ -136,6 +141,15 @@
   font-size: 20px;
   color    : #000;
 }
+
+.features2 .table-cell{
+padding-left: 30px;
+padding-right: 30px;
+
+}
+
+
+
 
 .teco {
   margin-bottom: 30px;
@@ -152,7 +166,7 @@
 #privacy-security,
 #submission-guidelines,
 #terms-conditions {
-  border-bottom: 1px solid #aaa;
+
   line-height  : 27px;
 }
 
