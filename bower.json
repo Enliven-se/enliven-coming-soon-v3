@@ -11,7 +11,8 @@
     "jquery-placeholder": "^2.3.1",
     "jquery.smartresize": "^1.0.0",
     "waypoints": "^4.0.0",
-    "flexslider": "^2.6.2"
+    "flexslider": "^2.6.2",
+    "iframe-resizer": "^3.5.5"
   },
   "overrides": {
     "bootstrap-sass": {
