@@ -1271,6 +1271,20 @@ $hamburger-color: $gray-darker;
   border-radius: 50%;
 }
 
+#phone1 {
+  //-webkit-clip-path: inset(0 28% 1% 19%);
+//clip-path: inset(0 28% 1% 19%);
+  -webkit-clip-path: inset(0 0 588px 0);
+  clip-path: inset(0 0 588px 0);
+}
+
+#tablet1 {
+  -webkit-clip-path: inset(0 0 1060px 0);
+  clip-path: inset(0 0 1060px 0);
+}
+
+
+
 .mbr-reviews-author-name {
   font-size: 14px;
   position : relative;
