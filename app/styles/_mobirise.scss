@@ -1528,8 +1528,10 @@ $hamburger-color: $gray-darker;
 //.mbr-buttons-link .text-black .become-a-contributor {
 //  max-width: 140px;
 //}
-.mbr-buttons-link.text-black.become-link {
-  max-width: 140px;
+@media (min-width:$screen-md-min) {
+  .mbr-buttons-link.text-black.become-link {
+    max-width: 140px;
+  }
 }
 
 .mbr-buttons-activated .mbr-buttons-link {
