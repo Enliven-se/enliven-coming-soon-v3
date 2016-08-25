@@ -15,6 +15,9 @@
 
   &.about {
     background-image: url("../images/heroes/hero-about-enliven.jpg");
+    @media (min-width: $screen-md) {
+      background-position: 0 50%;
+    }
   }
 
   &.become-a-contributor,
@@ -70,7 +73,7 @@
 
 .become-a-contributor {
   #our-vision {
-  max-width: 666px;
+    max-width: 666px;
   }
 
   h4 {
@@ -124,15 +127,15 @@
 }
 
 #join-a-global-community {
-  margin   : 0.5em 0;
-  padding-top: 15px;
-  padding-bottom  : 15px ;
-  border   : 0;
-  font-size: 34px;
+  margin        : 0.5em 0;
+  padding-top   : 15px;
+  padding-bottom: 15px;
+  border        : 0;
+  font-size     : 34px;
 }
 
 #frequently-asked-questions {
-  padding-top: 15px;
+  padding-top  : 15px;
   border-bottom: none;
 }
 
@@ -142,14 +145,11 @@
   color    : #000;
 }
 
-.features2 .table-cell{
-padding-left: 30px;
-padding-right: 30px;
+.features2 .table-cell {
+  padding-left : 30px;
+  padding-right: 30px;
 
 }
-
-
-
 
 .teco {
   margin-bottom: 30px;
@@ -167,7 +167,7 @@ padding-right: 30px;
 #submission-guidelines,
 #terms-conditions {
 
-  line-height  : 27px;
+  line-height: 27px;
 }
 
 #privacy-security,
