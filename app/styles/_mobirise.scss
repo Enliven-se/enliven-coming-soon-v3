@@ -1004,9 +1004,12 @@ $hamburger-color: $gray-darker;
 }
 
 .mockup-frames {
-  position: absolute;
-  right   : 0;
-  top     : -150px;
+  @media (min-width:$screen-sm-min) {
+    position: absolute;
+    right   : 0;
+    top     : -67px;
+  }
+
   overflow: visible;
   width   : 490px;
 
@@ -1273,17 +1276,15 @@ $hamburger-color: $gray-darker;
 
 #phone1 {
   //-webkit-clip-path: inset(0 28% 1% 19%);
-//clip-path: inset(0 28% 1% 19%);
+  //clip-path: inset(0 28% 1% 19%);
   -webkit-clip-path: inset(0 0 588px 0);
-  clip-path: inset(0 0 588px 0);
+  clip-path        : inset(0 0 588px 0);
 }
 
 #tablet1 {
   -webkit-clip-path: inset(0 0 1060px 0);
-  clip-path: inset(0 0 1060px 0);
+  clip-path        : inset(0 0 1060px 0);
 }
-
-
 
 .mbr-reviews-author-name {
   font-size: 14px;
