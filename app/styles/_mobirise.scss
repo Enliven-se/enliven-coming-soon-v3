@@ -994,14 +994,17 @@ $hamburger-color: $gray-darker;
 }
 
 .mockup-frames {
+  overflow: visible;
+  width   : 520px;
   @media (min-width:$screen-sm-min) {
     position: absolute;
     right   : 0;
     top     : -67px;
   }
-
-  overflow: visible;
-  width   : 490px;
+  @media (max-width:$screen-sm-max) {
+    height     : 430px !important;
+    padding-top: 0;
+  }
 
   .mbr-figures {
     position: relative;
@@ -1036,13 +1039,17 @@ $hamburger-color: $gray-darker;
     width         : auto !important;
   }
 
+  .flex-slider-tablet,
   .mockup-tablet {
+    height  : 254px;
+    left    : 37px;
     position: absolute;
     top     : 27px;
-    left    : 37px;
+    width   : 338px;
     z-index : -1;
   }
 
+  .flex-slider-phone,
   .mockup-phone {
     position: absolute;
     top     : 41px;
@@ -1988,7 +1995,9 @@ $hamburger-color: $gray-darker;
 
 #msg-box4-3 {
   background-color: #fff;
-  height          : 320px;
+  @media (min-width:$screen-sm-min) {
+    height: 320px;
+  }
 }
 
 #msg-box4-4 {

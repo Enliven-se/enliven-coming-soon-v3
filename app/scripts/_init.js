@@ -40,13 +40,50 @@ export default function($) {
       background: 1
     });
 
-    $('.flex-slider').flexslider({
-      animation: 'fade',
-      direction: 'horizontal',
-      pauseOnHover: false,
-      controlNav: false,
-      directionNav: false,
-      randomize: true,
+    $('.flex-slider').each(function() {
+      var $this = $(this),
+        opts = {};
+
+      switch ($this.data('slider')) {
+        case 'quotes':
+          opts = {
+            animation: 'fade',
+            direction: 'horizontal',
+            pauseOnHover: false,
+            controlNav: false,
+            directionNav: false,
+            randomize: true
+          };
+          break;
+        case 'tablet':
+          opts = {
+            animation: 'slide',
+            direction: 'vertical',
+            slideshowSpeed: 5000,
+            easing: 'swing',
+            keyboard: false,
+            pauseOnHover: false,
+            controlNav: false,
+            directionNav: false,
+            randomize: false
+          };
+          break;
+        case 'phone':
+          opts = {
+            animation: 'slide',
+            direction: 'vertical',
+            slideshowSpeed: 5000,
+            easing: 'swing',
+            keyboard: false,
+            pauseOnHover: false,
+            controlNav: false,
+            directionNav: false,
+            randomize: false
+          };
+          break;
+      }
+
+      $this.flexslider(opts);
     });
 
     // waypoint
