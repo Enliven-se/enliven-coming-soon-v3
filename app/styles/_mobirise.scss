@@ -995,14 +995,16 @@ $hamburger-color: $gray-darker;
 
 .mockup-frames {
   overflow: visible;
-  width   : 520px;
   @media (min-width:$screen-sm-min) {
+    width   : 520px;
     position: absolute;
     right   : 0;
     top     : -67px;
+    @media (max-width:$screen-sm-max) {
+      height: 430px !important;
+    }
   }
   @media (max-width:$screen-sm-max) {
-    height     : 430px !important;
     padding-top: 0;
   }
 
@@ -1017,20 +1019,30 @@ $hamburger-color: $gray-darker;
   }
 
   .phone-container {
+    display : none !important; // @TODO
     height  : 292px;
-    left    : 335px;
     overflow: hidden;
-    top     : 136px;
     z-index : 100;
+    @media (max-width:$screen-xs-max) {
+      position: relative;
+    }
+    @media (min-width:$screen-sm-min) {
+      top : 136px;
+      left: 335px;
+    }
   }
 
   .tablet-container {
     overflow: hidden;
     height  : 297px;
+    @media (max-width:$screen-xs-max) {
+      display: none;
+    }
   }
 
   .mbr-figure {
-    position: relative;
+    position  : relative;
+    text-align: center;
   }
 
   .mbr-figure-img {
@@ -1955,11 +1967,15 @@ $hamburger-color: $gray-darker;
   text-align : center;
   color      : white;
 }
+@media (max-width:$screen-xs-max) {
+  .section {
+    overflow: hidden;
+  }
+}
 
 #section4 {
   background-color: #15447b;
   padding         : 20px 0;
-  @media (max-width:$screen-md-min) {}
 }
 
 #section4 h4 {
