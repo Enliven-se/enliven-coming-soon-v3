@@ -76,13 +76,6 @@ $hamburger-color: $gray-darker;
     background-color: rgba(255,255,255,0);
   }
 
-  // &.top {
-  //   .text-black {
-  //     color      : $black-forest !important;
-  //     text-shadow: 0 0 1px #eee;
-  //   }
-  // }
-
   &.going-down {
     .navbar {
       background-color: rgba(255,255,255,0.95);
@@ -99,13 +92,7 @@ $hamburger-color: $gray-darker;
   }
 }
 
-// .mbr-navbar-container,
-// .mbr-navbar:before {
-//   height: 98px;
-// }
-
 // short navbar
-
 .mbr-navbar-short {
   .mbr-navbar-brand-img,
   .mbr-navbar-brand-link:after {
@@ -887,6 +874,11 @@ $hamburger-color: $gray-darker;
   margin-bottom : 0;
   text-align    : center;
   vertical-align: middle;
+}
+
+#section1 .mbr-box-magnet {
+  display: table-cell;
+  float  : none;
 }
 
 .mbr-box-magnet-sm-padding {
@@ -2021,9 +2013,8 @@ $hamburger-color: $gray-darker;
 }
 
 .mbr-section.mbr-section--relative.mbr-section--fixed-size.mbr-parallax-background {
-  background-image: url('../images/bg-lynch-hidef.jpg') !important;
-  @media screen and (max-width:$screen-xs-max) {
-    background-position: 50% 50%;
+  @media screen and (min-width: $screen-sm-min) {
+    background-image: url('../images/bg-lynch-hidef.jpg') !important;
   }
 }
 
