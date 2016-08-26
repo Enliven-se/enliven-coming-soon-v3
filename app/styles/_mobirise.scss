@@ -2022,6 +2022,9 @@ $hamburger-color: $gray-darker;
 
 .mbr-section.mbr-section--relative.mbr-section--fixed-size.mbr-parallax-background {
   background-image: url('../images/bg-lynch-hidef.jpg') !important;
+  @media screen and (max-width:$screen-xs-max) {
+    background-position: 50% 50%;
+  }
 }
 
 .mbr-section.mbr-section--relative.mbr-section--fixed-size {
@@ -2029,9 +2032,11 @@ $hamburger-color: $gray-darker;
 }
 
 // lnch
-.mbr-section-container.mbr-section-container--std-padding.container {
-  padding-top   : 160px;
-  padding-bottom: 160px;
+@media screen and (min-width: $screen-sm-min) {
+  .mbr-section-container.mbr-section-container--std-padding.container {
+    padding-top   : 160px;
+    padding-bottom: 160px;
+  }
 }
 
 .mbr-section-container.mbr-section-container-isolated.container {
