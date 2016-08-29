@@ -40,52 +40,6 @@ export default function($) {
       background: 1
     });
 
-    $('.flex-slider').each(function() {
-      var $this = $(this),
-        opts = {};
-
-      switch ($this.data('slider')) {
-        case 'quotes':
-          opts = {
-            animation: 'fade',
-            direction: 'horizontal',
-            pauseOnHover: false,
-            controlNav: false,
-            directionNav: false,
-            randomize: true
-          };
-          break;
-        case 'tablet':
-          opts = {
-            animation: 'slide',
-            direction: 'vertical',
-            slideshowSpeed: 5000,
-            easing: 'swing',
-            keyboard: false,
-            pauseOnHover: false,
-            controlNav: false,
-            directionNav: false,
-            randomize: false
-          };
-          break;
-        case 'phone':
-          opts = {
-            animation: 'slide',
-            direction: 'vertical',
-            slideshowSpeed: 5000,
-            easing: 'swing',
-            keyboard: false,
-            pauseOnHover: false,
-            controlNav: false,
-            directionNav: false,
-            randomize: false
-          };
-          break;
-      }
-
-      $this.flexslider(opts);
-    });
-
     // waypoint
     var waypoint = new Waypoint({
       element: document.getElementById('section2'),
@@ -98,6 +52,63 @@ export default function($) {
       },
       offset: 100
     });
+  });
+
+  $('.flex-slider').each(function() {
+    var $this = $(this),
+      opts = {};
+
+    switch ($this.data('slider')) {
+      case 'tablet':
+        opts = {
+          animation: 'slide',
+          direction: 'vertical',
+          slideshowSpeed: 5000,
+          easing: 'swing',
+          keyboard: false,
+          pauseOnHover: false,
+          controlNav: false,
+          directionNav: false,
+          randomize: false
+        };
+        break;
+      case 'phone':
+        opts = {
+          animation: 'slide',
+          direction: 'vertical',
+          slideshowSpeed: 5000,
+          easing: 'swing',
+          keyboard: false,
+          pauseOnHover: false,
+          controlNav: false,
+          directionNav: false,
+          randomize: false
+        };
+        break;
+      case 'quotes':
+        opts = {
+          animation: 'fade',
+          direction: 'horizontal',
+          pauseOnHover: false,
+          controlNav: false,
+          directionNav: false,
+          randomize: true
+        };
+        break;
+      default:
+        opts = {
+          animation: 'slide',
+          direction: 'horizontal',
+          pauseOnHover: true,
+          controlNav: true,
+          directionNav: false,
+          randomize: false,
+          initDelay: 1000
+        };
+        break;
+    }
+
+    $this.flexslider(opts);
   });
 
   // MailChimp

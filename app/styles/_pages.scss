@@ -27,6 +27,7 @@
 
   .title {
     letter-spacing: -1px;
+    z-index       : 1000;
     @media (min-width: $screen-md) {
       position: absolute;
       bottom  : 0;
