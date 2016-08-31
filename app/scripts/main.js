@@ -17,9 +17,9 @@ import mobirise from './_mobirise';
 
   mobirise($, isSupportViewportUnits);
 
-  // $(document).ready(function() {
-  //   ready($);
-  // });
+  $(document).ready(function() {
+    ready($);
+  });
 
 })(jQuery);
 
