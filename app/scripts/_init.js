@@ -44,6 +44,8 @@ export default function($) {
       var $this = $(this),
         opts = {};
 
+      // set flex-slider options
+      // see https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties
       switch ($this.data('slider')) {
         case 'quotes':
           opts = {
@@ -52,7 +54,8 @@ export default function($) {
             pauseOnHover: false,
             controlNav: false,
             directionNav: false,
-            randomize: true
+            randomize: true,
+            smoothHeight: true
           };
           break;
         case 'tablet':
