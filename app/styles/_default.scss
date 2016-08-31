@@ -104,8 +104,9 @@ blockquote {
 }
 
 .flex-slider-slide {
-  list-style-type: none;
   display        : inline-block;
+  list-style-type: none;
+  text-align     : center;
 
   blockquote {
     @extend .mbr-header-text;
@@ -116,6 +117,7 @@ blockquote {
       font-size: 20px;
     }
   }
+
 }
 
 // Responsive: Portrait tablets and up
