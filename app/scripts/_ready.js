@@ -93,7 +93,7 @@ export default function($) {
   fnames[2] = 'LNAME';
   ftypes[2] = 'text';
 
-  // smartresize
-  $('iframe').smartResize();
+  // iFrameResize
+  $('iframe.resizable').iFrameResize();
 
 }
