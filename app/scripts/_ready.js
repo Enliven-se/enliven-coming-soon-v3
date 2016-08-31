@@ -20,55 +20,6 @@ export default function($) {
       });
     }
 
-    $('.flex-slider').each(function() {
-      var $this = $(this),
-        opts = {};
-
-      // set flex-slider options
-      // see https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties
-      switch ($this.data('slider')) {
-        case 'quotes':
-          opts = {
-            animation: 'fade',
-            direction: 'horizontal',
-            pauseOnHover: false,
-            controlNav: false,
-            directionNav: false,
-            randomize: true,
-            smoothHeight: true
-          };
-          break;
-        case 'tablet':
-          opts = {
-            animation: 'slide',
-            direction: 'vertical',
-            slideshowSpeed: 5000,
-            easing: 'swing',
-            keyboard: false,
-            pauseOnHover: false,
-            controlNav: false,
-            directionNav: false,
-            randomize: false
-          };
-          break;
-        case 'phone':
-          opts = {
-            animation: 'slide',
-            direction: 'vertical',
-            slideshowSpeed: 5000,
-            easing: 'swing',
-            keyboard: false,
-            pauseOnHover: false,
-            controlNav: false,
-            directionNav: false,
-            randomize: false
-          };
-          break;
-      }
-
-      $this.flexslider(opts);
-    });
-
     // waypoint
     var waypoint = new Waypoint({
       element: document.getElementById('section2'),
@@ -81,17 +32,78 @@ export default function($) {
       },
       offset: 100
     });
+
+    // MailChimp
+    window.fnames = [];
+    window.ftypes = [];
+    fnames[0] = 'EMAIL';
+    ftypes[0] = 'email';
+    fnames[1] = 'FNAME';
+    ftypes[1] = 'text';
+    fnames[2] = 'LNAME';
+    ftypes[2] = 'text';
+
   });
 
-  // MailChimp
-  window.fnames = [];
-  window.ftypes = [];
-  fnames[0] = 'EMAIL';
-  ftypes[0] = 'email';
-  fnames[1] = 'FNAME';
-  ftypes[1] = 'text';
-  fnames[2] = 'LNAME';
-  ftypes[2] = 'text';
+  $('.flex-slider').each(function() {
+    var $this = $(this),
+      opts = {};
+
+    // set flex-slider options
+    // see https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties
+    switch ($this.data('slider')) {
+      case 'tablet':
+        opts = {
+          animation: 'slide',
+          direction: 'vertical',
+          slideshowSpeed: 5000,
+          easing: 'swing',
+          keyboard: false,
+          pauseOnHover: false,
+          controlNav: false,
+          directionNav: false,
+          randomize: false
+        };
+        break;
+      case 'phone':
+        opts = {
+          animation: 'slide',
+          direction: 'vertical',
+          slideshowSpeed: 5000,
+          easing: 'swing',
+          keyboard: false,
+          pauseOnHover: false,
+          controlNav: false,
+          directionNav: false,
+          randomize: false
+        };
+        break;
+      case 'quotes':
+        opts = {
+          animation: 'fade',
+          direction: 'horizontal',
+          pauseOnHover: false,
+          controlNav: false,
+          directionNav: false,
+          randomize: true,
+          smoothHeight: true
+        };
+        break;
+      default:
+        opts = {
+          animation: 'slide',
+          direction: 'horizontal',
+          pauseOnHover: true,
+          controlNav: true,
+          directionNav: false,
+          randomize: false,
+          initDelay: 1000
+        };
+        break;
+    }
+
+    $this.flexslider(opts);
+  });
 
   // iFrameResize
   $('iframe.resizable').iFrameResize();
