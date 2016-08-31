@@ -19,8 +19,13 @@ body {
 blockquote {
   @extend h1;
 
-  padding: 0 20px;
-  margin : 40px 0;
+  padding    : 0 20px;
+  margin     : 40px 0;
+  text-shadow: none !important;
+
+  p {
+    text-shadow: 1px 1px 1px #999;
+  }
 }
 
 .footer,

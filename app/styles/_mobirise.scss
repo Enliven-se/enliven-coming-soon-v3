@@ -80,6 +80,11 @@ $hamburger-color: $gray-darker;
     .navbar {
       background-color: rgba(255,255,255,0.95);
     }
+
+    .mbr-buttons-right .mbr-buttons-link {
+      color      : #666 !important;
+      text-shadow: 1px 1px 0 #fff;
+    }
   }
 }
 
@@ -1526,11 +1531,18 @@ $hamburger-color: $gray-darker;
 .mbr-buttons-right .mbr-buttons-link {
   font-size  : 18px;
   margin     : 0;
-  color      : #000;
   text-align : left;
+
   white-space: normal;
   @media (min-width:$screen-sm-max) {
     max-width: 111px;
+  }
+}
+
+.front {
+  .mbr-buttons-right .mbr-buttons-link {
+    color      : #fff !important;
+    text-shadow: 1px 1px 0 #666;
   }
 }
 
@@ -1999,8 +2011,9 @@ $hamburger-color: $gray-darker;
 #section6 a:hover,
 #section6 a:link,
 #section6 a:visited {
-  white-space: nowrap;
   color      : #fff;
+  text-shadow: 1px 1px 1px #111;
+  white-space: nowrap;
 }
 
 #section6 i {
