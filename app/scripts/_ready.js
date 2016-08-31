@@ -8,7 +8,7 @@ export default function($) {
     // vimeofy
     // don't render the video in the background on touch devices
     // @FIXME - should use "videoautoplay" but that doesn't seem to be set on desktop
-    if (!$('body').hasClass('touch')) {
+    if (!$('html').hasClass('touch')) {
       var autoplay = (self.location.port != 9000);
       $('#background').vimeofy({
         url: 'https://vimeo.com/178568007',
