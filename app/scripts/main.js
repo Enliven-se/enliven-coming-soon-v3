@@ -13,12 +13,12 @@ import mobirise from './_mobirise';
 
   init($);
 
-  // scrollbarWidth();
-
-  mobirise($, isSupportViewportUnits);
-
   $(document).ready(function() {
+
+    // scrollbarWidth();
+    mobirise($, isSupportViewportUnits);
     ready($);
+
   });
 
 })(jQuery);
