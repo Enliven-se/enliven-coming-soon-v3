@@ -81,6 +81,11 @@ $hamburger-color: $gray-darker;
     .navbar {
       background-color: rgba(255,255,255,0.95);
     }
+
+    .mbr-buttons-right .mbr-buttons-link {
+      color      : #666 !important;
+      text-shadow: 1px 1px 0 #fff;
+    }
   }
 }
 
@@ -282,7 +287,8 @@ $hamburger-color: $gray-darker;
   .mbr-buttons-right {
     .mbr-buttons-btn,
     .mbr-buttons-link {
-      text-align: center;
+      text-align : center;
+      text-shadow: none !important;
     }
   }
 }
@@ -445,26 +451,28 @@ $hamburger-color: $gray-darker;
   top: 5px;
 }
 
-.mbr-hamburger-open .mbr-hamburger-line {
-  border-color: transparent;
-}
+.mbr-hamburger-open {
+  .mbr-hamburger-line {
+    border-color: transparent;
+  }
 
-.mbr-hamburger-open .mbr-hamburger-line:after,
-.mbr-hamburger-open .mbr-hamburger-line:before {
-  top: 0;
-}
+  .mbr-hamburger-line:after,
+  .mbr-hamburger-line:before {
+    top: 0;
+  }
 
-.mbr-hamburger-open .mbr-hamburger-line:before {
-  -webkit-transform: rotate(45deg);
-  -ms-transform    : rotate(45deg);
-  transform        : rotate(45deg);
-}
+  .mbr-hamburger-line:before {
+    -webkit-transform: rotate(45deg);
+    -ms-transform    : rotate(45deg);
+    transform        : rotate(45deg);
+  }
 
-.mbr-hamburger-open .mbr-hamburger-line:after {
-  top              : 10px;
-  -webkit-transform: translatey(-10px) rotate(-45deg);
-  -ms-transform    : translatey(-10px) rotate(-45deg);
-  transform        : translatey(-10px) rotate(-45deg);
+  .mbr-hamburger-line:after {
+    top              : 10px;
+    -webkit-transform: translatey(-10px) rotate(-45deg);
+    -ms-transform    : translatey(-10px) rotate(-45deg);
+    transform        : translatey(-10px) rotate(-45deg);
+  }
 }
 @media (max-width:$screen-xs-max) {
   .mbr-hamburger {
@@ -1527,11 +1535,18 @@ $hamburger-color: $gray-darker;
 .mbr-buttons-right .mbr-buttons-link {
   font-size  : 18px;
   margin     : 0;
-  color      : #000;
   text-align : left;
+
   white-space: normal;
   @media (min-width:$screen-sm-max) {
     max-width: 111px;
+  }
+}
+
+.front {
+  .mbr-buttons-right .mbr-buttons-link {
+    color      : #fff !important;
+    text-shadow: 1px 1px 0 #666;
   }
 }
 
@@ -2000,8 +2015,9 @@ $hamburger-color: $gray-darker;
 #section6 a:hover,
 #section6 a:link,
 #section6 a:visited {
-  white-space: nowrap;
   color      : #fff;
+  text-shadow: 1px 1px 1px #111;
+  white-space: nowrap;
 }
 
 #section6 i {
