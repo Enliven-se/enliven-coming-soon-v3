@@ -97,7 +97,7 @@ export default function($) {
           controlNav: true,
           directionNav: false,
           randomize: false,
-          slideshowSpeed: 7500,
+          slideshowSpeed: 6000,
           initDelay: 750
         };
         break;
