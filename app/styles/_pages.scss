@@ -393,4 +393,8 @@ div.mce_inline_error {
 iframe {
   border: 0;
   width : 100%;
+
+  // &.resizable {
+  //   min-height: 3400px; // @FIXME
+  // }
 }
