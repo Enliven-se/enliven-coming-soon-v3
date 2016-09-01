@@ -107,6 +107,8 @@ export default function($) {
   });
 
   // iFrameResize
-  $('iframe.resizable').iFrameResize();
+  $('iframe.resizable').iFrameResize({
+    log: true
+  });
 
 }
