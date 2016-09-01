@@ -168,10 +168,12 @@ blockquote {
   &.slide-6 {
     align-items: center;
     display    : flex !important;
-    // max-width  : 300px;
 
     .row {
       margin: 0 auto;
+      @media screen and (min-width: $screen-sm-min) {
+        margin: 50px auto;
+      }
     }
 
     .slide.slide-6 {
