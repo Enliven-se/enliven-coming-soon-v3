@@ -108,14 +108,85 @@ blockquote {
   text-decoration: underline;
 }
 
+.flex-slider {
+  margin: 40px auto 10px;
+}
+
 .flex-slider-slide {
   display        : inline-block;
   list-style-type: none;
-  text-align     : center;
+  position       : relative;
+
+  .row {
+    display    : flex;
+    align-items: center;
+  }
+
+  .col-sm-6 {
+    &.slide-bg {
+      padding-left: 50px;
+      text-align  : center;
+    }
+
+    &.slide-text {
+      padding-right: 50px;
+      text-align   : left;
+    }
+  }
+
+  .row .slide-text {
+    max-width: 34em;
+  }
+
+  &.slide-1 {
+    .slide-bg {
+      margin: 50px 0 40px;
+    }
+
+    .slide-text {
+      position: absolute;
+      width   : 100%;
+
+      &.p1 {
+        top: 0;
+      }
+
+      &.p2 {
+        bottom: 30px;
+      }
+
+      h4 {
+        color      : #fff;
+        font-size  : 24px;
+        margin     : 0 auto;
+        max-width  : 22em;
+        text-shadow: 1px 1px 1px #666;
+      }
+    }
+  }
+
+  &.slide-6 {
+    align-items: center;
+    display    : flex !important;
+    // max-width  : 300px;
+
+    .row {
+      margin: 0 auto;
+    }
+
+    .slide.slide-6 {
+      max-width: 300px;
+    }
+  }
+
+  h3 {
+    font-size: 28px;
+    // max-width: 20em;
+    // margin   : 0 auto;
+  }
 
   blockquote {
     @extend .mbr-header-text;
-    color : #fff !important;
     margin: 0;
 
     small {
@@ -123,6 +194,38 @@ blockquote {
     }
   }
 
+  .slide {
+    max-width: 100%;
+    height   : auto;
+  }
+}
+
+.front .flex-slider-slide {
+  blockquote {
+    color: #fff !important;
+  }
+}
+
+.become-a-contributor {
+  .slide-1 {
+    text-align: center;
+  }
+}
+
+.flex-control-nav.flex-control-paging {
+  bottom: 33%;
+  right : 0;
+  left  : auto;
+  width : auto;
+
+  li {
+    display: block;
+    margin : 10px;
+  }
+}
+
+.flex-active {
+  background-color: #ffd700 !important;
 }
 
 // Responsive: Portrait tablets and up
