@@ -109,7 +109,12 @@ blockquote {
 }
 
 .flex-slider {
-  margin: 40px auto 10px;
+  margin: 0 auto;
+
+  .slides {
+    display    : flex;
+    align-items: center;
+  }
 }
 
 .flex-slider-slide {
@@ -117,63 +122,96 @@ blockquote {
   list-style-type: none;
   position       : relative;
 
+  .slide-bg {
+    text-align: center;
+    padding   : 20px;
+  }
+
   .row {
-    display    : flex;
-    align-items: center;
-  }
-
-  .col-sm-6 {
-    &.slide-bg {
-      padding-left: 50px;
-      text-align  : center;
+    @media screen and (min-width: $screen-xs-min) {
+      display    : flex;
+      align-items: center;
     }
 
-    &.slide-text {
-      padding-right: 50px;
-      text-align   : left;
+    .slide-text {
+      max-width: 34em;
+      padding  : 0 40px 20px;
+      @media screen and (min-width: $screen-sm-min) {
+        padding-top: 10px;
+      }
     }
   }
+  @media screen and (min-width: $screen-xs-min) {
+    .col-sm-6 {
+      &.slide-bg {
+        padding-left: 50px;
+        text-align  : center;
+      }
 
-  .row .slide-text {
-    max-width: 34em;
+      &.slide-text {
+        padding-right: 50px;
+        text-align   : left;
+      }
+    }
+
   }
 
   &.slide-1 {
     .slide-bg {
-      margin: 50px 0 40px;
+      margin: -40px 0 40px;
+      @media screen and (min-width: $screen-xs-min) {
+        margin-top: 50px;
+      }
     }
 
     .slide-text {
-      position: absolute;
-      width   : 100%;
+      @media screen and (min-width: $screen-xs-min) {
+        position: absolute;
+        width   : 100%;
 
-      &.p1 {
-        top: 0;
+        &.p1 {
+          top: 20px;
+        }
+
+        &.p2 {
+          bottom: 8px;
+          @media screen and (min-width: $screen-sm-min) {
+            bottom: -25px;
+          }
+        }
+
+        h4 {
+          color      : #fff;
+          font-size  : 24px;
+          margin     : 0 auto;
+          max-width  : 22em;
+          text-shadow: 1px 1px 1px #666;
+        }
       }
-
-      &.p2 {
-        bottom: 30px;
-      }
-
-      h4 {
-        color      : #fff;
-        font-size  : 24px;
-        margin     : 0 auto;
-        max-width  : 22em;
-        text-shadow: 1px 1px 1px #666;
+      @media screen and (min-width: $screen-sm-min) {
+        &.p2 {
+          bottom: 30px;
+        }
       }
     }
   }
 
   &.slide-6 {
-    align-items: center;
-    display    : flex !important;
+    @media screen and (min-width: $screen-xs-min) {
+      align-items: center;
+      display    : flex !important;
+    }
 
     .row {
       margin: 0 auto;
-      @media screen and (min-width: $screen-sm-min) {
-        margin: 50px auto;
-      }
+      // @media screen and (min-width: $screen-sm-min) {
+      //   margin: 50px auto;
+      // }
+    }
+
+    .slide-text {
+      padding-top: 0 !important;
+      max-width  : 100%;
     }
 
     .slide.slide-6 {
@@ -182,9 +220,12 @@ blockquote {
   }
 
   h3 {
-    font-size: 28px;
-    // max-width: 20em;
-    // margin   : 0 auto;
+    font-size: 20px;
+    @media screen and (min-width: $screen-sm-min) {
+      font-size: 28px;
+      // max-width: 20em;
+      // margin   : 0 auto;
+    }
   }
 
   blockquote {
@@ -197,8 +238,15 @@ blockquote {
   }
 
   .slide {
-    max-width: 100%;
-    height   : auto;
+    max-height: 34vh;
+    width     : auto;
+    max-width : 100%;
+    height    : auto;
+    @media screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+      height    : auto;
+      max-height: auto;
+      max-width : 100%;
+    }
   }
 }
 
@@ -215,10 +263,15 @@ blockquote {
 }
 
 .flex-control-nav.flex-control-paging {
-  bottom: 33%;
-  right : 0;
+  bottom: auto;
   left  : auto;
+  right : 0;
+  top   : 10px;
   width : auto;
+  @media screen and (min-width: $screen-xs-min) {
+    bottom: 33%;
+    top   : auto;
+  }
 
   li {
     display: block;
@@ -231,7 +284,7 @@ blockquote {
 }
 
 // Responsive: Portrait tablets and up
-@media screen and (min-width: $screen-sm-min) {
+@media screen and (min-width: $screen-xs-min) {
   .container {
     max-width: 730px;
   }
