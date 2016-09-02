@@ -4,11 +4,16 @@ export default function($) {
   //   $('#pagepiling').pagepiling();
   // }
 
+  function isIOS() {
+    var iOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+    return iOS;
+  }
+
   $('.front').each(function() {
     // vimeofy
     // don't render the video in the background on touch devices
     // @FIXME - should use "videoautoplay" but that doesn't seem to be set on desktop
-    if (!$('html').hasClass('touch')) {
+    if ($('html').hasClass('videoautoplay') || !isIOS()) {
       var autoplay = (self.location.port != 9000);
       $('#background').vimeofy({
         url: 'https://vimeo.com/178568007',
@@ -18,6 +23,7 @@ export default function($) {
         delay: 0,
         background: 1
       });
+      $('html').removeClass('poster');
     }
 
     // waypoint

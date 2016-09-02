@@ -886,8 +886,9 @@ $hamburger-color: $gray-darker;
 }
 
 #section1 .mbr-box-magnet {
-  display: table-cell;
-  float  : none;
+  display    : table-cell;
+  float      : none;
+  padding-top: 88px;
 }
 
 .mbr-box-magnet-sm-padding {

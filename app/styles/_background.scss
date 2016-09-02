@@ -9,7 +9,8 @@
   background-size    : cover;
   overflow           : hidden;
   z-index            : 0;
-  @media (max-width:$screen-xs-max) {
+
+  &.poster {
     background-image: url('../images/bg-lynch-hidef.jpg') !important;
   }
 }
