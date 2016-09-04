@@ -75,8 +75,9 @@ export default function($) {
         opts = {
           animation: 'slide',
           direction: 'vertical',
-          slideshowSpeed: 5000,
-          easing: 'swing',
+          slideshowSpeed: 7000,
+          animationSpeed: 1000,
+          easing: 'linear',
           keyboard: false,
           pauseOnHover: false,
           controlNav: false,

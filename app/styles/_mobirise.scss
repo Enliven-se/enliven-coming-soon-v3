@@ -1029,12 +1029,16 @@ $hamburger-color: $gray-darker;
   }
 
   .phone-container {
-    display : none !important; // @TODO
     height  : 292px;
+    width   : 162px;
     overflow: hidden;
     z-index : 100;
     @media (max-width:$screen-xs-max) {
+      margin  : 0 auto;
       position: relative;
+    }
+    @media (min-width:$screen-sm-min) and (max-width:$screen-sm-max) {
+      display: none;
     }
     @media (min-width:$screen-sm-min) {
       top : 136px;
@@ -1073,10 +1077,14 @@ $hamburger-color: $gray-darker;
 
   .flex-slider-phone,
   .mockup-phone {
-    position: absolute;
-    top     : 41px;
-    left    : 10px;
-    z-index : -1;
+    background: #fff;
+    height    : 212px;
+    left      : 17px;
+    overflow  : hidden;
+    position  : absolute;
+    top       : 41px;
+    width     : 135px;
+    z-index   : -1;
   }
 
 }
