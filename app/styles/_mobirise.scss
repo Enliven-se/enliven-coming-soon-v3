@@ -1,4 +1,4 @@
-$hamburger-color: $gray-darker;
+$hamburger-color: $gray;
 
 .is-builder .animated {
   -webkit-animation-name: none !important;
@@ -58,6 +58,10 @@ $hamburger-color: $gray-darker;
 
   .mbr-navbar-hamburger {
     color: $hamburger-color;
+  }
+
+  &.mbr-navbar-open .mbr-navbar-hamburger {
+    color: $gray-lighter;
   }
 }
 
@@ -178,6 +182,7 @@ $hamburger-color: $gray-darker;
 
 .mbr-navbar-column {
   display       : table-cell;
+  min-height    : 89px;
   vertical-align: middle;
 }
 
@@ -344,8 +349,7 @@ $hamburger-color: $gray-darker;
   }
 
   .mbr-navbar-auto-collapse .mbr-navbar-column {
-    display: block;
-    width  : 100%;
+    width: 100%;
   }
 
   .mbr-navbar-column {
