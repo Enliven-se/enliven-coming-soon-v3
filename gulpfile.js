@@ -265,28 +265,24 @@ gulp.task('views', () => {
     }));
 });
 
-gulp.task('sitemap', function () {
-console.log("looking in "+destination+" for html files")
-
-    gulp.src(destination + '/**/*.html', {
-            read: false
-        })
-        .pipe(sitemap({
-            siteUrl: 'https://www.enliven.co'
-        }))
-        .pipe(gulp.dest(destination));
+gulp.task('sitemap', ['build'], () => {
+  gulp.src(destination + '/**/*.html', {
+    read: false
+  })
+    .pipe(sitemap({
+      siteUrl: 'https://www.enliven.co'
+    }))
+    .pipe(gulp.dest(destination));
 });
 
-
-
 // deploy to Github pages
-gulp.task('deploy', ['build', 'cname'], () => {
+gulp.task('deploy', ['build', 'cname', 'sitemap'], () => {
   return gulp.src(destination)
     .pipe($.subtree())
     .pipe($.clean());
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'sitemap'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src(destination + '/**/*')
     .pipe($.size({
       title: 'build',
