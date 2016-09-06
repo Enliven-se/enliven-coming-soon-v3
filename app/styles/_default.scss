@@ -111,7 +111,7 @@ blockquote {
 .flex-slider {
   margin: 0 auto;
 
-  .slides {
+  .slides.centered {
     display    : flex;
     align-items: center;
   }
@@ -233,7 +233,8 @@ blockquote {
     margin: 0;
 
     small {
-      font-size: 20px;
+      font-size  : 20px;
+      line-height: 26px;
     }
   }
 
@@ -302,5 +303,28 @@ blockquote {
   // Remove the bottom border on the jumbotron for visual effect
   .jumbotron {
     border-bottom: 0;
+  }
+}
+
+.ordered-list-fancy {
+  counter-reset: fancy-counter;
+
+  li {
+    list-style-type: none;
+    margin-bottom  : 2em;
+
+    &:before {
+      background       : $gray-darker;
+      border-radius    : 50%;
+      color            : #fff;
+      content          : counter(fancy-counter);
+      counter-increment: fancy-counter;
+      font             : 18px;
+      height           : 36px;
+      margin           : 0 10px;
+      padding          : 9px 12px;
+      text-align       : center;
+      width            : 36px;
+    }
   }
 }
