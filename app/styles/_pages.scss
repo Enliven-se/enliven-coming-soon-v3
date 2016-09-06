@@ -392,12 +392,17 @@
 .response,
 div.mce_inline_error {
   color: #fff;
+        asdfkbasdkfj;
 }
 
 // iframe
 iframe {
   border: 0;
   width : 100%;
+
+  &.contributor-form {
+    margin-top:40px;
+  }
 
   // &.resizable {
   //   min-height: 3400px; // @FIXME
