@@ -15,6 +15,11 @@
     "extra_classes" : ["hidden-md", "hidden-lg"],
     "url": "/contributor-faq"
   }, {
+    "title": "Submission Guidelines",
+    "className": "submission-guidelines",
+    "extra_classes" : ["hidden-md", "hidden-lg"],
+    "url": "/submission-guidelines"
+  }, {
     "title": "Contributor Application Form",
     "className": "contributor-application-form",
     "extra_classes" : ["hidden-md", "hidden-lg"],
