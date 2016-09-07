@@ -11,6 +11,7 @@ const browserify = require('browserify');
 const babelify = require('babelify');
 const buffer = require('vinyl-buffer');
 const source = require('vinyl-source-stream');
+const sitemap = require('gulp-sitemap');
 
 const reload = browserSync.reload;
 
@@ -264,6 +265,20 @@ gulp.task('views', () => {
     }));
 });
 
+gulp.task('sitemap', function () {
+console.log("looking in "+destination+" for html files")
+
+    gulp.src(destination + '/**/*.html', {
+            read: false
+        })
+        .pipe(sitemap({
+            siteUrl: 'https://www.enliven.co'
+        }))
+        .pipe(gulp.dest(destination));
+});
+
+
+
 // deploy to Github pages
 gulp.task('deploy', ['build', 'cname'], () => {
   return gulp.src(destination)
@@ -271,7 +286,7 @@ gulp.task('deploy', ['build', 'cname'], () => {
     .pipe($.clean());
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'sitemap'], () => {
   return gulp.src(destination + '/**/*')
     .pipe($.size({
       title: 'build',
