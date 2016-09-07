@@ -97,6 +97,7 @@ export default function($) {
         };
         break;
       default:
+        // animation
         opts = {
           animation: 'slide',
           direction: 'horizontal',
@@ -104,7 +105,7 @@ export default function($) {
           controlNav: true,
           directionNav: false,
           randomize: false,
-          slideshowSpeed: 6000,
+          slideshowSpeed: 6500,
           initDelay: 750
         };
         break;
