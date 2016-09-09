@@ -10,7 +10,15 @@
   }
 
   &.contributor-faq {
-    background-image: url("../images/heroes/hero-contributor-faq.jpg");
+    background-image: url("../images/heroes/hero-piano.jpg");
+    @media (min-width: $screen-md) {
+      background-position: 50% 50%;
+    }
+  }
+
+  &.submission-guidelines {
+    background-image: url("../images/heroes/hero-player.jpg");
+    padding-top     : 0;
   }
 
   &.about {
@@ -36,7 +44,7 @@
 
   .title {
     letter-spacing: -1px;
-    z-index : 0;
+    z-index       : 0;
     @media (min-width: $screen-md) {
       position: absolute;
       bottom  : 0;
@@ -120,6 +128,30 @@
   background-color: $gray-lighter;
 }
 
+.credits {
+  position: absolute;
+  color   : white;
+  bottom  : 5px;
+  right   : 25px;
+  @media (max-width:$screen-md-max) {
+    font-size    : 10px;
+    margin-bottom: 0;
+  }
+
+  &.credits-black {
+    color: black;
+  }
+
+  &.credits-top {
+    top       : 5px;
+    text-align: right;
+  }
+}
+
+#submission-guidelines {
+  line-height: 36px;
+}
+
 #section2 {
   background-color: #fff;
 }
@@ -139,7 +171,14 @@
 }
 
 #how-does-it-work {
-  position: relative;
+  @media (max-width: $screen-xs-max) {
+    text-shadow: 1px 1px 1px white;
+  }
+  @media (min-width:$screen-sm-min) {
+    position: absolute;
+    bottom  : 5px;
+    color   : white;
+  }
 }
 
 #join-a-global-community {
@@ -164,7 +203,6 @@
 .features2 .table-cell {
   padding-left : 30px;
   padding-right: 30px;
-
 }
 
 .teco {
@@ -180,14 +218,11 @@
 
 #frequently-asked-questions,
 #privacy-security,
-#submission-guidelines,
 #terms-conditions {
-
   line-height: 27px;
 }
 
 #privacy-security,
-#submission-guidelines,
 #terms-conditions {
   padding-top: 100px;
   line-height: 36px;
@@ -210,7 +245,6 @@
 #want-to-become-an-enliven-contributor {
   color: #fff;
 }
-
 // front
 .text-coming-soon {
   font-size: 54px;
@@ -278,7 +312,6 @@
 
 #below {
   padding: 0;
-
 }
 
 .newt {
@@ -308,9 +341,7 @@
     padding: 0;
   }
 }
-
 //about enliven
-
 .agrey {
   text-decoration: underline;
   color          : grey;
@@ -336,7 +367,6 @@
   @media (max-width:$screen-xs-max) {
     font-size: 16px;
   }
-
 }
 
 .bkg16 {
@@ -357,14 +387,12 @@
     padding-bottom: 20px;
   }
 }
-
 // .mission {
 //   display: block;
 //   @media (min-width: $screen-sm) and (max-width: $screen-sm-max) {
 //     display: inline;
 //   }
 // }
-
 .revenue-share-model {
   .list,
   .row {
@@ -386,23 +414,19 @@
     margin: 10px;
   }
 }
-
 // mailchimp
-
 .response,
 div.mce_inline_error {
   color: #fff;
 }
-
 // iframe
 iframe {
   border: 0;
   width : 100%;
 
   &.contributor-form {
-    margin-top:40px;
+    margin-top: 40px;
   }
-
   // &.resizable {
   //   min-height: 3400px; // @FIXME
   // }
