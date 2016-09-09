@@ -169,12 +169,12 @@
 }
 
 #how-does-it-work {
-  margin-top: 3em;
   @media (max-width: $screen-xs-max) {
     text-shadow: 0 0 3px white;
   }
   @media (min-width:$screen-sm-min) {
     color      : white;
+    margin-top : 3em;
     text-shadow: 0 0 3px #000;
   }
 }
