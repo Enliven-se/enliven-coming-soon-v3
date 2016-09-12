@@ -4,7 +4,6 @@ const gulpLoadPlugins = require('gulp-load-plugins');
 const $ = gulpLoadPlugins();
 
 const fs = require('fs');
-const browserSync = require('browser-sync');
 const del = require('del');
 const wiredep = require('wiredep').stream;
 const browserify = require('browserify');
@@ -13,7 +12,9 @@ const buffer = require('vinyl-buffer');
 const source = require('vinyl-source-stream');
 const sitemap = require('gulp-sitemap');
 
+const browserSync = require('browser-sync');
 const reload = browserSync.reload;
+const browserSync_port = 9000;
 
 const destination = 'dist';
 
@@ -165,7 +166,7 @@ gulp.task('clean', () => {
 gulp.task('serve', ['views', 'styles', 'scripts', 'fonts'], () => {
   browserSync({
     notify: false,
-    port: 9000,
+    port: browserSync_port,
     server: {
       baseDir: ['.tmp', 'app'],
       routes: {
@@ -196,7 +197,7 @@ gulp.task('serve', ['views', 'styles', 'scripts', 'fonts'], () => {
 gulp.task('serve:dist', () => {
   browserSync({
     notify: false,
-    port: 9000,
+    port: browserSync_port,
     server: {
       baseDir: [destination]
     }
@@ -206,7 +207,7 @@ gulp.task('serve:dist', () => {
 gulp.task('serve:test', ['scripts'], () => {
   browserSync({
     notify: false,
-    port: 9000,
+    port: browserSync_port,
     ui: false,
     server: {
       baseDir: 'test',
@@ -265,28 +266,24 @@ gulp.task('views', () => {
     }));
 });
 
-gulp.task('sitemap', function () {
-console.log("looking in "+destination+" for html files")
-
-    gulp.src(destination + '/**/*.html', {
-            read: false
-        })
-        .pipe(sitemap({
-            siteUrl: 'https://www.enliven.co'
-        }))
-        .pipe(gulp.dest(destination));
+gulp.task('sitemap', ['build'], () => {
+  gulp.src(destination + '/**/*.html', {
+    read: false
+  })
+    .pipe(sitemap({
+      siteUrl: 'https://www.enliven.co'
+    }))
+    .pipe(gulp.dest(destination));
 });
 
-
-
 // deploy to Github pages
-gulp.task('deploy', ['build', 'cname'], () => {
+gulp.task('deploy', ['build', 'cname', 'sitemap'], () => {
   return gulp.src(destination)
     .pipe($.subtree())
     .pipe($.clean());
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'sitemap'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src(destination + '/**/*')
     .pipe($.size({
       title: 'build',
