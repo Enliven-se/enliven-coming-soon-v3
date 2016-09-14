@@ -1,5 +1,15 @@
 // build:js scripts/vendor.js
 // bower:js
+// endbower
+// endbuild
+// build:js scripts/plugins.js
+// endbuild
+
+if is_front
+  script(src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js', async='')
+  
+// build:js scripts/main.js
+// vendor
 script(src='/bower_components/jquery/dist/jquery.js')
 script(src='/bower_components/smoothscroll/dist/smoothscroll.js')
 script(src='/bower_components/jarallax/jarallax/jarallax.js')
@@ -9,9 +19,7 @@ script(src='/bower_components/jquery.smartresize/jquery.smartresize.js')
 script(src='/bower_components/waypoints/lib/jquery.waypoints.js')
 script(src='/bower_components/flexslider/jquery.flexslider.js')
 script(src='/bower_components/iframe-resizer/js/iframeResizer.js')
-// endbower
-// endbuild
-// build:js scripts/plugins.js
+// plugins
 script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/affix.js')
 script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/alert.js')
 script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/dropdown.js')
@@ -24,11 +32,6 @@ script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/carous
 script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/scrollspy.js')
 script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/collapse.js')
 script(src='/bower_components/bootstrap-sass/assets/javascripts/bootstrap/tab.js')
-// endbuild
-
-if is_front
-  script(src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js', async='')
-  
-// build:js scripts/main.js
+// main
 script(src='/scripts/bundle.js')
 // endbuild
