@@ -92,8 +92,8 @@ $hamburger-color: $gray;
     }
   }
 }
-
 // navbar height
+
 .mbr-navbar-brand-img,
 .mbr-navbar-brand-link:after {
   max-height: 32px;
@@ -101,8 +101,8 @@ $hamburger-color: $gray;
     max-height: 20px;
   }
 }
-
 // short navbar
+
 .mbr-navbar-short {
   .mbr-navbar-brand-img,
   .mbr-navbar-brand-link:after {
@@ -1090,7 +1090,6 @@ $hamburger-color: $gray;
     width     : 135px;
     z-index   : -1;
   }
-
 }
 
 .mbr-figure-full-width .mbr-figure-img,
@@ -1546,13 +1545,12 @@ $hamburger-color: $gray;
 
 .mbr-buttons-right .mbr-buttons-btn,
 .mbr-buttons-right .mbr-buttons-link {
-  font-size  : 18px;
+  font-size  : 15px;
   margin     : 0;
-  text-align : left;
-
+  text-align : center;
   white-space: normal;
   @media (min-width:$screen-sm-max) {
-    max-width: 111px;
+    max-width: 90px;
   }
 }
 
@@ -1577,13 +1575,16 @@ $hamburger-color: $gray;
   margin-right: 0;
   margin-left : 0;
 }
-
 //.mbr-buttons-link .text-black .become-a-contributor {
 //  max-width: 140px;
 //}
 @media (min-width:$screen-md-min) {
   .mbr-buttons-link.text-black.become-link {
-    max-width: 140px;
+    max-width: 110px;
+  }
+
+  .mbr-buttons-link.text-black.contributor-faq {
+    max-width: 100px;
   }
 }
 
@@ -2016,7 +2017,6 @@ $hamburger-color: $gray;
   @media (max-width:$screen-xs-min) {
     margin-bottom: 40px;
   }
-
 }
 
 #section6 li {
@@ -2076,7 +2076,6 @@ $hamburger-color: $gray;
 .mbr-section.mbr-section--relative.mbr-section--fixed-size {
   background-color: $gray-darker;
 }
-
 // lnch
 @media screen and (min-width: $screen-sm-min) {
   .mbr-section-container.mbr-section-container--std-padding.container {

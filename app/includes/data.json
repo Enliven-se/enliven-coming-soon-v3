@@ -1,6 +1,6 @@
 {
   "navbar_items": [{
-    "title": "About Enliven",
+    "title": "Our Mission",
     "className": "about",
     "extra_classes" : ["about-link"],
     "url": "/about"
@@ -12,7 +12,7 @@
   }, {
     "title": "Contributor FAQ",
     "className": "contributor-faq",
-    "extra_classes" : ["hidden-md", "hidden-lg"],
+    "extra_classes" : ["contributor-faq"],
     "url": "/contributor-faq"
   }, {
     "title": "Submission Guidelines",
