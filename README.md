@@ -1,6 +1,6 @@
 # enliven-coming-soon-v3
 
-Behind the scenes at http://v3.enliven.co/
+Behind the scenes at http://www.enliven.co/
 
 This site was produced using [yeoman/generator-webapp: A gulp.js generator for modern webapps](https://github.com/yeoman/generator-webapp/) and a few great plugins.
 
