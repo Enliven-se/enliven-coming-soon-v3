@@ -31,9 +31,9 @@ export default function($) {
       element: document.getElementById('section2'),
       handler: function(direction) {
         if (direction == 'down') {
-          $('.mbr-navbar').addClass('going-down').removeClass('top');
+          $('.navbar').addClass('going-down').removeClass('top');
         } else {
-          $('.mbr-navbar').addClass('top').removeClass('going-down');
+          $('.navbar').addClass('top').removeClass('going-down');
         }
       },
       offset: 100

@@ -8,17 +8,17 @@ export default function($, isSupportViewportUnits) {
 
   $('html').addClass(isMobile ? 'mobile' : 'desktop');
 
-  // .mbr-section-16by9 (16 by 9 blocks autoheight)
+  // .section-16by9 (16 by 9 blocks autoheight)
   function calculate16by9() {
     $(this).css('height', $(this).parent().width() * 9 / 16);
   }
 
   $(window).scroll(function() {
-    // .mbr-navbar-sticky
-    $('.mbr-navbar-sticky').each(function() {
+    // .navbar-sticky
+    $('.navbar-sticky').each(function() {
       var method = $(window).scrollTop() > 10 ? 'addClass' : 'removeClass';
-      $(this)[method]('mbr-navbar-stuck')
-        .not('.mbr-navbar-open')[method]('mbr-navbar-short');
+      $(this)[method]('navbar-stuck')
+        .not('.navbar-open')[method]('navbar-short');
     });
 
     // is-fixed
@@ -47,31 +47,31 @@ export default function($, isSupportViewportUnits) {
     }
   });
 
-  // .mbr-hamburger
-  $('.mbr-hamburger:not(.mbr-added)').each(function() {
-    $(this).addClass('mbr-added')
+  // .hamburger
+  $('.hamburger:not(.added)').each(function() {
+    $(this).addClass('added')
       .click(function() {
         $(this)
-          .toggleClass('mbr-hamburger-open')
-          .parents('.mbr-navbar')
-          .toggleClass('mbr-navbar-open')
-          .removeClass('mbr-navbar-short');
-      }).parents('.mbr-navbar').find('a:not(.mbr-hamburger)').click(function() {
-      $('.mbr-hamburger-open').click();
+          .toggleClass('hamburger-open')
+          .parents('.navbar')
+          .toggleClass('navbar-open')
+          .removeClass('navbar-short');
+      }).parents('.navbar').find('a:not(.hamburger)').click(function() {
+      $('.hamburger-open').click();
     });
   });
 
   // smartResize
   $(window).smartResize(function() {
     if ($(window).width() > 991) {
-      $('.mbr-navbar-auto-collapse .mbr-hamburger-open').click();
+      $('.navbar-auto-collapse .hamburger-open').click();
     }
 
-    $('.mbr-section-16by9').each(calculate16by9);
+    $('.section-16by9').each(calculate16by9);
 
   }).keydown(function(event) {
     if (27 == event.which) // ESC
-      $('.mbr-hamburger-open').click();
+      $('.hamburger-open').click();
   });
 
   if (isMobile && navigator.userAgent.match(/Chrome/i)) { // simple fix for Chrome's scrolling
@@ -83,18 +83,18 @@ export default function($, isSupportViewportUnits) {
         var windowHeight = $(window).height();
         if ($.inArray(windowHeight, deviceSize) < 0)
           windowHeight = deviceSize[$(window).width() > windowHeight ? 1 : 0];
-        $('.mbr-section-full-height').css('height', windowHeight + 'px');
+        $('.section-full-height').css('height', windowHeight + 'px');
       });
     })($(window).width(), $(window).height());
-  } else if (!isSupportViewportUnits) { // fallback for .mbr-section-full-height
+  } else if (!isSupportViewportUnits) { // fallback for .section-full-height
     $(window).smartResize(function() {
-      $('.mbr-section-full-height').css('height', $(window).height() + 'px');
+      $('.section-full-height').css('height', $(window).height() + 'px');
     });
-    if ($('html').hasClass('mbr-site-loaded') && $('.mbr-section-full-height').length)
+    if ($('html').hasClass('site-loaded') && $('.section-full-height').length)
       $(window).resize();
   }
 
-  var enabled = $('.mbr-section-16by9');
+  var enabled = $('.section-16by9');
   if (enabled.length) {
     enabled
       .attr('data-16by9', 'true')
@@ -105,26 +105,26 @@ export default function($, isSupportViewportUnits) {
       .removeAttr('data-16by9');
   }
 
-  // .mbr-parallax-background
+  // .parallax-background
   if ($.fn.jarallax && !isMobile) {
     $(document).on('destroy.parallax', function(event) {
-      $('.mbr-parallax-background')
+      $('.parallax-background')
         .jarallax('destroy')
         .css('position', '');
     });
-    $('.mbr-parallax-background')
+    $('.parallax-background')
       .jarallax()
       .css('position', 'relative');
   }
 
-  // .mbr-fixed-top
+  // .fixed-top
   if (fixedTopTimeout) clearTimeout(fixedTopTimeout);
   fixedTopTimeout = setTimeout(function() {
     if (fixedTop) {
       fixedTop.fixed = false;
       $(fixedTop.elm).removeClass('is-fixed');
     }
-    $('.mbr-fixed-top:first').each(function() {
+    $('.fixed-top:first').each(function() {
       fixedTop = {
         breakPoint: $(this).offset().top + $(this).height() * 3,
         fixed: false,
@@ -135,7 +135,7 @@ export default function($, isSupportViewportUnits) {
   }, 650);
 
   // init
-  $('html').addClass('mbr-site-loaded');
+  $('html').addClass('site-loaded');
   $(window).resize().scroll();
 
   // smooth scroll
@@ -149,7 +149,7 @@ export default function($, isSupportViewportUnits) {
           $(useBody ? 'body' : target.hash).each(function() {
             e.preventDefault();
             // in css sticky navbar has height 64px
-            var stickyMenuHeight = $('.mbr-navbar-sticky').length ? 64 : 0;
+            var stickyMenuHeight = $('.navbar-sticky').length ? 64 : 0;
             var goTo = target.hash == '#bottom' ?
               ($(this).height() - $(window).height()) :
               ($(this).offset().top - stickyMenuHeight);
