@@ -37,7 +37,6 @@ blockquote {
 // Custom page header
 
 .header {
-  border-bottom: 1px solid #e5e5e5;
   // Make the masthead heading the same height as the navigation
   h3 {
     line-height   : 40px;
@@ -68,7 +67,7 @@ blockquote {
   }
 }
 
-.front .mbr-hero-text,
+.front .hero-text,
 .title {
   font-size: 52px;
   @media (max-width:$screen-xs-min) {
@@ -229,7 +228,7 @@ blockquote {
   }
 
   blockquote {
-    @extend .mbr-header-text;
+    @extend .header-text;
     margin: 0;
 
     small {
@@ -308,7 +307,7 @@ blockquote {
 
 .ordered-list-fancy {
   counter-reset: fancy-counter;
-  margin-top: 30px;
+  margin-top   : 30px;
 
   li {
     list-style-type: none;
