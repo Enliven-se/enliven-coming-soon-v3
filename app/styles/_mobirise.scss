@@ -42,6 +42,7 @@ $hamburger-color: $gray;
 .navbar {
   border-radius: 0;
   box-shadow   : none;
+  min-height   : 0;
   position     : relative;
   width        : 100%;
 
@@ -97,22 +98,6 @@ $hamburger-color: $gray;
   }
 }
 
-.front .navbar {
-  .navbar {
-    background-color: rgba(255,255,255,0);
-  }
-
-  &.going-down {
-    .navbar {
-      background-color: rgba(255,255,255,0.95);
-    }
-
-    .buttons-right .buttons-link {
-      color      : #666 !important;
-      text-shadow: 1px 1px 0 #fff;
-    }
-  }
-}
 // navbar height
 
 .navbar-brand-img,
@@ -150,10 +135,6 @@ $hamburger-color: $gray;
     &:before,
     .navbar-container {
       height: 45px;
-    }
-
-    .navbar-container {
-      padding: 7px 0;
     }
   }
 }
@@ -234,7 +215,7 @@ $hamburger-color: $gray;
   position: absolute;
   z-index : 10000;
   top     : 22px;
-  right   : 10px;
+  right   : 22px;
   display : none;
   @media (min-width:$screen-sm-min) {
     top: 30px;
@@ -861,9 +842,8 @@ $hamburger-color: $gray;
 }
 
 #section1 .box-magnet {
-  display    : table-cell;
-  float      : none;
-  padding-top: 88px;
+  display: table-cell;
+  float  : none;
 }
 
 .box-magnet-sm-padding {
@@ -1323,7 +1303,7 @@ $hamburger-color: $gray;
 
 .header {
   position  : relative;
-  padding   : 0;
+  // padding   : 0;
   text-align: left;
 }
 
@@ -1458,7 +1438,7 @@ $hamburger-color: $gray;
 .footer {
   font-size   : 13px;
   line-height : 1em;
-  padding     : 20px 0;
+  padding     : 20px;
   word-spacing: 1px;
   color       : #9c9c9c;
 
@@ -1529,6 +1509,21 @@ $hamburger-color: $gray;
 }
 
 .front {
+  .navbar {
+    background-color: rgba(255,255,255,0);
+
+    &.going-down {
+      .navbar {
+        background-color: rgba(255,255,255,0.95);
+      }
+
+      .buttons-right .buttons-link {
+        color      : #666 !important;
+        text-shadow: 1px 1px 0 #fff;
+      }
+    }
+  }
+
   .buttons-right .buttons-link {
     color      : #fff !important;
     text-shadow: 1px 1px 0 #666;
@@ -2058,9 +2053,9 @@ $hamburger-color: $gray;
   }
 }
 
-.section-container.section-container-isolated.container {
-  padding: 40px 0;
-}
+// .section-container.section-container-isolated.container {
+//   padding: 40px 0;
+// }
 
 #section3 .section-container-isolated {
   padding: 60px 0 40px;
