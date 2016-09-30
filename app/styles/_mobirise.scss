@@ -97,7 +97,6 @@ $hamburger-color: $gray;
     margin-bottom   : 0;
   }
 }
-
 // navbar height
 
 .navbar-brand-img,
@@ -921,7 +920,7 @@ $hamburger-color: $gray;
   color         : #000;
   font-size     : 54px;
   line-height   : 120%;
-  margin        : 20px auto;
+  margin        : 260px auto;
   // max-width     : 400px;
   padding-bottom: 41px;
   text-shadow   : 0 0 1px #eee;
@@ -964,7 +963,7 @@ $hamburger-color: $gray;
     width   : 520px;
     position: absolute;
     right   : 50;
-    top     : -135px;
+    top     : -95px;
     @media (max-width:$screen-sm-max) {
       height: 430px !important;
     }
@@ -2011,7 +2010,7 @@ $hamburger-color: $gray;
 #msg-box4-3 {
   background-color: #fff;
   @media (min-width:$screen-sm-min) {
-    height: 500px;
+    height: 600px;
   }
 }
 
@@ -2052,7 +2051,6 @@ $hamburger-color: $gray;
     padding-bottom: 160px;
   }
 }
-
 // .section-container.section-container-isolated.container {
 //   padding: 40px 0;
 // }
