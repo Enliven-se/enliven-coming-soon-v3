@@ -99,7 +99,6 @@ $hamburger-color: $gray;
 }
 
 // navbar height
-
 .navbar-brand-img,
 .navbar-brand-link:after {
   max-height: 32px;
@@ -979,7 +978,7 @@ $hamburger-color: $gray;
   .figure-container {
     position: absolute;
     top     : 0;
-    left    : 0;
+    left    : 20px;
   }
 
   .phone-container {
