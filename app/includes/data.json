@@ -30,6 +30,11 @@
     "extra_classes" : ["hidden-md", "hidden-lg"],
     "url": "/join-enliven"
   }, {
+    "title": "Work with Us",
+    "className": "work-with-us",
+    "extra_classes" : ["hidden-md", "hidden-lg"],
+    "url": "/work-with-us"
+  }, {
     "title": "Beta <span class=\"text-nowrap\">Sign-In</span>",
     "className": "cms",
     "extra_classes" : ["beta-link"],
