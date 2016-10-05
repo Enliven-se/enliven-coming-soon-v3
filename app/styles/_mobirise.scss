@@ -98,7 +98,6 @@ $hamburger-color: $gray;
   }
 }
 // navbar height
-
 .navbar-brand-img,
 .navbar-brand-link:after {
   max-height: 32px;
@@ -920,8 +919,7 @@ $hamburger-color: $gray;
   color         : #000;
   font-size     : 54px;
   line-height   : 120%;
-  margin        : 260px auto;
-  // max-width     : 400px;
+  margin        : 20px auto;
   padding-bottom: 41px;
   text-shadow   : 0 0 1px #eee;
 }
@@ -963,7 +961,7 @@ $hamburger-color: $gray;
     width   : 520px;
     position: absolute;
     right   : 50;
-    top     : -95px;
+    top     : -135px;
     @media (max-width:$screen-sm-max) {
       height: 430px !important;
     }
@@ -983,7 +981,7 @@ $hamburger-color: $gray;
   }
 
   .phone-container {
-    height  : 692px;
+    // height  : 692px;
     width   : 400px;
     overflow: hidden;
     z-index : 100;
