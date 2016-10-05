@@ -42,6 +42,10 @@
     background-image: url("../images/heroes/hero-become-a-contributor.jpg");
   }
 
+  &.work-with-us {
+    background-image: url("../images/heroes/hero-work.jpg");
+  }
+
   .title {
     letter-spacing: -1px;
     z-index       : 0;
@@ -78,7 +82,6 @@
     padding   : 0;
     min-height: 1em;
     transition: all 0.2s ease-in-out 0s;
-
   }
 
   h1,
@@ -265,6 +268,7 @@
   color: #fff;
 }
 // front
+
 .text-coming-soon {
   font-size: 54px;
   color    : #FFFFFF;
@@ -361,6 +365,7 @@
   }
 }
 //about enliven
+
 .agrey {
   text-decoration: underline;
   color          : grey;
@@ -412,6 +417,7 @@
 //     display: inline;
 //   }
 // }
+
 .revenue-share-model {
   .list,
   .row {
@@ -434,11 +440,13 @@
   }
 }
 // mailchimp
+
 .response,
 div.mce_inline_error {
   color: #fff;
 }
 // iframe
+
 iframe {
   border: 0;
   width : 100%;

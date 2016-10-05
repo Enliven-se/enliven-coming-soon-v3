@@ -97,8 +97,8 @@ $hamburger-color: $gray;
     margin-bottom   : 0;
   }
 }
-
 // navbar height
+
 .navbar-brand-img,
 .navbar-brand-link:after {
   max-height: 32px;
@@ -114,6 +114,7 @@ $hamburger-color: $gray;
   }
 }
 // short navbar
+
 .navbar-short {
   .navbar-brand-img,
   .navbar-brand-link:after {
@@ -1984,7 +1985,7 @@ $hamburger-color: $gray;
 }
 
 #section6 li {
-  font-size  : 20px;
+  font-size  : 16px;
   line-height: 2em;
 }
 
@@ -2047,7 +2048,6 @@ $hamburger-color: $gray;
     padding-bottom: 160px;
   }
 }
-
 // .section-container.section-container-isolated.container {
 //   padding: 40px 0;
 // }
