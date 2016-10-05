@@ -97,7 +97,6 @@ $hamburger-color: $gray;
     margin-bottom   : 0;
   }
 }
-
 // navbar height
 .navbar-brand-img,
 .navbar-brand-link:after {
@@ -114,6 +113,7 @@ $hamburger-color: $gray;
   }
 }
 // short navbar
+
 .navbar-short {
   .navbar-brand-img,
   .navbar-brand-link:after {
@@ -919,7 +919,7 @@ $hamburger-color: $gray;
   color         : #000;
   font-size     : 54px;
   line-height   : 120%;
-  margin        : 20px auto;
+  margin        : 260px auto;
   // max-width     : 400px;
   padding-bottom: 41px;
   text-shadow   : 0 0 1px #eee;
@@ -961,8 +961,8 @@ $hamburger-color: $gray;
   @media (min-width:$screen-sm-min) {
     width   : 520px;
     position: absolute;
-    right   : 0;
-    top     : -67px;
+    right   : 50;
+    top     : -95px;
     @media (max-width:$screen-sm-max) {
       height: 430px !important;
     }
@@ -982,8 +982,8 @@ $hamburger-color: $gray;
   }
 
   .phone-container {
-    height  : 292px;
-    width   : 162px;
+    height  : 692px;
+    width   : 400px;
     overflow: hidden;
     z-index : 100;
     @media (max-width:$screen-xs-max) {
@@ -994,14 +994,15 @@ $hamburger-color: $gray;
       display: none;
     }
     @media (min-width:$screen-sm-min) {
-      top : 136px;
-      left: 335px;
+      left: 485px;
+      top : 120px;
     }
   }
 
   .tablet-container {
     overflow: hidden;
-    height  : 297px;
+    height  : 660px;
+    width   : 740px;
     @media (max-width:$screen-xs-max) {
       display: none;
     }
@@ -1020,23 +1021,21 @@ $hamburger-color: $gray;
 
   .flex-slider-tablet,
   .mockup-tablet {
-    height  : 254px;
-    left    : 37px;
+    left    : 120px;
+    width   : 500px;
     position: absolute;
-    top     : 25px;
-    width   : 338px;
+    top     : 35px;
     z-index : -1;
   }
 
   .flex-slider-phone,
   .mockup-phone {
     background: #fff;
-    height    : 212px;
-    left      : 17px;
+    left      : 110px;
     overflow  : hidden;
     position  : absolute;
-    top       : 41px;
-    width     : 135px;
+    top       : 58px;
+    width     : 180px;
     z-index   : -1;
   }
 }
@@ -1075,6 +1074,11 @@ $hamburger-color: $gray;
   text-align : left;
   color      : #fff;
   background : rgba(0,0,0,.5);
+}
+
+.device-heading {
+  padding  : 50px 0 0 20px;
+  max-width: 400px;
 }
 
 .figure-caption-no-padding {
@@ -2006,7 +2010,7 @@ $hamburger-color: $gray;
 #msg-box4-3 {
   background-color: #fff;
   @media (min-width:$screen-sm-min) {
-    height: 320px;
+    height: 600px;
   }
 }
 
@@ -2047,7 +2051,6 @@ $hamburger-color: $gray;
     padding-bottom: 160px;
   }
 }
-
 // .section-container.section-container-isolated.container {
 //   padding: 40px 0;
 // }
