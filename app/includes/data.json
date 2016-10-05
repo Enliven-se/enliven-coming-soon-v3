@@ -44,5 +44,22 @@
     "className": "contact",
     "extra_classes" : ["hidden-md", "hidden-lg"],
     "url": "/contact"
+  }], 
+  "footer_items" : [{
+      "title": "About Enliven",
+      "className": "about",
+      "url": "/about"
+  }, {
+      "title": "<span class=\"text-nowrap\">Become a</span> Contributor",
+      "className": "become-a-contributor",
+      "url": "/become-a-contributor"
+  }, {
+      "title": "Contact Us",
+      "className": "contact-us",
+      "url": "/contact"
+  }, {
+      "title": "Work with Us",
+      "className": "work-with-us",
+      "url": "/work-with-us"
   }]
 }
