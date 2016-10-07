@@ -24,8 +24,8 @@
     }
   },
   "devDependencies": {
+    "enliven-bootswatch": "git@gitlab.com:enliven/enliven-bootswatch.git#*",
     "chai": "^3.5.0",
-    "mocha": "^2.5.3",
-    "enliven-bootswatch": "https://github.com/Enliven-se/enliven-bootswatch.git#*"
+    "mocha": "^2.5.3"
   }
 }

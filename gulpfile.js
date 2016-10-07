@@ -266,7 +266,7 @@ gulp.task('views', () => {
     }));
 });
 
-gulp.task('sitemap', ['build'], () => {
+gulp.task('sitemap', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   gulp.src(destination + '/**/*.html', {
     read: false
   })
@@ -279,11 +279,15 @@ gulp.task('sitemap', ['build'], () => {
 // deploy to Github pages
 gulp.task('deploy', ['build', 'cname', 'sitemap'], () => {
   return gulp.src(destination)
-    .pipe($.subtree())
+    .pipe($.subtree({
+      remote: 'github',
+      branch: 'gh-pages',
+      message: 'deployed by gulp'
+    }))
     .pipe($.clean());
 });
 
-gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
+gulp.task('build', ['lint', 'html', 'images', 'fonts', 'extras', 'sitemap'], () => {
   return gulp.src(destination + '/**/*')
     .pipe($.size({
       title: 'build',
