@@ -920,8 +920,7 @@ $hamburger-color: $gray;
   color         : #000;
   font-size     : 54px;
   line-height   : 120%;
-  margin        : 260px auto;
-  // max-width     : 400px;
+  margin        : 20px auto;
   padding-bottom: 41px;
   text-shadow   : 0 0 1px #eee;
 }
@@ -963,7 +962,7 @@ $hamburger-color: $gray;
     width   : 520px;
     position: absolute;
     right   : 50;
-    top     : -95px;
+    top     : -135px;
     @media (max-width:$screen-sm-max) {
       height: 430px !important;
     }
@@ -983,13 +982,14 @@ $hamburger-color: $gray;
   }
 
   .phone-container {
-    height  : 692px;
-    width   : 400px;
+    // height  : 420px;
+    width   : 249px;
     overflow: hidden;
     z-index : 100;
     @media (max-width:$screen-xs-max) {
       margin  : 0 auto;
       position: relative;
+      top     : -70px;
     }
     @media (min-width:$screen-sm-min) and (max-width:$screen-sm-max) {
       display: none;
@@ -1002,8 +1002,8 @@ $hamburger-color: $gray;
 
   .tablet-container {
     overflow: hidden;
-    height  : 660px;
-    width   : 740px;
+    height  : 446px;
+    width   : 600px;
     @media (max-width:$screen-xs-max) {
       display: none;
     }
@@ -1022,7 +1022,7 @@ $hamburger-color: $gray;
 
   .flex-slider-tablet,
   .mockup-tablet {
-    left    : 120px;
+    left    : 50px;
     width   : 500px;
     position: absolute;
     top     : 35px;
@@ -1032,7 +1032,7 @@ $hamburger-color: $gray;
   .flex-slider-phone,
   .mockup-phone {
     background: #fff;
-    left      : 110px;
+    left      : 35px;
     overflow  : hidden;
     position  : absolute;
     top       : 58px;
@@ -1077,9 +1077,14 @@ $hamburger-color: $gray;
   background : rgba(0,0,0,.5);
 }
 
-.device-heading {
-  padding  : 50px 0 0 20px;
-  max-width: 400px;
+#device-heading {
+  margin-top : 450px;
+  padding-top: 50px;
+  max-width  : 400px;
+  @media (max-width: $screen-xs-max) {
+    margin      : -70px auto;
+    padding-left: 20px;
+  }
 }
 
 .figure-caption-no-padding {
