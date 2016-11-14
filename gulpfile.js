@@ -10,7 +10,6 @@ const browserify = require('browserify');
 const babelify = require('babelify');
 const buffer = require('vinyl-buffer');
 const source = require('vinyl-source-stream');
-const sitemap = require('gulp-sitemap');
 
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
@@ -270,7 +269,7 @@ gulp.task('sitemap', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
   gulp.src(destination + '/**/*.html', {
     read: false
   })
-    .pipe(sitemap({
+    .pipe($.sitemap({
       siteUrl: 'https://www.enliven.co'
     }))
     .pipe(gulp.dest(destination));

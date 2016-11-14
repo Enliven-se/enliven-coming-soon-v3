@@ -1,5 +1,15 @@
 {
   "name": "enliven-coming-soon-v3",
+  "version": "1.0.0",
+  "homepage": "https://gitlab.com/enliven/enliven-coming-soon",
+  "authors": [
+    "Daniel \"Klokie\" Grossfeld",
+    "Peter Larsén",
+    "Isaiah Blodgett",
+    "Joseph Prasanth"
+  ],
+  "description": "www.ENLIVEN.co",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "bootstrap-sass": "~3.3.5",
