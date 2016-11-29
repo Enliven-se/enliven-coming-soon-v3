@@ -93,7 +93,7 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
     .pipe($.useref({
       searchPath: ['.tmp', 'app', '.']
     }))
-    .pipe($.if('*.js', $.uglify()))
+    // .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({
       safe: true,
       autoprefixer: false
