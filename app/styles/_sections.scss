@@ -1,0 +1,598 @@
+#section1 .section {
+  padding: 0;
+}
+
+.section-no-padding {
+  padding: 0;
+}
+
+.section-relative {
+  position: relative;
+}
+
+.section-fixed-size {
+  overflow: hidden;
+}
+
+.section-full-height {
+  height: 100vh;
+}
+
+.section-full-height.after-navbar:before {
+  display: none;
+}
+
+.section-bg-adapted {
+  background-repeat    : no-repeat;
+  background-attachment: scroll;
+  background-position  : 50% 0;
+  background-size      : cover;
+}
+
+.section-gray {
+  background-color: #444;
+}
+
+.section-light-gray {
+  background-color: #f0f0f0;
+}
+
+.section-dark-gray {
+  background-color: #3c3c3c;
+}
+
+.section-container {
+  position: relative;
+  z-index : 3;
+}
+
+.section-container-center {
+  text-align: center;
+}
+
+.section-container-std-padding {
+  padding: 93px 0;
+}
+
+.section-container-std-top-padding {
+  padding-top: 93px;
+}
+
+.section-container-std-bot-padding {
+  padding-bottom: 93px;
+}
+
+.section-container-sm-padding {
+  padding: 41px 0;
+}
+
+.section-container-sm-top-padding {
+  padding-top: 41px;
+}
+
+.section-container-sm-bot-padding {
+  padding-bottom: 41px;
+}
+
+.section-container-isolated {
+  padding-top   : 93px;
+  padding-bottom: 93px;
+}
+
+.section-container-first {
+  padding-top   : 93px;
+  padding-bottom: 41px;
+}
+
+.section-container-middle {
+  padding-bottom: 41px;
+}
+
+.section-container-last {
+  padding-bottom: 93px;
+}
+
+.section-row {
+  margin-right: -24px;
+  margin-left : -24px;
+}
+
+.section-col {
+  overflow     : hidden;
+  padding-right: 24px;
+  padding-left : 24px;
+}
+
+.section-left {}
+
+.section-right {
+  padding-left: 15px;
+}
+
+.section-header {
+  line-height: 1.5em;
+  margin     : -10px 0 0;
+  text-align : center;
+}
+@media (min-width:$screen-sm-min) {
+  .section-short-paddings {
+    .section-container-std-padding {
+      padding: 59px 0;
+    }
+
+    .section-container-std-top-padding {
+      padding-top: 59px;
+    }
+
+    .section-container-std-bot-padding {
+      padding-bottom: 59px;
+    }
+
+    .section-container-sm-padding {
+      padding: 41px 0;
+    }
+
+    .section-container-sm-top-padding {
+      padding-top: 41px;
+    }
+
+    .section-container-sm-bot-padding {
+      padding-bottom: 41px;
+    }
+
+    .section-container-isolated {
+      padding-top   : 59px;
+      padding-bottom: 59px;
+    }
+
+    .section-container-first {
+      padding-top   : 59px;
+      padding-bottom: 41px;
+    }
+
+    .section-container-middle {
+      padding-bottom: 41px;
+    }
+
+    .section-container-last {
+      padding-bottom: 59px;
+    }
+  }
+}
+@media (max-width:$screen-xs-max) {
+  .section-left {
+    padding-right: 15px;
+  }
+
+  .section-right {
+    padding-top : 51px;
+    padding-left: 15px;
+  }
+}
+
+.section.section--relative.section--fixed-size.parallax-background {
+  @media screen and (min-width: $screen-sm-min) {
+    background-image: url('../images/bg-lynch-hidef.jpg') !important;
+  }
+}
+
+.section.section--relative.section--fixed-size {
+  background-color: $gray-darker;
+}
+// lnch
+@media screen and (min-width: $screen-sm-min) {
+  .section-container.section-container--std-padding.container {
+    padding-top   : 160px;
+    padding-bottom: 160px;
+  }
+}
+
+#section3 .section-container-isolated {
+  padding: 60px 0 40px;
+}
+
+.hero {
+  background     : transparent no-repeat scroll 0 0;
+  background-size: cover;
+  margin-top     : 79px;
+  min-height     : 50vmin;
+  position       : relative;
+  @media (min-width: $screen-md) {
+    margin-top: 113px;
+    min-height: 450px;
+  }
+
+  &.contributor-faq {
+    background-image: url("../images/heroes/hero-piano.jpg");
+    @media (min-width: $screen-md) {
+      background-position: 50% 50%;
+    }
+  }
+
+  &.submission-guidelines {
+    background-image: url("../images/heroes/hero-player.jpg");
+    padding-top     : 0;
+  }
+
+  &.about {
+    background-image: url("../images/heroes/hero-about-enliven.jpg");
+    @media (min-width: $screen-md) {
+      background-position: 0 50%;
+    }
+  }
+
+  &.become-a-contributor {
+    background: #bbb;
+    min-height: 0;
+  }
+
+  &.contact {
+    min-height: 0;
+  }
+
+  &.contributor-application-form {
+    background-image: url("../images/heroes/hero-become-a-contributor.jpg");
+  }
+
+  &.work-with-us {
+    background-image: url("../images/heroes/hero-work.jpg");
+  }
+
+  .title {
+    letter-spacing: -1px;
+    z-index       : 0;
+    @media (min-width: $screen-md) {
+      position: absolute;
+      bottom  : 0;
+    }
+  }
+}
+
+.front {
+  body {
+    padding-top: 20px;
+  }
+
+  .navbar {
+    box-shadow   : none;
+    margin-bottom: 0;
+  }
+
+  .after-navbar,
+  .box-container {
+    height    : 100%;
+    transition: all 0.2s ease-in-out 0s;
+  }
+
+  .hero {
+    position  : absolute;
+    top       : 50%;
+    left      : 0;
+    text-align: center;
+    width     : 100%;
+    margin    : -2em 0 0;
+    padding   : 0;
+    min-height: 1em;
+    transition: all 0.2s ease-in-out 0s;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong {
+    color: #fff;
+  }
+
+  h1,
+  h2,
+  strong {
+    text-shadow: 1px 1px 1px #111;
+  }
+}
+
+.responsive-table {
+  margin: 20px 0;
+
+  .table-cell {
+    position: relative;
+
+    .align-bottom {
+      position  : absolute;
+      bottom    : 0;
+      left      : 0;
+      width     : 100%;
+      text-align: center;
+    }
+  }
+}
+
+#section1 {
+  background-color: $gray-lighter;
+}
+
+.credits {
+  position   : absolute;
+  color      : white;
+  bottom     : 5px;
+  right      : 25px;
+  text-shadow: 0 0 3px #000;
+  @media (max-width:$screen-md-max) {
+    font-size    : 10px;
+    margin-bottom: 0;
+  }
+
+  &.credits-black {
+    color      : black;
+    text-shadow: 0 0 3px #fff;
+  }
+
+  &.credits-top {
+    top       : 5px;
+    text-align: right;
+  }
+}
+
+#section2 {
+  background-color: #fff;
+  @media(max-width: $screen-xs-max) {
+    max-height: 700px;
+  }
+}
+
+#section3 {
+  background-color: $gray-lighter;
+}
+
+#section6 {
+  background-color: $gray-darker;
+}
+
+#textinput {
+  height : 37px;
+  padding: 0 10px;
+  width  : 100%;
+}
+
+#how-does-it-work {
+  @media (max-width: $screen-xs-max) {
+    text-shadow: 0 0 3px white;
+  }
+  @media (min-width:$screen-sm-min) {
+    color      : white;
+    margin-top : 3em;
+    text-shadow: 0 0 3px #000;
+  }
+}
+
+#join-a-global-community {
+  margin        : 0.5em 0;
+  padding-top   : 15px;
+  padding-bottom: 15px;
+  border        : 0;
+  font-size     : 34px;
+}
+
+#frequently-asked-questions {
+  padding-top  : 15px;
+  border-bottom: none;
+}
+
+#finalh h2 {
+  // font-family: AvenirNext-MediumItalic;
+  font-size: 20px;
+  color    : #000;
+}
+
+.features2 .table-cell {
+  padding-left : 30px;
+  padding-right: 30px;
+}
+
+.teco {
+  margin-bottom: 30px;
+
+  h2 {
+    margin-top : 30px;
+    font-size  : 20px;
+    font-weight: normal;
+    color      : #000;
+  }
+}
+
+#frequently-asked-questions,
+#privacy-security,
+#terms-conditions {
+  line-height: 27px;
+}
+
+#privacy-security,
+#terms-conditions {
+  padding-top: 100px;
+  line-height: 36px;
+}
+
+#introduction,
+#overview {
+  @media (min-width:$screen-sm-min) {
+    padding-top: 30px;
+  }
+}
+
+.contact1 {
+  padding-bottom: 30px;
+}
+
+.cta {
+  padding: 20px 0;
+}
+
+#contact-us,
+#want-to-become-an-enliven-contributor {
+  color: #fff;
+}
+// front
+
+.text-coming-soon {
+  font-size: 54px;
+  color    : #FFFFFF;
+}
+
+.text-sign-up {
+  font-size    : 30px;
+  line-height  : 1.5em;
+  margin-bottom: 1em;
+}
+
+.form-group-email {
+  width        : 300px;
+  padding-right: 35px;
+}
+
+.bkg12 {
+  width           : 100%;
+  padding         : 30px 0;
+  background-color: $gray-lighter;
+}
+
+.bkg14 {
+  width           : 100%;
+  padding         : 30px 0;
+  background-color: white;
+}
+
+#singlebutton {
+  width      : 155px;
+  margin-top : 45px;
+  white-space: normal;
+}
+
+.features {
+  padding-bottom: 30px;
+  padding-left  : 0;
+
+  .table-cell h3 {
+    font-size: 22px;
+  }
+
+  .glyphicon {
+    font-size     : 32px;
+    display       : block;
+    padding-bottom: 20px;
+    text-align    : center;
+  }
+
+  a {
+    font-size      : 14px;
+    line-height    : 40px;
+    margin-top     : 20px;
+    text-align     : center;
+    text-decoration: underline;
+    color          : grey;
+  }
+}
+
+.connections {
+  padding-top   : 110px;
+  padding-bottom: 110px;
+}
+
+#below {
+  padding: 1.5em 0 0;
+}
+
+.newt {
+  border-bottom: 2px solid #aaa;
+}
+
+#singlebutton2 {
+  width        : 155px;
+  margin-top   : 45px;
+  margin-bottom: 45px;
+  white-space  : normal;
+}
+
+#singlebutton3 {
+  margin-bottom: 0;
+  width        : 100px;
+  white-space  : normal;
+}
+
+.faq {
+  ol {
+    padding-left: 0;
+  }
+
+  h2 {
+    color  : #000;
+    padding: 0;
+  }
+}
+//about enliven
+
+.agrey {
+  text-decoration: underline;
+  color          : grey;
+}
+
+.bkg15 {
+  width           : 100%;
+  padding         : 33px 0;
+  background-color: $gray-lighter;
+
+  blockquote {
+    padding   : 10px 0;
+    margin    : 0;
+    text-align: center;
+  }
+
+  h2 {
+    font-size     : 36px;
+    margin        : 0;
+    line-height   : 114%;
+    letter-spacing: -1px;
+  }
+  @media (max-width:$screen-xs-max) {
+    font-size: 16px;
+  }
+}
+
+.bkg16 {
+  width           : 100%;
+  padding         : 16px 0 33px;
+  background-color: white;
+}
+
+.bkg17 {
+  width           : 100%;
+  padding         : 33px 0;
+  background-color: white;
+}
+
+#our-mission-is-to-inspire-and-activate-your-life {
+  padding-bottom: 20px;
+  @media (max-width:$screen-md-min) {
+    padding-bottom: 20px;
+  }
+}
+// mailchimp
+
+.response,
+div.mce_inline_error {
+  color: #fff;
+}
+// iframe
+
+iframe {
+  border: 0;
+  width : 100%;
+
+  &.contributor-form {
+    margin-top: 40px;
+  }
+  // &.resizable {
+  //   min-height: 3400px; // @FIXME
+  // }
+}
