@@ -11,6 +11,10 @@ const babelify = require('babelify');
 const buffer = require('vinyl-buffer');
 const source = require('vinyl-source-stream');
 
+const environments = require('gulp-environments');
+const development = environments.development;
+const production = environments.production;
+
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 const browserSync_port = 9000;
@@ -20,16 +24,16 @@ const destination = 'dist';
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
     .pipe($.plumber())
-    .pipe($.sourcemaps.init())
+    .pipe(development($.sourcemaps.init()))
     .pipe($.sass.sync({
-      outputStyle: 'expanded',
+      outputStyle: production() ? 'compressed' : 'nested',
       precision: 10,
       includePaths: ['.']
     }).on('error', $.sass.logError))
     .pipe($.autoprefixer({
       browsers: ['> 1%', 'last 2 versions', 'Firefox ESR']
     }))
-    .pipe($.sourcemaps.write())
+    .pipe(development($.sourcemaps.write()))
     .pipe(gulp.dest('.tmp/styles'))
     .pipe(reload({
       stream: true
@@ -47,10 +51,11 @@ gulp.task('scripts', () => {
     .pipe(source('bundle.js'))
     .pipe($.plumber())
     .pipe(buffer())
-    .pipe($.sourcemaps.init({
+    .pipe(development($.sourcemaps.init({
       loadMaps: true
-    }))
-    .pipe($.sourcemaps.write('.'))
+    })))
+    .pipe(development($.sourcemaps.write('.')))
+    .pipe(production($.uglify()))
     .pipe(gulp.dest('.tmp/scripts'))
     .pipe(reload({
       stream: true
@@ -93,7 +98,6 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
     .pipe($.useref({
       searchPath: ['.tmp', 'app', '.']
     }))
-    // .pipe($.if('*.js', $.uglify()))
     .pipe($.if('*.css', $.cssnano({
       safe: true,
       autoprefixer: false
@@ -103,9 +107,9 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
     .pipe($.revReplace({
       prefix: '/' // absolute URLs
     }))
-    .pipe($.if('*.html', $.htmlmin({
+    .pipe(production($.if('*.html', $.htmlmin({
       collapseWhitespace: true
-    })))
+    }))))
     .pipe(gulp.dest(destination))
 /*
     .pipe(reload())
@@ -115,17 +119,17 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
 gulp.task('images', () => {
   return gulp.src('app/images/**/*')
     .pipe(
-      //  $.cache(
-      $.imagemin({
-        progressive: true,
-        interlaced: true,
-        // don't remove IDs from SVGs, they are often used
-        // as hooks for embedding and styling
-        svgoPlugins: [{
-          cleanupIDs: false
-        }]
-      })
-  //  )
+      production(
+        $.imagemin({
+          progressive: true,
+          interlaced: true,
+          // don't remove IDs from SVGs, they are often used
+          // as hooks for embedding and styling
+          svgoPlugins: [{
+            cleanupIDs: false
+          }]
+        })
+      )
   )
     .pipe(gulp.dest(destination + '/images'));
 });
