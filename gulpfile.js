@@ -21,6 +21,10 @@ const browserSync_port = 9000;
 
 const destination = 'dist';
 
+gulp.task('set-dev', development.task);
+
+gulp.task('set-prod', production.task);
+
 gulp.task('styles', () => {
   return gulp.src('app/styles/*.scss')
     .pipe($.plumber())
@@ -281,6 +285,8 @@ gulp.task('sitemap', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 
 // deploy to Github pages
 gulp.task('deploy', ['build', 'cname', 'sitemap'], () => {
+  environments.current(production);
+
   return gulp.src(destination)
     .pipe($.subtree({
       remote: 'github',
