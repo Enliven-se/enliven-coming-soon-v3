@@ -38,7 +38,7 @@
     "title": "Beta <span class=\"text-nowrap\">Sign-In</span>",
     "className": "cms",
     "extra_classes" : ["beta-link"],
-    "url": "//cms.enliven.co/"
+    "url": "https://cms.enliven.co/en/user"
   }, {
     "title": "Contact",
     "className": "contact",
