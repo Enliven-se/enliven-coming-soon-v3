@@ -27,6 +27,272 @@
   }
 }
 
+#section1 {
+  background-color: $gray-lighter;
+}
+
+.credits {
+  position   : absolute;
+  color      : white;
+  bottom     : 5px;
+  right      : 25px;
+  text-shadow: 0 0 3px #000;
+  @media (max-width:$screen-md-max) {
+    font-size    : 10px;
+    margin-bottom: 0;
+  }
+
+  &.credits-black {
+    color      : black;
+    text-shadow: 0 0 3px #fff;
+  }
+
+  &.credits-top {
+    top       : 5px;
+    text-align: right;
+  }
+}
+
+#section2 {
+  background-color: #fff;
+}
+
+#section3 {
+  background-color: $gray-lighter;
+}
+
+#section6 {
+  background-color: $gray-darker;
+}
+
+#textinput {
+  height : 37px;
+  padding: 0 10px;
+  width  : 100%;
+}
+
+#how-does-it-work {
+  @media (max-width: $screen-xs-max) {
+    text-shadow: 0 0 3px white;
+  }
+  @media (min-width:$screen-sm-min) {
+    color      : white;
+    margin-top : 3em;
+    text-shadow: 0 0 3px #000;
+  }
+}
+
+#join-a-global-community {
+  margin        : 0.5em 0;
+  padding-top   : 15px;
+  padding-bottom: 15px;
+  border        : 0;
+  font-size     : 34px;
+}
+
+#frequently-asked-questions {
+  padding-top  : 15px;
+  border-bottom: none;
+}
+
+#finalh h2 {
+  // font-family: AvenirNext-MediumItalic;
+  font-size: 20px;
+  color    : #000;
+}
+
+.features2 .table-cell {
+  padding-left : 30px;
+  padding-right: 30px;
+}
+
+.teco {
+  margin-bottom: 30px;
+
+  h2 {
+    margin-top : 30px;
+    font-size  : 20px;
+    font-weight: normal;
+    color      : #000;
+  }
+}
+
+#frequently-asked-questions,
+#privacy-security,
+#terms-conditions {
+  line-height: 27px;
+}
+
+#privacy-security,
+#terms-conditions {
+  padding-top: 100px;
+  line-height: 36px;
+}
+
+#introduction,
+#overview {
+  @media (min-width:$screen-sm-min) {
+    padding-top: 30px;
+  }
+}
+
+.contact1 {
+  padding-bottom: 30px;
+}
+
+.cta {
+  padding: 20px 0;
+}
+
+#contact-us,
+#want-to-become-an-enliven-contributor {
+  color: #fff;
+}
+// front
+
+.text-coming-soon {
+  font-size: 54px;
+  color    : #FFFFFF;
+}
+
+.text-sign-up {
+  font-size    : 30px;
+  line-height  : 1.5em;
+  margin-bottom: 1em;
+}
+
+.form-group-email {
+  width        : 300px;
+  padding-right: 35px;
+}
+
+.bkg12 {
+  width           : 100%;
+  padding         : 30px 0;
+  background-color: $gray-lighter;
+}
+
+.bkg14 {
+  width           : 100%;
+  padding         : 30px 0;
+  background-color: white;
+}
+
+#singlebutton {
+  width      : 155px;
+  margin-top : 45px;
+  white-space: normal;
+}
+
+.features {
+  padding-bottom: 30px;
+  padding-left  : 0;
+
+  .table-cell h3 {
+    font-size: 22px;
+  }
+
+  .glyphicon {
+    font-size     : 32px;
+    display       : block;
+    padding-bottom: 20px;
+    text-align    : center;
+  }
+
+  a {
+    font-size      : 14px;
+    line-height    : 40px;
+    margin-top     : 20px;
+    text-align     : center;
+    text-decoration: underline;
+    color          : grey;
+  }
+}
+
+.connections {
+  padding-top   : 110px;
+  padding-bottom: 110px;
+}
+
+#below {
+  padding: 1.5em 0 0;
+}
+
+.newt {
+  border-bottom: 2px solid #aaa;
+}
+
+#singlebutton2 {
+  width        : 155px;
+  margin-top   : 45px;
+  margin-bottom: 45px;
+  white-space  : normal;
+}
+
+#singlebutton3 {
+  margin-bottom: 0;
+  width        : 100px;
+  white-space  : normal;
+}
+
+.faq {
+  ol {
+    padding-left: 0;
+  }
+
+  h2 {
+    color  : #000;
+    padding: 0;
+  }
+}
+//about enliven
+
+.agrey {
+  text-decoration: underline;
+  color          : grey;
+}
+
+.bkg15 {
+  width           : 100%;
+  padding         : 33px 0;
+  background-color: $gray-lighter;
+
+  blockquote {
+    padding   : 10px 0;
+    margin    : 0;
+    text-align: center;
+  }
+
+  h2 {
+    font-size     : 36px;
+    margin        : 0;
+    line-height   : 114%;
+    letter-spacing: -1px;
+  }
+  @media (max-width:$screen-xs-max) {
+    font-size: 16px;
+  }
+}
+
+.bkg16 {
+  width           : 100%;
+  padding         : 16px 0 33px;
+  background-color: white;
+}
+
+.bkg17 {
+  width           : 100%;
+  padding         : 33px 0;
+  background-color: white;
+}
+
+#our-mission-is-to-inspire-and-activate-your-life {
+  padding-bottom: 20px;
+  @media (max-width:$screen-md-min) {
+    padding-bottom: 20px;
+  }
+}
+
 .revenue-share-model {
   .list,
   .row {
