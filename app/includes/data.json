@@ -1,65 +1,34 @@
 {
-  "navbar_items": [{
-    "title": "Our Mission",
-    "className": "about",
-    "extra_classes" : ["about-link"],
-    "url": "/about"
-  }, {
-    "title": "<span class=\"text-nowrap\">Become a</span> Contributor",
-    "className": "become-a-contributor",
-    "extra_classes" : ["become-link"],
-    "url": "/become-a-contributor"
-  }, {
-    "title": "Contributor FAQ",
-    "className": "contributor-faq",
-    "extra_classes" : ["contributor-faq"],
-    "url": "/contributor-faq"
-  }, {
-    "title": "Submission Guidelines",
-    "className": "submission-guidelines",
-    "extra_classes" : ["hidden-md", "hidden-lg"],
-    "url": "/submission-guidelines"
-  }, {
-    "title": "Contributor Application Form",
-    "className": "contributor-application-form",
-    "extra_classes" : ["hidden-md", "hidden-lg"],
-    "url": "/contributor-application-form"
-  }, {
-    "title": "Join ENLIVEN",
-    "className": "join-enliven",
-    "extra_classes" : ["hidden-md", "hidden-lg"],
-    "url": "/join-enliven"
-  }, {
-    "title": "Work with Us",
-    "className": "work-with-us",
-    "extra_classes" : ["hidden-md", "hidden-lg"],
-    "url": "/work-with-us"
-  }, {
-    "title": "Beta <span class=\"text-nowrap\">Sign-In</span>",
-    "className": "cms",
-    "extra_classes" : ["beta-link"],
-    "url": "https://cms.enliven.co/en/user"
-  }, {
-    "title": "Contact",
-    "className": "contact",
-    "extra_classes" : ["hidden-md", "hidden-lg"],
-    "url": "/contact"
-  }], 
-  "footer_items" : [{
-      "title": "About Enliven",
+  "navbar_items": [
+    {
+      "title": "What Is Enliven",
       "className": "about",
+      "extra_classes": ["about-link"],
       "url": "/about"
-  }, {
+    },
+    {
       "title": "<span class=\"text-nowrap\">Become a</span> Contributor",
       "className": "become-a-contributor",
-      "url": "/become-a-contributor"
-  }, {
-      "title": "Contact Us",
-      "className": "contact-us",
-      "url": "/contact"
-  }, {
+      "extra_classes": ["become-link"],
+      "url": "/become-a-creative"
+    },
+    {
+      "title": "Beta <span class=\"text-nowrap\">Sign-In</span>",
+      "className": "cms",
+      "extra_classes": ["beta-link"],
+      "url": "https://cms.enliven.co/en/user"
+    }
+  ],
+  "footer_items": [
+    {
       "title": "Work with Us",
       "className": "work-with-us",
       "url": "/work-with-us"
-  }]
+    },
+    {
+      "title": "Contact Us",
+      "className": "contact-us",
+      "url": "/contact"
+    }
+  ]
 }
