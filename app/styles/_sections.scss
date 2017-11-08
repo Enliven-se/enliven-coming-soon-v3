@@ -23,10 +23,10 @@
 }
 
 .section-bg-adapted {
-  background-repeat    : no-repeat;
+  background-repeat: no-repeat;
   background-attachment: scroll;
-  background-position  : 50% 0;
-  background-size      : cover;
+  background-position: 50% 0;
+  background-size: cover;
 }
 
 .section-gray {
@@ -43,7 +43,7 @@
 
 .section-container {
   position: relative;
-  z-index : 3;
+  z-index: 3;
 }
 
 .section-container-center {
@@ -75,17 +75,17 @@
 }
 
 .section-container-isolated {
-  padding-top   : 93px;
-  padding-bottom: 93px;
+  padding-top: 65px;
+  padding-bottom: 65px;
 }
 
 .section-container-first {
-  padding-top   : 93px;
+  padding-top: 93px;
   padding-bottom: 41px;
 }
 
 .section-container-middle {
-  padding-bottom: 41px;
+  padding-bottom: 32px;
 }
 
 .section-container-last {
@@ -94,16 +94,17 @@
 
 .section-row {
   margin-right: -24px;
-  margin-left : -24px;
+  margin-left: -24px;
 }
 
 .section-col {
-  overflow     : hidden;
+  overflow: hidden;
   padding-right: 24px;
-  padding-left : 24px;
+  padding-left: 24px;
 }
 
-.section-left {}
+.section-left {
+}
 
 .section-right {
   padding-left: 15px;
@@ -111,10 +112,10 @@
 
 .section-header {
   line-height: 1.5em;
-  margin     : -10px 0 0;
-  text-align : center;
+  margin: -10px 0 0;
+  text-align: center;
 }
-@media (min-width:$screen-sm-min) {
+@media (min-width: $screen-sm-min) {
   .section-short-paddings {
     .section-container-std-padding {
       padding: 59px 0;
@@ -141,12 +142,12 @@
     }
 
     .section-container-isolated {
-      padding-top   : 59px;
+      padding-top: 59px;
       padding-bottom: 59px;
     }
 
     .section-container-first {
-      padding-top   : 59px;
+      padding-top: 59px;
       padding-bottom: 41px;
     }
 
@@ -159,20 +160,20 @@
     }
   }
 }
-@media (max-width:$screen-xs-max) {
+@media (max-width: $screen-xs-max) {
   .section-left {
     padding-right: 15px;
   }
 
   .section-right {
-    padding-top : 51px;
+    padding-top: 51px;
     padding-left: 15px;
   }
 }
 
 .section.section--relative.section--fixed-size.parallax-background {
   @media screen and (min-width: $screen-sm-min) {
-    background-image: url('../images/bg-lynch-hidef.jpg') !important;
+    background-image: url("../images/bg-lynch-hidef.jpg") !important;
   }
 }
 
@@ -182,21 +183,21 @@
 // lnch
 @media screen and (min-width: $screen-sm-min) {
   .section-container.section-container--std-padding.container {
-    padding-top   : 160px;
+    padding-top: 160px;
     padding-bottom: 160px;
   }
 }
 
 #section3 .section-container-isolated {
-  padding: 60px 0 40px;
+  padding: 48px 0 32px;
 }
 
 .hero {
-  background     : transparent no-repeat scroll 0 0;
+  background: transparent no-repeat scroll 0 0;
   background-size: cover;
-  margin-top     : 79px;
-  min-height     : 50vmin;
-  position       : relative;
+  margin-top: 79px;
+  min-height: 50vmin;
+  position: relative;
   @media (min-width: $screen-md) {
     margin-top: 113px;
     min-height: 450px;
@@ -211,7 +212,7 @@
 
   &.submission-guidelines {
     background-image: url("../images/heroes/hero-player.jpg");
-    padding-top     : 0;
+    padding-top: 0;
   }
 
   &.about {
@@ -240,10 +241,10 @@
 
   .title {
     letter-spacing: -1px;
-    z-index       : 0;
+    z-index: 0;
     @media (min-width: $screen-md) {
       position: absolute;
-      bottom  : 0;
+      bottom: 0;
     }
   }
 }
@@ -254,24 +255,24 @@
   }
 
   .navbar {
-    box-shadow   : none;
+    box-shadow: none;
     margin-bottom: 0;
   }
 
   .after-navbar,
   .box-container {
-    height    : 100%;
+    height: 100%;
     transition: all 0.2s ease-in-out 0s;
   }
 
   .hero {
-    position  : absolute;
-    top       : 50%;
-    left      : 0;
+    position: absolute;
+    top: 50%;
+    left: 0;
     text-align: center;
-    width     : 100%;
-    margin    : -2em 0 0;
-    padding   : 0;
+    width: 100%;
+    margin: -2em 0 0;
+    padding: 0;
     min-height: 1em;
     transition: all 0.2s ease-in-out 0s;
   }
@@ -300,10 +301,10 @@
     position: relative;
 
     .align-bottom {
-      position  : absolute;
-      bottom    : 0;
-      left      : 0;
-      width     : 100%;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
       text-align: center;
     }
   }
@@ -319,7 +320,7 @@ div.mce_inline_error {
 
 iframe {
   border: 0;
-  width : 100%;
+  width: 100%;
 
   &.contributor-form {
     margin-top: 40px;
