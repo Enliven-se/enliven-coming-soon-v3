@@ -9,35 +9,35 @@ export default function($) {
         return iOS;
     }
 
-    $(".front").each(function() {
+    $('.front').each(function() {
         // vimeofy
         // don't render the video in the background on touch devices
         // @FIXME - should use "videoautoplay" but that doesn't seem to be set on desktop
-        if ($("html").hasClass("videoautoplay") || !isIOS()) {
+        if ($('html').hasClass('videoautoplay') || !isIOS()) {
             var autoplay = self.location.port != 9000;
-            $("#background").vimeofy({
-                url: "https://vimeo.com/178568007",
-                color: "#ffffff",
+            $('#background').vimeofy({
+                url: 'https://vimeo.com/178568007',
+                color: '#ffffff',
                 autoplay: autoplay,
                 loop: true,
                 delay: 0,
                 background: 1
             });
-            $("html").removeClass("poster");
+            $('html').removeClass('poster');
         }
 
         // waypoint - header
         var waypoint = new Waypoint({
-            element: document.getElementById("section2"),
+            element: document.getElementById('section2'),
             handler: function(direction) {
-                if (direction == "down") {
-                    $(".navbar")
-                        .addClass("going-down")
-                        .removeClass("top");
+                if (direction == 'down') {
+                    $('.navbar')
+                        .addClass('going-down')
+                        .removeClass('top');
                 } else {
-                    $(".navbar")
-                        .addClass("top")
-                        .removeClass("going-down");
+                    $('.navbar')
+                        .addClass('top')
+                        .removeClass('going-down');
                 }
             },
             offset: 100
@@ -45,13 +45,13 @@ export default function($) {
 
         // waypoint - show bottom bar
         var waypoint2 = new Waypoint({
-            element: $("#section2,h2.title").get(0),
+            element: $('#section2,h2.title').get(0),
             handler: function(direction) {
-                console.log("section2", direction);
-                if (direction == "down") {
-                    $(".bottom-bar").addClass("show-bar");
+                console.log('section2', direction);
+                if (direction == 'down') {
+                    $('.bottom-bar').addClass('show-bar');
                 } else {
-                    $(".bottom-bar").removeClass("show-bar");
+                    $('.bottom-bar').removeClass('show-bar');
                 }
             },
             offset: 600
@@ -59,13 +59,13 @@ export default function($) {
 
         // waypoint - remove bottom bar at footer
         var waypoint3 = new Waypoint({
-            element: $("#section5").get(0),
+            element: $('#section5').get(0),
             handler: function(direction) {
-                console.log("footer", direction);
-                if (direction == "down") {
-                    $(".bottom-bar").removeClass("show-bar");
+                console.log('footer', direction);
+                if (direction == 'down') {
+                    $('.bottom-bar').removeClass('show-bar');
                 } else {
-                    $(".bottom-bar").addClass("show-bar");
+                    $('.bottom-bar').addClass('show-bar');
                 }
             },
             offset: 500
@@ -74,27 +74,27 @@ export default function($) {
         // MailChimp
         window.fnames = [];
         window.ftypes = [];
-        fnames[0] = "EMAIL";
-        ftypes[0] = "email";
-        fnames[1] = "FNAME";
-        ftypes[1] = "text";
-        fnames[2] = "LNAME";
-        ftypes[2] = "text";
+        fnames[0] = 'EMAIL';
+        ftypes[0] = 'email';
+        fnames[1] = 'FNAME';
+        ftypes[1] = 'text';
+        fnames[2] = 'LNAME';
+        ftypes[2] = 'text';
     });
 
-    $(".flex-slider").each(function() {
+    $('.flex-slider').each(function() {
         var $this = $(this),
             opts = {};
 
         // set flex-slider options
         // see https://github.com/woothemes/FlexSlider/wiki/FlexSlider-Properties
-        switch ($this.data("slider")) {
-            case "tablet":
+        switch ($this.data('slider')) {
+            case 'tablet':
                 opts = {
-                    animation: "slide",
-                    direction: "vertical",
+                    animation: 'slide',
+                    direction: 'vertical',
                     slideshowSpeed: 5000,
-                    easing: "swing",
+                    easing: 'swing',
                     keyboard: false,
                     pauseOnHover: false,
                     controlNav: false,
@@ -102,13 +102,13 @@ export default function($) {
                     randomize: false
                 };
                 break;
-            case "phone":
+            case 'phone':
                 opts = {
-                    animation: "slide",
-                    direction: "vertical",
+                    animation: 'slide',
+                    direction: 'vertical',
                     slideshowSpeed: 7000,
                     animationSpeed: 1000,
-                    easing: "linear",
+                    easing: 'linear',
                     keyboard: false,
                     pauseOnHover: false,
                     controlNav: false,
@@ -116,10 +116,10 @@ export default function($) {
                     randomize: false
                 };
                 break;
-            case "quotes":
+            case 'quotes':
                 opts = {
-                    animation: "fade",
-                    direction: "horizontal",
+                    animation: 'fade',
+                    direction: 'horizontal',
                     pauseOnHover: false,
                     controlNav: false,
                     directionNav: false,
@@ -130,8 +130,8 @@ export default function($) {
             default:
                 // animation
                 opts = {
-                    animation: "slide",
-                    direction: "horizontal",
+                    animation: 'slide',
+                    direction: 'horizontal',
                     pauseOnHover: true,
                     controlNav: true,
                     directionNav: false,
@@ -146,5 +146,5 @@ export default function($) {
     });
 
     // iFrameResize
-    $("iframe.resizable").iFrameResize();
+    $('iframe.resizable').iFrameResize();
 }
