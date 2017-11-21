@@ -1362,6 +1362,33 @@ $hamburger-color: $gray;
   }
 }
 
+.bottom-bar {
+  transition: all ease-in-out 0.2s;
+  height: 150px;
+  width: 100%;
+  position: fixed;
+  bottom: -200px;
+  z-index: 5;
+  background-color: grey;
+
+  &.show-bar {
+    display: block;
+    bottom: 0px;
+  }
+  &.remove-bar {
+    display: none;
+    bottom: 0px;
+  }
+  .form-control {
+    width: 300px;
+    float: left;
+    margin-right: 5px;
+  }
+  #singlebutton3 {
+    width: auto;
+  }
+}
+
 .buttons-right.buttons-only-links {
   left: 20px;
 }
