@@ -1,331 +1,305 @@
 #section1 .section {
-  padding: 0;
+    padding: 0;
 }
 
 .section-no-padding {
-  padding: 0;
+    padding: 0;
 }
 
 .section-relative {
-  position: relative;
+    position: relative;
 }
 
 .section-fixed-size {
-  overflow: hidden;
+    overflow: hidden;
 }
 
 .section-full-height {
-  height: 100vh;
+    height: 100vh;
 }
 
 .section-full-height.after-navbar:before {
-  display: none;
+    display: none;
 }
 
 .section-bg-adapted {
-  background-repeat: no-repeat;
-  background-attachment: scroll;
-  background-position: 50% 0;
-  background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-position: 50% 0;
+    background-size: cover;
 }
 
 .section-gray {
-  background-color: #444;
+    background-color: #444;
 }
 
 .section-light-gray {
-  background-color: #f0f0f0;
+    background-color: #f0f0f0;
 }
 
 .section-dark-gray {
-  background-color: #3c3c3c;
+    background-color: #3c3c3c;
 }
 
 .section-container {
-  position: relative;
-  z-index: 3;
+    position: relative;
+    z-index: 3;
 }
 
 .section-container-center {
-  text-align: center;
+    text-align: center;
 }
 
 .section-container-std-padding {
-  padding: 93px 0;
+    padding: 93px 0;
 }
 
 .section-container-std-top-padding {
-  padding-top: 93px;
+    padding-top: 93px;
 }
 
 .section-container-std-bot-padding {
-  padding-bottom: 93px;
+    padding-bottom: 93px;
 }
 
 .section-container-sm-padding {
-  padding: 41px 0;
+    padding: 41px 0;
 }
 
 .section-container-sm-top-padding {
-  padding-top: 41px;
+    padding-top: 41px;
 }
 
 .section-container-sm-bot-padding {
-  padding-bottom: 41px;
+    padding-bottom: 41px;
 }
 
 .section-container-isolated {
-  padding-top: 65px;
-  padding-bottom: 65px;
+    padding-top: 65px;
+    padding-bottom: 65px;
 }
 
 .section-container-first {
-  padding-top: 93px;
-  padding-bottom: 41px;
+    padding-top: 93px;
+    padding-bottom: 41px;
 }
 
 .section-container-middle {
-  padding-bottom: 32px;
+    padding-bottom: 32px;
 }
 
 .section-container-last {
-  padding-bottom: 93px;
+    padding-bottom: 93px;
 }
 
 .section-row {
-  margin-right: -24px;
-  margin-left: -24px;
+    margin-right: -24px;
+    margin-left: -24px;
 }
 
 .section-col {
-  overflow: hidden;
-  padding-right: 24px;
-  padding-left: 24px;
+    overflow: hidden;
+    padding-right: 24px;
+    padding-left: 24px;
 }
 
-.section-left {
-}
+.section-left {}
 
 .section-right {
-  padding-left: 15px;
+    padding-left: 15px;
 }
 
 .section-header {
-  line-height: 1.5em;
-  margin: -10px 0 0;
-  text-align: center;
+    line-height: 1.5em;
+    margin: -10px 0 0;
+    text-align: center;
 }
+
 @media (min-width: $screen-sm-min) {
-  .section-short-paddings {
-    .section-container-std-padding {
-      padding: 59px 0;
+    .section-short-paddings {
+        .section-container-std-padding {
+            padding: 59px 0;
+        }
+        .section-container-std-top-padding {
+            padding-top: 59px;
+        }
+        .section-container-std-bot-padding {
+            padding-bottom: 59px;
+        }
+        .section-container-sm-padding {
+            padding: 41px 0;
+        }
+        .section-container-sm-top-padding {
+            padding-top: 41px;
+        }
+        .section-container-sm-bot-padding {
+            padding-bottom: 41px;
+        }
+        .section-container-isolated {
+            padding-top: 59px;
+            padding-bottom: 59px;
+        }
+        .section-container-first {
+            padding-top: 59px;
+            padding-bottom: 41px;
+        }
+        .section-container-middle {
+            padding-bottom: 41px;
+        }
+        .section-container-last {
+            padding-bottom: 59px;
+        }
     }
-
-    .section-container-std-top-padding {
-      padding-top: 59px;
-    }
-
-    .section-container-std-bot-padding {
-      padding-bottom: 59px;
-    }
-
-    .section-container-sm-padding {
-      padding: 41px 0;
-    }
-
-    .section-container-sm-top-padding {
-      padding-top: 41px;
-    }
-
-    .section-container-sm-bot-padding {
-      padding-bottom: 41px;
-    }
-
-    .section-container-isolated {
-      padding-top: 59px;
-      padding-bottom: 59px;
-    }
-
-    .section-container-first {
-      padding-top: 59px;
-      padding-bottom: 41px;
-    }
-
-    .section-container-middle {
-      padding-bottom: 41px;
-    }
-
-    .section-container-last {
-      padding-bottom: 59px;
-    }
-  }
 }
-@media (max-width: $screen-xs-max) {
-  .section-left {
-    padding-right: 15px;
-  }
 
-  .section-right {
-    padding-top: 51px;
-    padding-left: 15px;
-  }
+@media (max-width: $screen-xs-max) {
+    .section-left {
+        padding-right: 15px;
+    }
+    .section-right {
+        padding-top: 51px;
+        padding-left: 15px;
+    }
 }
 
 .section.section--relative.section--fixed-size.parallax-background {
-  @media screen and (min-width: $screen-sm-min) {
-    background-image: url("../images/bg-lynch-hidef.jpg") !important;
-  }
+    @media screen and (min-width: $screen-sm-min) {
+        background-image: url("../images/bg-lynch-hidef.jpg") !important;
+    }
 }
 
 .section.section--relative.section--fixed-size {
-  background-color: $gray-darker;
+    background-color: $gray-darker;
 }
+
 // lnch
 @media screen and (min-width: $screen-sm-min) {
-  .section-container.section-container--std-padding.container {
-    padding-top: 160px;
-    padding-bottom: 160px;
-  }
+    .section-container.section-container--std-padding.container {
+        padding-top: 160px;
+        padding-bottom: 160px;
+    }
 }
 
 #section3 .section-container-isolated {
-  padding: 48px 0 32px;
+    padding: 48px 0 32px;
 }
 
 .hero {
-  background: transparent no-repeat scroll 0 0;
-  background-size: cover;
-  margin-top: 79px;
-  min-height: 50vmin;
-  position: relative;
-  @media (min-width: $screen-md) {
-    margin-top: 113px;
-    min-height: 450px;
-  }
-
-  &.contributor-faq {
-    background-image: url("../images/heroes/hero-piano.jpg");
+    background: transparent no-repeat scroll 0 0;
+    background-size: cover;
+    margin-top: 79px;
+    min-height: 50vmin;
+    position: relative;
     @media (min-width: $screen-md) {
-      background-position: 50% 50%;
+        margin-top: 113px;
+        min-height: 450px;
     }
-  }
-
-  &.submission-guidelines {
-    background-image: url("../images/heroes/hero-player.jpg");
-    padding-top: 0;
-  }
-
-  &.about {
-    background-image: url("../images/heroes/hero-about-enliven.jpg");
-    @media (min-width: $screen-md) {
-      background-position: 0 50%;
+    &.contributor-faq {
+        background-image: url("../images/heroes/hero-piano.jpg");
+        @media (min-width: $screen-md) {
+            background-position: 50% 50%;
+        }
     }
-  }
-
-  &.become-a-contributor {
-    background: #bbb;
-    min-height: 0;
-  }
-
-  &.contact {
-    min-height: 0;
-  }
-
-  &.contributor-application-form {
-    background-image: url("../images/heroes/hero-become-a-contributor.jpg");
-  }
-
-  &.work-with-us {
-    background-image: url("../images/heroes/hero-work.jpg");
-  }
-
-  .title {
-    letter-spacing: -1px;
-    z-index: 0;
-    @media (min-width: $screen-md) {
-      position: absolute;
-      bottom: 0;
+    &.submission-guidelines {
+        background-image: url("../images/heroes/hero-player.jpg");
+        padding-top: 0;
     }
-  }
+    &.about {
+        background-image: url("../images/heroes/hero-about-enliven.jpg");
+        @media (min-width: $screen-md) {
+            background-position: 0 50%;
+        }
+    }
+    &.become-a-contributor {
+        background: #bbb;
+        min-height: 0;
+    }
+    &.contact {
+        min-height: 0;
+    }
+    &.contributor-application-form {
+        background-image: url("../images/heroes/hero-become-a-contributor.jpg");
+    }
+    &.work-with-us {
+        background-image: url("../images/heroes/hero-work.jpg");
+    }
+    .title {
+        letter-spacing: -1px;
+        z-index: 0;
+        @media (min-width: $screen-md) {
+            position: absolute;
+            bottom: 0;
+        }
+    }
 }
 
 .front {
-  body {
-    padding-top: 20px;
-  }
-
-  .navbar {
-    box-shadow: none;
-    margin-bottom: 0;
-  }
-
-  .after-navbar,
-  .box-container {
-    height: 100%;
-    transition: all 0.2s ease-in-out 0s;
-  }
-
-  .hero {
-    position: absolute;
-    top: 50%;
-    left: 0;
-    text-align: center;
-    width: 100%;
-    margin: -2em 0 0;
-    padding: 0;
-    min-height: 1em;
-    transition: all 0.2s ease-in-out 0s;
-  }
-
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
-  strong {
-    color: #fff;
-  }
-
-  h1,
-  h2,
-  strong {
-    text-shadow: 1px 1px 1px #111;
-  }
+    body {
+        padding-top: 20px;
+    }
+    .navbar {
+        box-shadow: none;
+        margin-bottom: 0;
+    }
+    .after-navbar,
+    .box-container {
+        height: 100%;
+        transition: all 0.2s ease-in-out 0s;
+    }
+    .hero {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        text-align: center;
+        width: 100%;
+        margin: -2em 0 0;
+        padding: 0;
+        min-height: 1em;
+        transition: all 0.2s ease-in-out 0s;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong {
+        color: #fff;
+    }
+    h1,
+    h2,
+    strong {
+        text-shadow: 1px 1px 1px #111;
+    }
 }
 
 .responsive-table {
-  margin: 20px 0;
-
-  .table-cell {
-    position: relative;
-
-    .align-bottom {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      text-align: center;
+    margin: 20px 0;
+    .table-cell {
+        position: relative;
+        .align-bottom {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            text-align: center;
+        }
     }
-  }
 }
 
 // mailchimp
-
 .response,
 div.mce_inline_error {
-  color: #fff;
+    color: #fff;
 }
+
 // iframe
-
 iframe {
-  border: 0;
-  width: 100%;
-
-  &.contributor-form {
-    margin-top: 40px;
-  }
-  // &.resizable {
-  //   min-height: 3400px; // @FIXME
-  // }
+    border: 0;
+    width: 100%;
+    &.contributor-form {
+        margin-top: 40px;
+    } // &.resizable {
+    //   min-height: 3400px; // @FIXME
+    // }
 }

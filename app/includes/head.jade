@@ -17,8 +17,8 @@
   meta(property='og:description', content=description)
   meta(property='twitter:description', content=description)
 
-  link(rel='apple-touch-icon', href='/logo-52a3cb.png')
-  link(rel='shortcut icon', href='/favicon.ico', type='image/x-icon')
+  link(href='/logo-52a3cb.png', rel='apple-touch-icon')
+  link(type='image/x-icon', href='/favicon.ico', rel='shortcut icon')
   meta(property='og:image', content='/images/logo-52a3cb.png')
   meta(property='twitter:image', content='/images/logo-52a3cb.png')
 
@@ -40,7 +40,7 @@
   // endbuild
 
   // build:css styles/main.css
-  link(rel='stylesheet', href='/styles/main.css')
+  link(href='/styles/main.css', rel='stylesheet')
   // endbuild
 
   // build:js scripts/vendor/modernizr.js

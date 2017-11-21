@@ -19,5 +19,5 @@ section#ext_menu-0.navbar.navbar-freeze.navbar-absolute.navbar-sticky.navbar-aut
               ul.navbar-items.navbar-items-right.float-left.buttons.buttons-freeze.buttons-right.btn-decorator.buttons-active.buttons-only-links.nav.navbar-nav.navbar-right
                 each item in navbar_items
                   li.navbar-item
-                    a(class=link_classes class=item.extra_classes class={active: item.className === page}, href=item.url)
+                    a(class=link_classes, class=item.extra_classes, class={active: item.className === page}, href=item.url)
                       | !{item.title}
