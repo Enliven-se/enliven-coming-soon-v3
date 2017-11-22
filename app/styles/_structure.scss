@@ -1319,24 +1319,25 @@ $hamburger-color: $gray;
 
 .bottom-bar {
     transition: all ease-in-out 0.2s;
-    height: 150px;
     width: 100%;
     position: fixed;
-    bottom: -200px;
+    display: block;
+    bottom: 0;
+    transform: translateY(100%);
     z-index: 5;
     background-color: grey;
     &.show-bar {
-        display: block;
-        bottom: 0px;
-    }
-    &.remove-bar {
-        display: none;
-        bottom: 0px;
+        transform: translateY(0);
     }
     .form-control {
         width: 300px;
         float: left;
         margin-right: 5px;
+    }
+    .form-inline .form-group {
+        display: inline-block;
+        margin-bottom: 0;
+        vertical-align: middle;
     }
     #singlebutton3 {
         width: auto;
