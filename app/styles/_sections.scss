@@ -74,9 +74,21 @@
     padding-bottom: 41px;
 }
 
-.section-container-isolated {
+.section-container-phones {
     padding-top: 65px;
     padding-bottom: 65px;
+}
+
+.section-container-quotes {
+    .first {
+        padding-right: 20px;
+    }
+    .middle {
+        padding: 0 20px;
+    }
+    .last {
+        padding-left: 20px;
+    }
 }
 
 .section-container-first {
@@ -102,8 +114,6 @@
     padding-right: 24px;
     padding-left: 24px;
 }
-
-.section-left {}
 
 .section-right {
     padding-left: 15px;

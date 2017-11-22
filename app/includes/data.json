@@ -1,12 +1,12 @@
 {
     "navbar_items": [{
-            "title": "What Is Enliven",
+            "title": "About Enliven",
             "className": "about",
             "extra_classes": ["about-link"],
             "url": "/about"
         },
         {
-            "title": "<span class=\"text-nowrap\">Become a</span> Contributor",
+            "title": "For Creatives",
             "className": "become-a-contributor",
             "extra_classes": ["become-link"],
             "url": "/become-a-contributor"

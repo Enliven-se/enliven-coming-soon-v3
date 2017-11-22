@@ -1779,16 +1779,15 @@ $hamburger-color: $gray;
 #section4 {
     background-color: #15447b;
     padding: 20px 0;
-}
-
-#section4 h4 {
-    font-family: $font-family-sans-serif;
-    font-size: 24px;
-    text-align: center;
-    word-break: normal;
-    color: #fff;
-    @media (max-width: $screen-xs-min) {
-        margin-bottom: 40px;
+    h4 {
+        font-family: $font-family-sans-serif;
+        font-size: 20px;
+        text-align: center;
+        word-break: normal;
+        color: #fff;
+        @media (max-width: $screen-xs-min) {
+            margin-bottom: 40px;
+        }
     }
 }
 
