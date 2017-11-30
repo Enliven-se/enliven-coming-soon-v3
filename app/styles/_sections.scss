@@ -234,20 +234,68 @@
   }
 }
 
+#section2 {
+  h2 {
+    font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
+    font-size: 72px;
+    font-weight: bold;
+    &#red {
+      color: #e53605;
+    }
+  }
+  .pencils {
+    flex: 1;
+    flex-basis: 70%;
+    height: 650px;
+  }
+  .gray-bg {
+    display: flex;
+    height: 650px;
+    background-color: #d8d8d8;
+    background-image: url("../images/bg-pencils_full-gray.jpg");
+    background-size: cover !important;
+    background-position: top right;
+  }
+  .text-wrapper-left {
+    position: relative;
+    right: 170px;
+    max-width: 250px;
+    text-align: right;
+    float: right;
+    padding-right: 10px;
+  }
+  .text-wrapper-right {
+    max-width: 310px;
+    text-align: right;
+    float: right;
+    padding-right: 70px;
+  }
+  .col-right {
+    flex: 1;
+    flex-basis: 30%;
+  }
+}
+
 .responsive-table {
   margin: 20px 0;
+
   .table-cell {
     position: relative;
+    text-align: right;
     .align-bottom {
-      position: absolute;
+      //position: relative;
       bottom: 0;
       left: 0;
       width: 100%;
-      text-align: center;
     }
   }
 }
 
+#section3 {
+  .text-justify {
+    text-align: justify;
+  }
+}
 // mailchimp
 .response,
 div.mce_inline_error {

@@ -105,8 +105,8 @@ $hamburger-color: $gray;
 }
 
 .buttons-right .buttons-link {
-  color: #fff !important;
-  text-shadow: 1px 1px 0 #666;
+  color: #000 !important;
+  text-shadow: 0px 2px 4px #666;
   text-transform: uppercase;
 }
 
@@ -1295,7 +1295,7 @@ $hamburger-color: $gray;
 
 .buttons-right .buttons-btn,
 .buttons-right .buttons-link {
-  font-size: 15px;
+  font-size: 14px;
   margin: 0;
   text-align: center;
   white-space: normal;
@@ -1750,6 +1750,45 @@ $hamburger-color: $gray;
   color: white;
 }
 
+#section1 h1 {
+  color: #e53605;
+  position: relative;
+  bottom: 40px;
+}
+
+.underline-black {
+  border-bottom: 7px solid black;
+  line-height: 105px;
+}
+
+.underline-red {
+  border-bottom: 7px solid #e53605;
+  line-height: 105px;
+}
+
+#section3 {
+  background-color: white;
+
+  h2.header-wrapper {
+    font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    border: 0.5px solid #0c1204;
+    color: #0c1204;
+    display: inline-block;
+    font-size: 1.8em;
+    line-height: 1em;
+    padding: 7px;
+    text-align: center;
+  }
+  .mockup-bg {
+    background-image: url("../images/mockups/mockup-iphone.png");
+    height: 650px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
 #header4-6 h3 {
   line-height: 60px;
   text-align: center;
@@ -1763,19 +1802,49 @@ $hamburger-color: $gray;
 }
 
 #section4 {
-  background-color: #15447b;
+  background-image: url("../images/bg-money-1200px.jpg");
   padding: 20px 0;
+  height: 500px;
+  h1,
+  h2,
+  h3,
+  p {
+    color: white;
+  }
+  h4 {
+    font-family: $font-family-sans-serif;
+    font-size: 24px;
+    text-align: center;
+    word-break: normal;
+    color: #fff;
+    @media (max-width: $screen-xs-min) {
+      margin-bottom: 40px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    line-height: normal;
+  }
+
+  .container-fluid {
+    height: 5700px;
+  }
+  .text-wrapper {
+    width: 500px;
+
+    background-color: gray;
+    //position: relative;
+    //right: 10px;
+    // top: 10px;
+    float: right;
+    padding: 30px;
+  }
 }
 
-#section4 h4 {
-  font-family: $font-family-sans-serif;
-  font-size: 24px;
-  text-align: center;
-  word-break: normal;
-  color: #fff;
-  @media (max-width: $screen-xs-min) {
-    margin-bottom: 40px;
-  }
+#section5 {
+  background: no-repeat right url("../images/bg-face02-1200px.jpg");
+  height: 1500px;
+  padding: 20px 0;
 }
 
 #section6 li {
@@ -1810,7 +1879,7 @@ $hamburger-color: $gray;
 }
 
 #main-container {
-  background-color: $gray-lighter;
+  //background-color: $gray-lighter;
 }
 
 #social-buttons1-10 {

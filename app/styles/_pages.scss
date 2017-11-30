@@ -25,7 +25,7 @@
 }
 
 #section1 {
-  background-color: $gray-lighter;
+  //background-color: $gray-lighter;
 }
 
 .credits {
@@ -52,9 +52,9 @@
   background-color: #fff;
 }
 
-#section3 {
+/*#section3 {
   background-color: $gray-lighter;
-}
+}*/
 
 #section6 {
   background-color: $gray-darker;
@@ -145,11 +145,10 @@
 
 //PR-31 Creatives
 .text-intro {
-  font-family: AvenirNext, serif;
+  font-family: AvenirNext-Medium, Didot, Georgia, serif;
   font-size: 18px;
   line-height: 1.4;
   letter-spacing: 0.3px;
-  text-align: left;
   color: #000000;
 
   .dropcap-red:first-child:first-letter {
@@ -171,6 +170,7 @@
   font-size: 30px;
   line-height: 1.5em;
   margin: 0.5em 0;
+  color: white;
 }
 
 .form-group-email {
@@ -190,13 +190,23 @@
   background-color: white;
 }
 
+.bkg-image {
+  width: 100%;
+  padding: 30px 0;
+  //background-color: $gray-lighter;
+  background-repeat: no-repeat;
+  //background-attachment: fixed !important;
+  background-position: 50% 0;
+  background-size: cover !important;
+}
+
 #singlebutton {
   width: 155px;
   margin-top: 45px;
   white-space: normal;
 }
 
-.features {
+.section7030 {
   padding-bottom: 30px;
   padding-left: 0;
   .table-cell h3 {
