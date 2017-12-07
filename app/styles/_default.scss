@@ -16,7 +16,7 @@ body {
   background: #ccc;
 }
 
-blockquote {
+/*blockquote {
   @extend h1;
   padding: 0 20px;
   margin: 40px 0;
@@ -24,7 +24,7 @@ blockquote {
   p {
     text-shadow: 1px 1px 1px #999;
   }
-}
+}*/
 
 .footer,
 .header,
@@ -241,7 +241,7 @@ blockquote {
 // Responsive: Portrait tablets and up
 @media screen and (min-width: $screen-xs-min) {
   .container {
-    max-width: 730px;
+    max-width: 1200px; //was 730
   } // Remove the padding we set earlier
   .footer,
   .header,

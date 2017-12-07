@@ -52,12 +52,37 @@ body.front {
   }
 }
 
-.front .hero-text,
-.title {
-  font-size: 52px;
-  @media (max-width: $screen-xs-min) {
-    font-size: 42px;
+#section1 h1 {
+  font-size: 90px;
+  position: relative;
+  bottom: 40px;
+  &.red {
+    color: #e53605;
   }
+}
+
+#creatives-section5 h1 {
+  font-size: 90px;
+  &.red {
+    color: #e53605;
+  }
+}
+
+#about-section4 h1 {
+  font-size: 90px;
+  &.red {
+    color: #e53605;
+  }
+}
+
+.underline-black {
+  border-bottom: 9px solid black;
+  line-height: 105px;
+}
+
+.underline-red {
+  border-bottom: 9px solid #e53605;
+  //line-height: 105px;
 }
 
 .front .flex-slider-slide {

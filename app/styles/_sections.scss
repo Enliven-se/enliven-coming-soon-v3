@@ -134,7 +134,7 @@
       padding-top: 41px;
     }
     .section-container-sm-bot-padding {
-      padding-bottom: 41px;
+      padding-bottom: responsi 41px;
     }
     .section-container-isolated {
       padding-top: 59px;
@@ -181,11 +181,14 @@
   }
 }
 
-#section3 .section-container-isolated {
-  padding: 48px 0 32px;
+.about-top {
+  background: url("../images/blonde_1200px-transparent.png") no-repeat;
+  background-size: contain !important;
+  background-position: bottom right;
+  height: 700px;
 }
 
-.hero {
+/*.hero {
   background: transparent no-repeat scroll 0 0;
   background-size: cover;
   margin-top: 79px;
@@ -232,9 +235,51 @@
       bottom: 0;
     }
   }
-}
+}*/
 
-#section2 {
+#creatives-section2 {
+  background: url("../images/bg-pencils_full-gray.jpg") no-repeat;
+  background-size: cover !important;
+  background-position: top right;
+  max-height: 742px;
+  @media (max-width: $screen-md-min) {
+    background-image: none;
+    .col-xs-12.up {
+      background: url("../images/bg-pencils-1200px.jpg") no-repeat;
+      background-position: top left;
+      padding-left: 30%;
+      //background-size: cover !important;
+    }
+    .col-xs-12.down {
+      background-color: #d8d8d8;
+    }
+    .underline-black {
+      border-bottom: 9px solid black;
+      line-height: 105px;
+      //max-width: fit-content;
+    }
+    .underline-red {
+      border-bottom: 9px solid #e53605;
+      //line-height: 105px;
+      //max-width: fit-content;
+    }
+    .text-wrapper-left {
+      //position: absolute;
+      //right: 170px;
+      //max-width: 250px;
+      //height: 100%;
+      text-align: right;
+      float: right;
+      padding-right: 10px;
+    }
+
+    .text-wrapper-right {
+      //max-width: 310px;
+      text-align: right;
+      float: right;
+      //padding-right: 70px;
+    }
+  }
   h2 {
     font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
     font-size: 72px;
@@ -243,36 +288,27 @@
       color: #e53605;
     }
   }
-  .pencils {
-    flex: 1;
-    flex-basis: 70%;
-    height: 650px;
-  }
-  .gray-bg {
-    display: flex;
-    height: 650px;
-    background-color: #d8d8d8;
-    background-image: url("../images/bg-pencils_full-gray.jpg");
-    background-size: cover !important;
-    background-position: top right;
-  }
+
   .text-wrapper-left {
-    position: relative;
-    right: 170px;
+    //position: absolute;
+    //right: 170px;
     max-width: 250px;
+    height: 100%;
     text-align: right;
     float: right;
     padding-right: 10px;
   }
+
   .text-wrapper-right {
     max-width: 310px;
     text-align: right;
     float: right;
-    padding-right: 70px;
+    //padding-right: 70px;
   }
-  .col-right {
-    flex: 1;
-    flex-basis: 30%;
+
+  .align-bottom {
+    position: relative;
+    bottom: 0;
   }
 }
 
@@ -291,11 +327,205 @@
   }
 }
 
-#section3 {
+#creatives-section3 {
   .text-justify {
     text-align: justify;
   }
 }
+
+#creatives-section3 {
+  background-color: white;
+
+  h2.header-wrapper {
+    font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    border: 0.5px solid #0c1204;
+    color: #0c1204;
+    display: inline-block;
+    font-size: 1.8em;
+    line-height: 1em;
+    padding: 7px;
+    text-align: center;
+  }
+  .mockup-bg {
+    background-image: url("../images/mockups/mockup-iphone.png");
+    min-height: 682px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+  }
+}
+
+#creatives-section3 .section-container-isolated {
+  padding: 48px 0 32px;
+}
+
+#creatives-section4 {
+  background-image: url("../images/bg-money-1200px.jpg");
+  padding: 20px 0;
+  height: 698px;
+  h1,
+  h2,
+  h3,
+  p {
+    color: white;
+  }
+  h4 {
+    font-family: $font-family-sans-serif;
+    font-size: 24px;
+    text-align: center;
+    word-break: normal;
+    color: #fff;
+    @media (max-width: $screen-xs-min) {
+      margin-bottom: 40px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .container-fluid {
+    height: 698px;
+    padding: 0 60px 60px 0;
+  }
+  .text-wrapper {
+    max-width: 500px;
+    background-color: gray;
+    //position: relative;
+    //right: 10px;
+    // top: 10px;
+    float: right;
+    padding: 20px;
+    margin-top: 300px;
+  }
+}
+
+#about-section4 {
+  padding: 20px 0;
+  min-height: 500px;
+  h1 {
+    padding-bottom: 50px;
+  }
+  h4 {
+    font-family: $font-family-serif;
+    font-size: 34px;
+    font-style: italic;
+    word-break: normal;
+    line-height: 40px;
+    padding-bottom: 20px;
+    vertical-align: top;
+    @media (max-width: $screen-xs-min) {
+      padding-bottom: 40px;
+    }
+  }
+  h3 {
+    font-size: 20px;
+    line-height: 40px;
+  }
+  .border-right {
+    border-right: 1px solid #979797;
+  }
+
+  .text-wrapper {
+    width: 500px;
+    background-color: gray;
+    //position: relative;
+    //right: 10px;
+    // top: 10px;
+    text-align: right;
+    float: right;
+    padding: 20px;
+    margin-top: 300px;
+  }
+}
+
+#creatives-section5 {
+  background: no-repeat right url("../images/bg-face02-1200px.jpg");
+  background-size: cover !important;
+  background-position: 150px;
+
+  @media (max-width: $screen-xs-max) {
+    background-position: top right;
+  }
+  .red {
+    color: #e53605;
+  }
+}
+
+#creatives-section6 {
+  h1 {
+    font-size: 84px;
+  }
+  .creatives-profile {
+    font-style: italic;
+    font-weight: normal;
+    font-family: "AvenirNext-MediumItalic", "avenirnext-regular", Helvetica,
+      Arial, sans-serif;
+    //width: 200px;
+  }
+  .avatar img {
+    border: 1px solid #9da09b;
+    border-radius: 50%;
+    padding: 2px;
+  }
+}
+
+#section6 li {
+  font-size: 16px;
+  line-height: 2em;
+}
+
+#section6 a:active,
+#section6 a:hover,
+#section6 a:link,
+#section6 a:visited {
+  color: #fff;
+  text-shadow: 1px 1px 1px #111;
+  white-space: nowrap;
+}
+
+#section6 i {
+  display: block;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+#about-section5 {
+  .top-left-bg {
+    background-image: url("../images/Sebastien-Boudet.jpg") !important;
+    background-position: top;
+    //padding-left: 30%;
+    background-size: cover !important;
+    height: 950px;
+  }
+  .bottom-right-bg {
+    background-image: url("../images/lily_collins.jpg") !important;
+    background-position: top;
+    //padding-left: 30%;
+    background-size: cover !important;
+    height: 950px;
+  }
+  .red-bg {
+    background-color: #d0021b;
+    height: 950px;
+  }
+  .gray-bg {
+    background-color: #979797;
+    height: 950px;
+  }
+  h2.header-wrapper {
+    font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
+    text-transform: uppercase;
+    border: 0.5px solid #0c1204;
+    color: #0c1204;
+    display: inline-block;
+    font-size: 1.8em;
+    line-height: 1em;
+    padding: 7px;
+    text-align: center;
+  }
+}
+
 // mailchimp
 .response,
 div.mce_inline_error {
