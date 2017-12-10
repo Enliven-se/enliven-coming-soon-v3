@@ -50,13 +50,13 @@ $hamburger-color: $gray;
   width: 100%;
   &:before {
     display: block;
-    content: "";
+    content: '';
   }
   .brand-name {
     font-size: 16px;
   }
   .navbar-section {
-    box-sizing: border-box; // height    : 89px;
+    box-sizing: border-box;
     position: absolute;
     top: 0;
     width: 100%;
@@ -310,7 +310,7 @@ $hamburger-color: $gray;
 
 // fix for popup menu conflict
 @media (max-width: $screen-xs-min) {
-  .navbar-absolute.navbar[id^="menu-"] {
+  .navbar-absolute.navbar[id^='menu-'] {
     position: absolute;
   }
 }
@@ -382,7 +382,7 @@ $hamburger-color: $gray;
 .after-navbar:before {
   display: block;
   height: 98px;
-  content: "";
+  content: '';
 }
 
 .hamburger {
@@ -399,7 +399,7 @@ $hamburger-color: $gray;
 .hamburger-line:after,
 .hamburger-line:before {
   border-bottom: 2px solid;
-  content: "";
+  content: '';
   cursor: pointer;
   display: block;
   height: 1px;
@@ -644,11 +644,6 @@ $hamburger-color: $gray;
   text-align: center;
   vertical-align: middle;
 }
-
-/*#section1 .box-magnet {
-  display: table-cell;
-  float: none;
-}*/
 
 .box-magnet-sm-padding {
   padding: 41px 0;
@@ -955,7 +950,7 @@ $hamburger-color: $gray;
   bottom: 0;
   width: 200%;
   margin-left: -50%;
-  content: "";
+  content: '';
 }
 
 .figure-caption-inside-bottom .figure-caption-std-grid:before,
@@ -1025,7 +1020,7 @@ $hamburger-color: $gray;
   display: block;
   width: 14px;
   height: 14px;
-  content: "";
+  content: '';
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
@@ -1061,8 +1056,6 @@ $hamburger-color: $gray;
 }
 
 #phone1 {
-  //-webkit-clip-path: inset(0 28% 1% 19%);
-  //clip-path: inset(0 28% 1% 19%);
   -webkit-clip-path: inset(0 0 588px 0);
   clip-path: inset(0 0 588px 0);
 }
@@ -1350,9 +1343,6 @@ $hamburger-color: $gray;
   margin-left: 0;
 }
 
-//.buttons-link .text-black .become-a-contributor {
-//  max-width: 140px;
-//}
 @media (min-width: $screen-md-min) {
   .buttons-link.text-black.become-link {
     max-width: 110px;
@@ -1590,7 +1580,7 @@ $hamburger-color: $gray;
 .plan-favorite .plan-number:before {
   display: block;
   height: 15px;
-  content: "";
+  content: '';
 }
 
 .plan-favorite .plan-box {

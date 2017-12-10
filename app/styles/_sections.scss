@@ -79,6 +79,18 @@
   padding-bottom: 65px;
 }
 
+.section-container-quotes {
+  .first {
+    padding-right: 20px;
+  }
+  .middle {
+    padding: 0 20px;
+  }
+  .last {
+    padding-left: 20px;
+  }
+}
+
 .section-container-first {
   padding-top: 93px;
   padding-bottom: 41px;
@@ -101,9 +113,6 @@
   overflow: hidden;
   padding-right: 24px;
   padding-left: 24px;
-}
-
-.section-left {
 }
 
 .section-right {
@@ -163,18 +172,16 @@
   }
 }
 
-.section.section--relative.section--fixed-size.parallax-background {
-  @media screen and (min-width: $screen-sm-min) {
-    background-image: url("../images/bg-lynch-hidef.jpg") !important;
-  }
-}
-
 .section.section--relative.section--fixed-size {
   background-color: $gray-darker;
 }
 
-// lnch
 @media screen and (min-width: $screen-sm-min) {
+  .section.section--relative.section--fixed-size.parallax-background {
+    background-image: url('../images/bg-lynch-hidef.jpg') !important;
+  }
+
+  // lnch
   .section-container.section-container--std-padding.container {
     padding-top: 160px;
     padding-bottom: 160px;
@@ -182,106 +189,52 @@
 }
 
 .about-top {
-  background: url("../images/blonde_1200px-transparent.png") no-repeat;
+  background: url('../images/blonde_1200px-transparent.png') no-repeat;
   background-size: contain !important;
   background-position: bottom right;
   height: 700px;
 }
 
-/*.hero {
-  background: transparent no-repeat scroll 0 0;
-  background-size: cover;
-  margin-top: 79px;
-  min-height: 50vmin;
-  position: relative;
-  @media (min-width: $screen-md) {
-    margin-top: 113px;
-    min-height: 450px;
-  }
-  &.contributor-faq {
-    background-image: url("../images/heroes/hero-piano.jpg");
-    @media (min-width: $screen-md) {
-      background-position: 50% 50%;
-    }
-  }
-  &.submission-guidelines {
-    background-image: url("../images/heroes/hero-player.jpg");
-    padding-top: 0;
-  }
-  &.about {
-    background-image: url("../images/heroes/hero-about-enliven.jpg");
-    @media (min-width: $screen-md) {
-      background-position: 0 50%;
-    }
-  }
-  &.become-a-contributor {
-    background: #bbb;
-    min-height: 0;
-  }
-  &.contact {
-    min-height: 0;
-  }
-  &.contributor-application-form {
-    background-image: url("../images/heroes/hero-become-a-contributor.jpg");
-  }
-  &.work-with-us {
-    background-image: url("../images/heroes/hero-work.jpg");
-  }
-  .title {
-    letter-spacing: -1px;
-    z-index: 0;
-    @media (min-width: $screen-md) {
-      position: absolute;
-      bottom: 0;
-    }
-  }
-}*/
-
 #creatives-section2 {
-  background: url("../images/bg-pencils_full-gray.jpg") no-repeat;
+  background: url('../images/bg-pencils_full-gray.jpg') no-repeat;
   background-size: cover !important;
   background-position: top right;
   max-height: 742px;
   @media (max-width: $screen-md-min) {
     background-image: none;
+
     .col-xs-12.up {
-      background: url("../images/bg-pencils-1200px.jpg") no-repeat;
+      background: url('../images/bg-pencils-1200px.jpg') no-repeat;
       background-position: top left;
       padding-left: 30%;
-      //background-size: cover !important;
     }
+
     .col-xs-12.down {
       background-color: #d8d8d8;
     }
+
     .underline-black {
       border-bottom: 9px solid black;
       line-height: 105px;
-      //max-width: fit-content;
     }
+
     .underline-red {
       border-bottom: 9px solid #e53605;
-      //line-height: 105px;
-      //max-width: fit-content;
     }
+
     .text-wrapper-left {
-      //position: absolute;
-      //right: 170px;
-      //max-width: 250px;
-      //height: 100%;
       text-align: right;
       float: right;
       padding-right: 10px;
     }
 
     .text-wrapper-right {
-      //max-width: 310px;
       text-align: right;
       float: right;
-      //padding-right: 70px;
     }
   }
   h2 {
-    font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
+    font-family: 'avenirnext-regular', Helvetica, Arial, sans-serif;
     font-size: 72px;
     font-weight: bold;
     &#red {
@@ -290,8 +243,6 @@
   }
 
   .text-wrapper-left {
-    //position: absolute;
-    //right: 170px;
     max-width: 250px;
     height: 100%;
     text-align: right;
@@ -303,7 +254,6 @@
     max-width: 310px;
     text-align: right;
     float: right;
-    //padding-right: 70px;
   }
 
   .align-bottom {
@@ -319,7 +269,6 @@
     position: relative;
     text-align: right;
     .align-bottom {
-      //position: relative;
       bottom: 0;
       left: 0;
       width: 100%;
@@ -337,7 +286,7 @@
   background-color: white;
 
   h2.header-wrapper {
-    font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
+    font-family: 'avenirnext-regular', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     border: 0.5px solid #0c1204;
     color: #0c1204;
@@ -348,7 +297,7 @@
     text-align: center;
   }
   .mockup-bg {
-    background-image: url("../images/mockups/mockup-iphone.png");
+    background-image: url('../images/mockups/mockup-iphone.png');
     min-height: 682px;
     background-repeat: no-repeat;
     background-position: center;
@@ -361,7 +310,7 @@
 }
 
 #creatives-section4 {
-  background-image: url("../images/bg-money-1200px.jpg");
+  background-image: url('../images/bg-money-1200px.jpg');
   padding: 20px 0;
   height: 698px;
   h1,
@@ -391,9 +340,6 @@
   .text-wrapper {
     max-width: 500px;
     background-color: gray;
-    //position: relative;
-    //right: 10px;
-    // top: 10px;
     float: right;
     padding: 20px;
     margin-top: 300px;
@@ -429,9 +375,6 @@
   .text-wrapper {
     width: 500px;
     background-color: gray;
-    //position: relative;
-    //right: 10px;
-    // top: 10px;
     text-align: right;
     float: right;
     padding: 20px;
@@ -440,7 +383,7 @@
 }
 
 #creatives-section5 {
-  background: no-repeat right url("../images/bg-face02-1200px.jpg");
+  background: no-repeat right url('../images/bg-face02-1200px.jpg');
   background-size: cover !important;
   background-position: 150px;
 
@@ -459,9 +402,8 @@
   .creatives-profile {
     font-style: italic;
     font-weight: normal;
-    font-family: "AvenirNext-MediumItalic", "avenirnext-regular", Helvetica,
+    font-family: 'AvenirNext-MediumItalic', 'avenirnext-regular', Helvetica,
       Arial, sans-serif;
-    //width: 200px;
   }
   .avatar img {
     border: 1px solid #9da09b;
@@ -492,16 +434,14 @@
 
 #about-section5 {
   .top-left-bg {
-    background-image: url("../images/Sebastien-Boudet.jpg") !important;
+    background-image: url('../images/Sebastien-Boudet.jpg') !important;
     background-position: top;
-    //padding-left: 30%;
     background-size: cover !important;
     height: 950px;
   }
   .bottom-right-bg {
-    background-image: url("../images/lily_collins.jpg") !important;
+    background-image: url('../images/lily_collins.jpg') !important;
     background-position: top;
-    //padding-left: 30%;
     background-size: cover !important;
     height: 950px;
   }
@@ -514,7 +454,7 @@
     height: 950px;
   }
   h2.header-wrapper {
-    font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
+    font-family: 'avenirnext-regular', Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     border: 0.5px solid #0c1204;
     color: #0c1204;
@@ -532,13 +472,31 @@ div.mce_inline_error {
   color: #fff;
 }
 
+.text-coming-soon {
+  font-size: 54px;
+  color: #ffffff;
+}
+
+.text-sign-up {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
+  margin: 1rem 0;
+}
+
+.mc_embed_signup {
+  margin: 2rem 0;
+}
+
+.form-group-email {
+  width: 300px;
+  padding-right: 35px;
+}
+
 // iframe
 iframe {
   border: 0;
   width: 100%;
   &.contributor-form {
     margin-top: 40px;
-  } // &.resizable {
-  //   min-height: 3400px; // @FIXME
-  // }
+  }
 }
