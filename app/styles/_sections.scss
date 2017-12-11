@@ -178,7 +178,7 @@
 
 @media screen and (min-width: $screen-sm-min) {
   .section.section--relative.section--fixed-size.parallax-background {
-    background-image: url('../images/bg-lynch-hidef.jpg') !important;
+    background-image: url("../images/bg-lynch-hidef.jpg") !important;
   }
 
   // lnch
@@ -189,14 +189,14 @@
 }
 
 .about-top {
-  background: url('../images/blonde_1200px-transparent.png') no-repeat;
+  background: url("../images/blonde_1200px-transparent.png") no-repeat;
   background-size: contain !important;
   background-position: bottom right;
   height: 700px;
 }
 
 #creatives-section2 {
-  background: url('../images/bg-pencils_full-gray.jpg') no-repeat;
+  background: url("../images/bg-pencils_full-gray.jpg") no-repeat;
   background-size: cover !important;
   background-position: top right;
   max-height: 742px;
@@ -204,7 +204,7 @@
     background-image: none;
 
     .col-xs-12.up {
-      background: url('../images/bg-pencils-1200px.jpg') no-repeat;
+      background: url("../images/bg-pencils-1200px.jpg") no-repeat;
       background-position: top left;
       padding-left: 30%;
     }
@@ -234,7 +234,7 @@
     }
   }
   h2 {
-    font-family: 'avenirnext-regular', Helvetica, Arial, sans-serif;
+    font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
     font-size: 72px;
     font-weight: bold;
     &#red {
@@ -286,7 +286,7 @@
   background-color: white;
 
   h2.header-wrapper {
-    font-family: 'avenirnext-regular', Helvetica, Arial, sans-serif;
+    font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     border: 0.5px solid #0c1204;
     color: #0c1204;
@@ -297,7 +297,7 @@
     text-align: center;
   }
   .mockup-bg {
-    background-image: url('../images/mockups/mockup-iphone.png');
+    background-image: url("../images/mockups/mockup-iphone.png");
     min-height: 682px;
     background-repeat: no-repeat;
     background-position: center;
@@ -310,7 +310,7 @@
 }
 
 #creatives-section4 {
-  background-image: url('../images/bg-money-1200px.jpg');
+  background-image: url("../images/bg-money-1200px.jpg");
   padding: 20px 0;
   height: 698px;
   h1,
@@ -383,7 +383,7 @@
 }
 
 #creatives-section5 {
-  background: no-repeat right url('../images/bg-face02-1200px.jpg');
+  background: no-repeat right url("../images/bg-face02-1200px.jpg");
   background-size: cover !important;
   background-position: 150px;
 
@@ -402,7 +402,7 @@
   .creatives-profile {
     font-style: italic;
     font-weight: normal;
-    font-family: 'AvenirNext-MediumItalic', 'avenirnext-regular', Helvetica,
+    font-family: "AvenirNext-MediumItalic", "avenirnext-regular", Helvetica,
       Arial, sans-serif;
   }
   .avatar img {
@@ -434,13 +434,13 @@
 
 #about-section5 {
   .top-left-bg {
-    background-image: url('../images/Sebastien-Boudet.jpg') !important;
+    background-image: url("../images/Sebastien-Boudet.jpg") !important;
     background-position: top;
     background-size: cover !important;
     height: 950px;
   }
   .bottom-right-bg {
-    background-image: url('../images/lily_collins.jpg') !important;
+    background-image: url("../images/lily_collins.jpg") !important;
     background-position: top;
     background-size: cover !important;
     height: 950px;
@@ -454,7 +454,7 @@
     height: 950px;
   }
   h2.header-wrapper {
-    font-family: 'avenirnext-regular', Helvetica, Arial, sans-serif;
+    font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
     text-transform: uppercase;
     border: 0.5px solid #0c1204;
     color: #0c1204;
@@ -462,7 +462,31 @@
     font-size: 1.8em;
     line-height: 1em;
     padding: 7px;
-    text-align: center;
+    position: relative;
+    top: 17em;
+    //text-align: center;
+  }
+  h3 {
+    color: white;
+    font-size: 42px;
+    //padding: 0 20px 0 20px;
+    text-align: left;
+  }
+  .text-intro {
+    position: relative;
+    top: 10em;
+    color: white;
+    text-align: justify;
+    padding: 0 20px 0 20px;
+  }
+
+  p {
+    padding-top: 15px;
+    border-top: 8px solid #fff;
+  }
+  .row {
+    margin-top: -25px;
+    margin-bottom: -25px;
   }
 }
 
