@@ -193,6 +193,9 @@
   background-size: contain !important;
   background-position: bottom right;
   height: 700px;
+  @media (max-width: $screen-xs) {
+    height: 400px;
+  }
 }
 
 #creatives-section2 {
@@ -298,10 +301,13 @@
   }
   .mockup-bg {
     background-image: url("../images/mockups/mockup-iphone.png");
-    min-height: 682px;
+    min-height: 600px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    @media (max-width: $screen-xs) {
+      min-height: 350px;
+    }
   }
 }
 
@@ -312,12 +318,15 @@
 #creatives-section4 {
   background-image: url("../images/bg-money-1200px.jpg");
   padding: 20px 0;
-  height: 698px;
+
   h1,
   h2,
   h3,
   p {
     color: white;
+  }
+  @media (max-width: $screen-xs) {
+    line-height: normal;
   }
   h4 {
     font-family: $font-family-sans-serif;
@@ -334,7 +343,6 @@
     line-height: 40px;
   }
   .container-fluid {
-    height: 698px;
     padding: 0 60px 60px 0;
   }
   .text-wrapper {
