@@ -19,6 +19,7 @@
   .after-navbar,
   .box-container {
     height: 100%;
+    min-height: 100vh;
     transition: all 0.2s ease-in-out 0s;
   }
   .hero {
@@ -67,24 +68,6 @@
     blockquote {
       color: #fff !important;
     }
-  }
-}
-
-#section1 {
-  h1 {
-    font-size: 90px;
-    position: relative;
-    bottom: 40px;
-    &.red {
-      color: #e53605;
-    }
-    @media (max-width: $screen-xs) {
-      font-size: 52px;
-    }
-  }
-
-  .section-container-isolated {
-    padding-bottom: 0;
   }
 }
 
