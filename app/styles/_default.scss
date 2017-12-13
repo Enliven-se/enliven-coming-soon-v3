@@ -98,6 +98,10 @@ body {
   }
 }
 
+.text-bold {
+  font-weight: 700;
+}
+
 .flex-slider-slide {
   display: inline-block;
   list-style-type: none;
@@ -107,19 +111,19 @@ body {
     padding: 20px;
   }
   .row {
-    @media screen and (min-width: $screen-xs-min) {
+    @media screen and (min-width: $screen-xs) {
       display: flex;
       align-items: center;
     }
     .slide-text {
       max-width: 34em;
       padding: 0 40px 20px;
-      @media screen and (min-width: $screen-sm-min) {
+      @media screen and (min-width: $screen-sm) {
         padding-top: 10px;
       }
     }
   }
-  @media screen and (min-width: $screen-xs-min) {
+  @media screen and (min-width: $screen-xs) {
     .col-sm-6 {
       &.slide-bg {
         padding-left: 50px;
@@ -134,12 +138,12 @@ body {
   &.slide-1 {
     .slide-bg {
       margin: -40px 0 40px;
-      @media screen and (min-width: $screen-xs-min) {
+      @media screen and (min-width: $screen-xs) {
         margin-top: 50px;
       }
     }
     .slide-text {
-      @media screen and (min-width: $screen-xs-min) {
+      @media screen and (min-width: $screen-xs) {
         position: absolute;
         width: 100%;
         &.p1 {
@@ -147,7 +151,7 @@ body {
         }
         &.p2 {
           bottom: 8px;
-          @media screen and (min-width: $screen-sm-min) {
+          @media screen and (min-width: $screen-sm) {
             bottom: -25px;
           }
         }
@@ -159,7 +163,7 @@ body {
           text-shadow: 1px 1px 1px #666;
         }
       }
-      @media screen and (min-width: $screen-sm-min) {
+      @media screen and (min-width: $screen-sm) {
         &.p2 {
           bottom: 30px;
         }
@@ -167,12 +171,12 @@ body {
     }
   }
   &.slide-6 {
-    @media screen and (min-width: $screen-xs-min) {
+    @media screen and (min-width: $screen-xs) {
       align-items: center;
       display: flex !important;
     }
     .row {
-      margin: 0 auto; // @media screen and (min-width: $screen-sm-min) {
+      margin: 0 auto; // @media screen and (min-width: $screen-sm) {
       //   margin: 50px auto;
       // }
     }
@@ -186,7 +190,7 @@ body {
   }
   h3 {
     font-size: 20px;
-    @media screen and (min-width: $screen-sm-min) {
+    @media screen and (min-width: $screen-sm) {
       font-size: 28px; // max-width: 20em;
       // margin   : 0 auto;
     }
@@ -204,7 +208,7 @@ body {
     width: auto;
     max-width: 100%;
     height: auto;
-    @media screen and (min-width: $screen-xs-min) and (max-width: $screen-xs-max) {
+    @media screen and (min-width: $screen-xs) and (max-width: $screen-xs-max) {
       height: auto;
       max-height: auto;
       max-width: 100%;
@@ -224,7 +228,7 @@ body {
   right: 0;
   top: 10px;
   width: auto;
-  @media screen and (min-width: $screen-xs-min) {
+  @media screen and (min-width: $screen-xs) {
     bottom: 33%;
     top: auto;
   }
@@ -239,7 +243,7 @@ body {
 }
 
 // Responsive: Portrait tablets and up
-@media screen and (min-width: $screen-xs-min) {
+@media screen and (min-width: $screen-xs) {
   .container {
     max-width: 1200px; //was 730
   } // Remove the padding we set earlier
@@ -281,4 +285,10 @@ body {
 
 .form-horizontal .form-group {
   margin-left: 0;
+}
+
+@media (max-width: $screen-xs-max) {
+  .text-nowrap {
+    white-space: normal;
+  }
 }

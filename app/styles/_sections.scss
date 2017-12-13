@@ -15,7 +15,7 @@
 }
 
 .section-full-height {
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .section-full-height.after-navbar:before {
@@ -75,8 +75,8 @@
 }
 
 .section-container-isolated {
-  padding-top: 65px;
-  padding-bottom: 65px;
+  padding-top: 60px;
+  padding-bottom: 60px;
 }
 
 .section-container-quotes {
@@ -125,7 +125,7 @@
   text-align: center;
 }
 
-@media (min-width: $screen-sm-min) {
+@media (min-width: $screen-sm) {
   .section-short-paddings {
     .section-container-std-padding {
       padding: 59px 0;
@@ -176,9 +176,9 @@
   background-color: $gray-darker;
 }
 
-@media screen and (min-width: $screen-sm-min) {
+@media screen and (min-width: $screen-sm) {
   .section.section--relative.section--fixed-size.parallax-background {
-    background-image: url("../images/bg-lynch-hidef.jpg") !important;
+    background-image: url('../images/bg-lynch-hidef.jpg') !important;
   }
 
   // lnch
@@ -189,7 +189,7 @@
 }
 
 .about-top {
-  background: url("../images/blonde_1200px-transparent.png") no-repeat;
+  background: url('../images/blonde_1200px-transparent.png') no-repeat;
   background-size: contain !important;
   background-position: bottom right;
   height: 700px;
@@ -199,15 +199,16 @@
 }
 
 #creatives-section2 {
-  background: url("../images/bg-pencils_full-gray.jpg") no-repeat;
+  background: url('../images/bg-pencils_full-gray.jpg') no-repeat;
   background-size: cover !important;
   background-position: top right;
   max-height: 742px;
-  @media (max-width: $screen-md-min) {
+
+  @media (max-width: $screen-md) {
     background-image: none;
 
     .col-xs-12.up {
-      background: url("../images/bg-pencils-1200px.jpg") no-repeat;
+      background: url('../images/bg-pencils-1200px.jpg') no-repeat;
       background-position: 25% 25%;
       padding-left: 30%;
     }
@@ -225,19 +226,18 @@
       border-bottom: 9px solid #e53605;
     }
 
-    .text-wrapper-left {
-      text-align: right;
-      float: right;
-      padding-right: 10px;
-    }
-
+    .text-wrapper-left,
     .text-wrapper-right {
       text-align: right;
       float: right;
     }
+
+    .text-wrapper-left {
+      padding-right: 10px;
+    }
   }
   h2 {
-    font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
+    font-family: $font-family-sans-serif;
     font-size: 72px;
     font-weight: bold;
     &#red {
@@ -251,12 +251,14 @@
     text-align: right;
     float: right;
     padding-right: 10px;
+    padding-bottom: 15px;
   }
 
   .text-wrapper-right {
     max-width: 310px;
     text-align: right;
     float: right;
+    padding-bottom: 15px;
   }
 
   .align-bottom {
@@ -289,7 +291,7 @@
   background-color: white;
 
   h2.header-wrapper {
-    font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
+    font-family: $font-family-sans-serif;
     text-transform: uppercase;
     border: 0.5px solid #0c1204;
     color: #0c1204;
@@ -300,11 +302,12 @@
     text-align: center;
   }
   .mockup-bg {
-    background-image: url("../images/mockups/mockup-iphone.png");
+    background-image: url('../images/mockups/mockup-iphone.png');
     min-height: 600px;
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    margin-bottom: 20px;
     @media (max-width: $screen-xs) {
       min-height: 350px;
     }
@@ -316,7 +319,7 @@
 }
 
 #creatives-section4 {
-  background-image: url("../images/bg-money-1200px.jpg");
+  background-image: url('../images/bg-money-1200px.jpg');
   padding: 20px 0;
 
   h1,
@@ -334,7 +337,7 @@
     text-align: center;
     word-break: normal;
     color: #fff;
-    @media (max-width: $screen-xs-min) {
+    @media (max-width: $screen-xs) {
       margin-bottom: 40px;
     }
   }
@@ -355,11 +358,18 @@
 }
 
 #about-section4 {
-  padding: 20px 0;
   min-height: 500px;
+  padding: 20px 0 50px;
   h1 {
-    padding-bottom: 50px;
+    font-size: 90px;
+    @media (max-width: 480px) {
+      font-size: 50px;
+    }
+    &.red {
+      color: #e53605;
+    }
   }
+
   h4 {
     font-family: $font-family-serif;
     font-size: 34px;
@@ -368,7 +378,7 @@
     line-height: 40px;
     padding-bottom: 20px;
     vertical-align: top;
-    @media (max-width: $screen-xs-min) {
+    @media (max-width: $screen-xs) {
       padding-bottom: 40px;
       font-size: 24px;
       line-height: normal;
@@ -393,14 +403,32 @@
 }
 
 #creatives-section5 {
-  background: no-repeat right url("../images/bg-face02-1200px.jpg");
+  background: no-repeat right url('../images/bg-face02-1200px.jpg');
   background-size: cover !important;
   background-position: 150px;
   @media (max-width: $screen-xs-max) {
     background-position: top;
   }
+  h1 {
+    font-size: 90px;
+    &.red {
+      color: #e53605;
+    }
+    @media (max-width: $screen-xs-max) {
+      font-size: 65px;
+    }
+  }
   .red {
     color: #e53605;
+  }
+
+  .container {
+    @media (max-width: $screen-xs-max) {
+      // lighten the background on mobile
+      background: rgba(255, 255, 255, 0.65);
+    }
+
+    padding-bottom: 50px;
   }
 }
 
@@ -411,7 +439,7 @@
   .creatives-profile {
     font-style: italic;
     font-weight: normal;
-    font-family: "AvenirNext-MediumItalic", "avenirnext-regular", Helvetica,
+    font-family: 'AvenirNext-MediumItalic', 'avenirnext-regular', Helvetica,
       Arial, sans-serif;
   }
   .avatar img {
@@ -443,27 +471,42 @@
 
 #about-section5 {
   .top-left-bg {
-    background-image: url("../images/Sebastien-Boudet.jpg") !important;
+    background-image: url('../images/Sebastien-Boudet.jpg') !important;
     background-position: top;
     background-size: cover !important;
-    height: 950px;
+    min-height: 100vh;
+
+    @media (min-width: $screen-xs) and (max-width: $screen-md - 1) {
+      // make sure the image fits in tablet landscape + portrait landscape mode
+      min-height: 200vh;
+    }
   }
   .bottom-right-bg {
-    background-image: url("../images/lily_collins.jpg") !important;
+    background-image: url('../images/lily_collins.jpg') !important;
     background-position: right top;
     background-size: cover !important;
-    height: 950px;
+    min-height: 100vh;
+    @media (min-width: $screen-xs) and (max-width: $screen-md - 1) {
+      // make sure the image fits in tablet landscape + portrait landscape mode
+      min-height: 200vh;
+    }
   }
   .red-bg {
     background-color: #d0021b;
-    height: 950px;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
   }
   .gray-bg {
     background-color: #979797;
-    height: 950px;
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
   }
   h2.header-wrapper {
-    font-family: "avenirnext-regular", Helvetica, Arial, sans-serif;
+    font-family: $font-family-sans-serif;
     text-transform: uppercase;
     border: 0.5px solid #0c1204;
     color: #0c1204;
@@ -483,7 +526,6 @@
   }
   .text-intro {
     position: relative;
-    top: 10em;
     color: white;
     text-align: justify;
     padding: 0 20px 0 20px;
