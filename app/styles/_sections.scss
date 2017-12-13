@@ -208,7 +208,7 @@
 
     .col-xs-12.up {
       background: url("../images/bg-pencils-1200px.jpg") no-repeat;
-      background-position: top left;
+      background-position: 25% 25%;
       padding-left: 30%;
     }
 
@@ -370,6 +370,8 @@
     vertical-align: top;
     @media (max-width: $screen-xs-min) {
       padding-bottom: 40px;
+      font-size: 24px;
+      line-height: normal;
     }
   }
   h3 {
@@ -394,9 +396,8 @@
   background: no-repeat right url("../images/bg-face02-1200px.jpg");
   background-size: cover !important;
   background-position: 150px;
-
   @media (max-width: $screen-xs-max) {
-    background-position: top right;
+    background-position: top;
   }
   .red {
     color: #e53605;
@@ -449,7 +450,7 @@
   }
   .bottom-right-bg {
     background-image: url("../images/lily_collins.jpg") !important;
-    background-position: top;
+    background-position: right top;
     background-size: cover !important;
     height: 950px;
   }

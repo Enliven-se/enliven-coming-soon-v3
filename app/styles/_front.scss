@@ -56,7 +56,7 @@
     color: #e53605;
   }
   @media (max-width: $screen-xs) {
-    font-size: 72px;
+    font-size: 52px;
   }
 }
 
@@ -71,10 +71,16 @@
   &.red {
     color: #e53605;
   }
+  @media (max-width: $screen-xs-max) {
+    font-size: 65px;
+  }
 }
 
 #about-section4 h1 {
   font-size: 90px;
+  @media (max-width: 480px) {
+    font-size: 50px;
+  }
   &.red {
     color: #e53605;
   }
