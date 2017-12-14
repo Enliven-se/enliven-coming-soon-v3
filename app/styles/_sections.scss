@@ -178,7 +178,7 @@
 
 @media screen and (min-width: $screen-sm) {
   .section.section--relative.section--fixed-size.parallax-background {
-    background-image: url("../images/bg-lynch-hidef.jpg") !important;
+    background-image: url('../images/bg-lynch-hidef.jpg') !important;
   }
 
   // lnch
@@ -189,7 +189,7 @@
 }
 
 .about-top {
-  background: url("../images/blonde_1200px-transparent.png") no-repeat;
+  background: url('../images/blonde_1200px-transparent.png') no-repeat;
   background-size: contain !important;
   background-position: bottom right;
   height: 700px;
@@ -199,16 +199,16 @@
 }
 
 #creatives-section2 {
-  background: url("../images/bg-pencils_full-gray.jpg") no-repeat;
+  background: url('../images/bg-pencils_full-gray.jpg') no-repeat;
   background-size: cover !important;
   background-position: top right;
-  max-height: 742px;
+  // max-height: 742px;
 
   @media (max-width: $screen-md) {
     background-image: none;
 
     .col-xs-12.up {
-      background: url("../images/bg-pencils-1200px.jpg") no-repeat;
+      background: url('../images/bg-pencils-1200px.jpg') no-repeat;
       background-position: 25% 25%;
       padding-left: 30%;
     }
@@ -297,7 +297,7 @@
     text-align: center;
   }
   .mockup-bg {
-    background-image: url("../images/mockups/mockup-iphone.png");
+    background-image: url('../images/mockups/mockup-iphone.png');
     min-height: 600px;
     background-repeat: no-repeat;
     background-position: center;
@@ -314,7 +314,7 @@
 }
 
 #creatives-section4 {
-  background-image: url("../images/bg-money-1200px.jpg");
+  background-image: url('../images/bg-money-1200px.jpg');
   padding: 20px 0;
 
   h1,
@@ -398,7 +398,7 @@
 }
 
 #creatives-section5 {
-  background: no-repeat right url("../images/bg-face02-1200px.jpg");
+  background: no-repeat right url('../images/bg-face02-1200px.jpg');
   background-size: cover !important;
   background-position: 150px;
   @media (max-width: $screen-xs-max) {
@@ -434,7 +434,7 @@
   .creatives-profile {
     font-style: italic;
     font-weight: normal;
-    font-family: "AvenirNext-MediumItalic", "avenirnext-regular", Helvetica,
+    font-family: 'AvenirNext-MediumItalic', 'avenirnext-regular', Helvetica,
       Arial, sans-serif;
   }
   .avatar img {
@@ -466,7 +466,7 @@
 
 #about-section5 {
   .top-left-bg {
-    background-image: url("../images/Sebastien-Boudet.jpg") !important;
+    background-image: url('../images/Sebastien-Boudet.jpg') !important;
     background-position: top;
     background-size: cover !important;
     min-height: 100vh;
@@ -477,7 +477,7 @@
     }
   }
   .bottom-right-bg {
-    background-image: url("../images/lily_collins.jpg") !important;
+    background-image: url('../images/lily_collins.jpg') !important;
     background-position: right top;
     background-size: cover !important;
     min-height: 100vh;
