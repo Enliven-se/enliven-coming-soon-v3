@@ -206,7 +206,7 @@
   //padding-right: 30px;
 
   .dropcap-red:first-child:first-letter {
-    font-family: AvenirNext-Medium, Didot, Georgia, serif;
+    font-family: "AvenirNext-Medium", Didot, Georgia, serif;
     color: #e53605;
     float: left;
     font-size: 5em;
@@ -218,7 +218,6 @@
   background: url("../images/bg-pencils_full-gray.jpg") no-repeat;
   background-size: cover !important;
   background-position: top right;
-  //max-height: 742px;
 
   @media (max-width: $screen-md) {
     background-image: none;
