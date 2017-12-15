@@ -198,11 +198,27 @@
   }
 }
 
+.bodytext {
+  font-size: 17px;
+  line-height: 1.4;
+  letter-spacing: 0.3px;
+  color: #000000;
+  //padding-right: 30px;
+
+  .dropcap-red:first-child:first-letter {
+    font-family: AvenirNext-Medium, Didot, Georgia, serif;
+    color: #e53605;
+    float: left;
+    font-size: 5em;
+    line-height: 1em;
+    margin-right: 10px;
+  }
+}
 #creatives-section2 {
   background: url("../images/bg-pencils_full-gray.jpg") no-repeat;
   background-size: cover !important;
   background-position: top right;
-  max-height: 742px;
+  //max-height: 742px;
 
   @media (max-width: $screen-md) {
     background-image: none;
@@ -231,6 +247,7 @@
       padding-right: 10px;
     }
   }
+
   h2 {
     font-family: $font-family-sans-serif;
     font-size: 72px;
@@ -255,16 +272,13 @@
     float: right;
     padding-bottom: 15px;
   }
-
   .align-bottom {
-    position: relative;
-    bottom: 0;
+    padding-top: 70px;
   }
 }
 
-.responsive-table {
+/*.responsive-table {
   margin: 20px 0;
-
   .table-cell {
     position: relative;
     text-align: right;
@@ -274,27 +288,30 @@
       width: 100%;
     }
   }
-}
-
-#creatives-section3 {
-  .text-justify {
-    text-align: justify;
-  }
-}
+}*/
 
 #creatives-section3 {
   background-color: white;
-
+  margin-top: 80px;
+  .text-justify {
+    text-align: justify;
+    // padding-right: 30px;
+  }
   h2.header-wrapper {
     font-family: $font-family-sans-serif;
     text-transform: uppercase;
-    border: 0.5px solid #0c1204;
+    border: 1px solid #0c1204;
     color: #0c1204;
     display: inline-block;
     font-size: 1.8em;
     line-height: 1em;
     padding: 7px;
     text-align: center;
+    margin-bottom: 30px;
+    &.red {
+      color: #e53605;
+      border: 1px solid #e53605;
+    }
   }
   .mockup-bg {
     background-image: url("../images/mockups/mockup-iphone.png");
@@ -357,6 +374,7 @@
   padding: 20px 0 50px;
   h1 {
     font-size: 90px;
+    margin-bottom: 40px;
     @media (max-width: 480px) {
       font-size: 50px;
     }
@@ -364,10 +382,9 @@
       color: #e53605;
     }
   }
-
   h4 {
     font-family: $font-family-serif;
-    font-size: 34px;
+    font-size: 28px;
     font-style: italic;
     word-break: normal;
     line-height: 40px;
@@ -383,10 +400,13 @@
     font-size: 20px;
     line-height: 40px;
   }
+  .border-left {
+    border-left: 1px solid #979797;
+    margin-left: -1px;
+  }
   .border-right {
     border-right: 1px solid #979797;
   }
-
   .text-wrapper {
     width: 500px;
     background-color: gray;
@@ -424,6 +444,9 @@
     }
 
     padding-bottom: 50px;
+  }
+  .row {
+    margin-top: 30px;
   }
 }
 
@@ -509,9 +532,6 @@
     font-size: 1.8em;
     line-height: 1em;
     padding: 7px;
-    position: relative;
-    top: 17em;
-    //text-align: center;
   }
   h3 {
     color: white;
@@ -519,7 +539,7 @@
     //padding: 0 20px 0 20px;
     text-align: left;
   }
-  .text-intro {
+  .bodytext {
     position: relative;
     color: white;
     text-align: justify;
