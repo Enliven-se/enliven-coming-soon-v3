@@ -492,6 +492,9 @@
     background-position: top;
     background-size: cover !important;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     @media (min-width: $screen-xs) and (max-width: $screen-md - 1) {
       // make sure the image fits in tablet landscape + portrait landscape mode
@@ -503,6 +506,9 @@
     background-position: right top;
     background-size: cover !important;
     min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     @media (min-width: $screen-xs) and (max-width: $screen-md - 1) {
       // make sure the image fits in tablet landscape + portrait landscape mode
       min-height: 200vh;
@@ -531,6 +537,8 @@
     font-size: 1.8em;
     line-height: 1em;
     padding: 7px;
+    margin: auto;
+    align-self: center;
   }
   h3 {
     color: white;
