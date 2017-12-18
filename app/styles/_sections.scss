@@ -573,39 +573,38 @@
 .marquee {
   height: 50px;
   width: 100%;
-
   overflow: hidden;
   position: relative;
   background-color: #f0f0f0;
-}
 
-.marquee div {
-  display: block;
-  width: 200%;
-  height: 50px;
-  position: absolute;
-  overflow: hidden;
+  .tag-list {
+    display: block;
+    width: 200%;
+    height: 50px;
+    position: absolute;
+    overflow: hidden;
 
-  animation: marquee 20s linear infinite;
-}
-
-.marquee span {
-  float: left;
-  width: 50%;
-  font-family: "AvenirNext-MediumItalic", "avenirnext-regular", Helvetica, Arial,
-    sans-serif;
-  font-size: 20px;
-  font-weight: 700;
-  word-spacing: 3em;
-  padding-top: 10px;
-}
-
-@keyframes marquee {
-  0% {
-    left: 0;
+    animation: marquee 20s linear infinite;
   }
-  100% {
-    left: -100%;
+
+  .marquee-elements {
+    float: left;
+    width: 50%;
+    font-family: "AvenirNext-MediumItalic", "avenirnext-regular", Helvetica,
+      Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    word-spacing: 3em;
+    padding-top: 10px;
+  }
+
+  @keyframes marquee {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: -100%;
+    }
   }
 }
 
