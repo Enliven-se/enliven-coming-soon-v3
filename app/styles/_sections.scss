@@ -581,8 +581,7 @@
   .tag-list {
     display: block;
     padding-top: 10px;
-    font-family: "AvenirNext-MediumItalic", "avenirnext-regular", Helvetica,
-      Arial, sans-serif;
+    font-family: $font-family-sans-serif;
     font-size: 20px;
     font-weight: 700;
     //word-spacing: 3em;
