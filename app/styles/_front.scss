@@ -33,6 +33,13 @@
     min-height: 1em;
     transition: all 0.2s ease-in-out 0s;
   }
+
+  .bottom-bar {
+    @media (max-width: $screen-sm - 1) {
+      display: none !important;
+    }
+  }
+
   h1,
   h2,
   h3,
