@@ -282,18 +282,24 @@
   }
 }
 
-/*.responsive-table {
-  margin: 20px 0;
-  .table-cell {
-    position: relative;
-    text-align: right;
-    .align-bottom {
-      bottom: 0;
-      left: 0;
-      width: 100%;
-    }
+.header-wrapper {
+  font-family: $font-family-sans-serif;
+  text-transform: uppercase;
+  border: 1px solid #0c1204;
+  color: #0c1204;
+  display: inline-block;
+  font-size: 1.8em;
+  line-height: 1em;
+  padding: 7px;
+  text-align: center;
+  margin: auto auto 30px;
+  align-self: center;
+  &.red {
+    color: #e53605;
+    border: 1px solid #e53605;
   }
-}*/
+}
+
 
 #creatives-section3 {
   background-color: white;
@@ -301,22 +307,6 @@
   .text-justify {
     text-align: justify;
     // padding-right: 30px;
-  }
-  h2.header-wrapper {
-    font-family: $font-family-sans-serif;
-    text-transform: uppercase;
-    border: 1px solid #0c1204;
-    color: #0c1204;
-    display: inline-block;
-    font-size: 1.8em;
-    line-height: 1em;
-    padding: 7px;
-    text-align: center;
-    margin-bottom: 30px;
-    &.red {
-      color: #e53605;
-      border: 1px solid #e53605;
-    }
   }
   .mockup-bg {
     background-image: url("../images/mockups/mockup-iphone.png");
@@ -534,18 +524,6 @@
     display: flex;
     align-items: center;
   }
-  h2.header-wrapper {
-    font-family: $font-family-sans-serif;
-    text-transform: uppercase;
-    border: 0.5px solid #0c1204;
-    color: #0c1204;
-    display: inline-block;
-    font-size: 1.8em;
-    line-height: 1em;
-    padding: 7px;
-    margin: auto;
-    align-self: center;
-  }
   h3 {
     color: white;
     font-size: 42px;
@@ -584,7 +562,10 @@
     font-family: $font-family-sans-serif;
     font-size: 20px;
     font-weight: 700;
+  }
+  .tag {
     //word-spacing: 3em;
+    padding-right: 3em;
   }
 }
 
