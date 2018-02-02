@@ -1309,16 +1309,13 @@ $hamburger-color: $gray;
   transition: all ease-in-out 0.2s;
   width: 100%;
   position: fixed;
-  bottom: -200px;
+  bottom: -300px;
+
   z-index: 5;
   background-color: grey;
 
   &.show-bar {
     display: block;
-    bottom: 0px;
-  }
-  &.remove-bar {
-    display: none;
     bottom: 0px;
   }
   .form-control {
