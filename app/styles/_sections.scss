@@ -312,7 +312,11 @@
     background-position: bottom center;
     margin-top: 30px;
     @media (max-width: $screen-md) {
-      background-size: 45%;
+      background-size: 50%;
+    }
+    @media (max-width: $screen-xs) {
+      background-size: 80%;
+      min-height: 120px;
     }
   }
 
@@ -331,11 +335,13 @@
       color: #e53605;
       border: 1px solid #e53605;
     }
+    @media (max-width: $screen-xs) {
+      max-width: 250px;
+    }
     &.comingsoon {
       margin-bottom: 60px;
       font-size: 1.3em;
       @media (max-width: $screen-xs) {
-        font-size: 0.8em;
         margin-bottom: 30px;
       }
     }
