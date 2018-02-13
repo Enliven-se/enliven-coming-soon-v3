@@ -102,7 +102,7 @@
     color: #000;
   }
   .dropcap-red {
-    font-family: "AvenirNext-Medium", Didot, Georgia, serif;
+    font-family: 'AvenirNext-Medium', Didot, Georgia, serif;
     color: #e53605;
     float: left;
     font-size: 5em;
@@ -115,8 +115,10 @@
   }
 }
 
-.creative-signup.teco.container {
-  max-width: 720px;
+.creative-signup {
+  .inner {
+    max-width: 720px;
+  }
 }
 
 .form-required {
