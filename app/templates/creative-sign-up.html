@@ -6,12 +6,12 @@
   <div class="inner">
 
     <p>
-      <span class="dropcap-red">W</span>e are constantly on the lookout for freelance creatives, experts and
-      personal brands that are passionate and skilled enough to creating and publishing
-      the best, most inspiring and relevant editorial content in the world. Our joint
-      ambitions are high, as they should be!</p>
-    <p>Fill in the form and we will get in contact witjh you. If your still feel a bit
-      unsure what we are looking for please read more here.</p>
+      <span class="dropcap-red">W</span>e are constantly on the lookout for skilled freelance creatives, experts
+      and personal brands who are passionate about creating inspiring and relevant
+      editorial stories. Our joint ambition is high, as it should be!</p>
+    <p>Please fill in the form below, and we will get in contact with you. If you still
+      feel a bit unsure about what we are looking for please read more
+      <a href="/submission-guidelines">here</a>.</p>
 
     <div class="form-group">
       <form name="insightly_web_to_lead" action="https://crm.na1.insightly.com/WebToLead/Create"
@@ -23,29 +23,29 @@
               <span class="form-required" title="This field is required.">*</span>
             </label>
             <input id="insightly_firstName" name="FirstName" type="text" class="form-control form-control-lg"
-            />
+              placeholder="First Name" autofocus required />
           </div>
           <div class="col-sm-6">
             <label for="insightly_lastName">Last Name
               <span class="form-required" title="This field is required.">*</span>
             </label>
             <input id="insightly_lastName" name="LastName" type="text" class="form-control form-control-lg"
-            />
+              placeholder="Last Name" required />
           </div>
         </div>
         <div class="row">
           <div class="col-sm-6">
             <label for="email">Email</label>
             <span class="form-required" title="This field is required.">*</span>
-            <input id="insightly_Email" name="email" type="text" class="form-control form-control-lg"
-            />
+            <input id="insightly_Email" name="email" type="email" class="form-control form-control-lg"
+              placeholder="Email address" required />
             <small id="emailHelp" class="form-text text-muted">
               <a href="/privacy-security">We'll never share your email with anyone else</a>.</small>
           </div>
           <div class="col-sm-6">
             <label for="phone">Phone</label>
-            <input id="insightly_Phone" name="phone" type="text" class="form-control form-control-lg"
-            />
+            <input id="insightly_Phone" name="phone" type="tel" class="form-control form-control-lg"
+              placeholder="Phone number including country code" />
           </div>
         </div>
         <div class="row">
@@ -65,82 +65,78 @@
           <div class="col-sm-6">
             <label for="AddressCountry">Country</label>
             <input id="insightly_AddressCountry" name="AddressCountry" type="text" class="form-control form-control-lg"
-            />
-            <br/>
+              placeholder="Country Name" />
           </div>
         </div>
         <div class="row">
           <div class="form-check ">
 
             <div class="col-sm-6">
+              <div>
+                <input id="insightly_LEAD_FIELD_6" name="LEAD_FIELD_6" type="checkbox" class="form-check-input"
+                />
+                <label class="form-check-label" for="insightly_LEAD_FIELD_6">Writer</label>
+              </div>
 
-              <input id="insightly_LEAD_FIELD_6" name="LEAD_FIELD_6" type="checkbox" class="form-check-input"
-              />
-              <label class="form-check-label" for="insightly_LEAD_FIELD_6">Writer</label>
-              <br/>
-
-              <input id="insightly_LEAD_FIELD_5" name="LEAD_FIELD_5" type="checkbox" class="form-check-input"
-              />
-              <label class="form-check-label" for="insightly_LEAD_FIELD_5">Photographer</label>
-              <br/>
+              <div>
+                <input id="insightly_LEAD_FIELD_5" name="LEAD_FIELD_5" type="checkbox" class="form-check-input"
+                />
+                <label class="form-check-label" for="insightly_LEAD_FIELD_5">Photographer</label>
+              </div>
 
               <input id="insightly_LEAD_FIELD_10" name="LEAD_FIELD_10" type="checkbox" class="form-check-input"
               />
               <label class="form-check-label" for="insightly_LEAD_FIELD_10">Editor</label>
             </div>
+
             <div class="col-sm-6">
-
-              <input id="insightly_LEAD_FIELD_7" name="LEAD_FIELD_7" type="checkbox" class="form-check-input"
-              />
-              <label class="form-check-label" for="insightly_LEAD_FIELD_7">Stylist</label>
-              <br/>
-
-
-              <input id="insightly_LEAD_FIELD_8" name="LEAD_FIELD_8" type="checkbox" class="form-check-input"
-              />
-              <label for="insightly_LEAD_FIELD_8">Expert</label>
-              <br/>
-
-              <input id="insightly_LEAD_FIELD_9" name="LEAD_FIELD_9" type="checkbox" class="form-check-input"
-              />
-              <label for="insightly_LEAD_FIELD_9">Personal Brand</label>
-
+              <div>
+                <input id="insightly_LEAD_FIELD_7" name="LEAD_FIELD_7" type="checkbox" class="form-check-input"
+                />
+                <label class="form-check-label" for="insightly_LEAD_FIELD_7">Stylist</label>
+              </div>
+              <div>
+                <input id="insightly_LEAD_FIELD_8" name="LEAD_FIELD_8" type="checkbox" class="form-check-input"
+                />
+                <label for="insightly_LEAD_FIELD_8">Expert</label>
+              </div>
+              <div>
+                <input id="insightly_LEAD_FIELD_9" name="LEAD_FIELD_9" type="checkbox" class="form-check-input"
+                />
+                <label for="insightly_LEAD_FIELD_9">Personal Brand</label>
+              </div>
             </div>
-
           </div>
 
-
         </div>
-        <br/>
-        <div class="row">
 
+        <div class="row">
           <div class="col-sm-6">
             <label for="website">Website</label>
-            <input id="insightly_WebSite" name="website" type="text" class="form-control form-control-lg"
-            />
+            <input id="insightly_WebSite" name="website" type="url" class="form-control form-control-lg"
+              placeholder="Link to your website" />
           </div>
           <div class="col-sm-6">
             <label for="insightly_LEAD_FIELD_4">Instagram (or other relevant link)</label>
-            <input id="insightly_LEAD_FIELD_4" name="LEAD_FIELD_4" type="text" class="form-control form-control-lg"
-            />
+            <input id="insightly_LEAD_FIELD_4" name="LEAD_FIELD_4" type="url" class="form-control form-control-lg"
+              placeholder="Got an Instagram or other relevant profile?" />
           </div>
 
-
-
+        </div>
+        <div class="row">
           <div class="col-sm-12">
             <label for="insightly_LEAD_FIELD_12">Let us know what is on your mind!</label>
             <textarea id="insightly_LEAD_FIELD_12" name="LEAD_FIELD_12" type="text" class="form-control form-control-lg"
               rows="3"></textarea>
-            <br/>
           </div>
-
+        </div>
+        <div class="row">
           <div class="col-sm-12 text-center">
             <input type="hidden" id="insightly_ResponsibleUser" name="ResponsibleUser" value="1533112"
             />
             <input type="hidden" id="insightly_LeadSource" name="LeadSource" value="2295827"
             />
             <input type="submit" class="btn btn-primary" value="Submit">
-
           </div>
         </div>
       </form>
