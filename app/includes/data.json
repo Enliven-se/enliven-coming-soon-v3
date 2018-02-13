@@ -13,7 +13,7 @@
       "url": "/become-a-contributor"
     },
     {
-      "title": "<span class=\"text-nowrap\">Sign-Up</span>",
+      "title": "<span class=\"text-nowrap\">Join Us!</span>",
       "className": "cms",
       "extra_classes": ["sign-up"],
       "url": "/contributor-signup"
