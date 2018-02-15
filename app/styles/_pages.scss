@@ -102,7 +102,7 @@
     color: #000;
   }
   .dropcap-red {
-    font-family: 'AvenirNext-Medium', Didot, Georgia, serif;
+    font-family: "AvenirNext-Medium", Didot, Georgia, serif;
     color: #e53605;
     float: left;
     font-size: 5em;
@@ -112,6 +112,12 @@
   a {
     color: #e53605;
     text-decoration: underline;
+  }
+  .inner {
+    max-width: 720px;
+    .row {
+      margin-bottom: 1em;
+    }
   }
 }
 
