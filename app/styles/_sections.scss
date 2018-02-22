@@ -306,18 +306,7 @@
     text-align: justify;
   }
   .apps {
-    background-image: url("../images/store_app_logo.png");
-    background-size: 65%;
-    background-repeat: no-repeat;
-    background-position: bottom center;
-    margin-top: 30px;
-    @media (max-width: $screen-md) {
-      background-size: 50%;
-    }
-    @media (max-width: $screen-xs) {
-      background-size: 80%;
-      min-height: 120px;
-    }
+    margin-top: -20px;
   }
 
   h2.header-wrapper {
@@ -339,7 +328,7 @@
       max-width: 250px;
     }
     &.comingsoon {
-      margin-bottom: 60px;
+      //margin-bottom: 60px;
       font-size: 1.3em;
       @media (max-width: $screen-xs) {
         margin-bottom: 30px;
