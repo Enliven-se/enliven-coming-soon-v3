@@ -13,10 +13,10 @@
       "url": "/become-a-contributor"
     },
     {
-      "title": "<span class=\"text-nowrap\">Sign-Up</span>",
+      "title": "Join <span class=\"text-nowrap\">Us!</span>",
       "className": "cms",
       "extra_classes": ["sign-up"],
-      "url": "https://cms.enliven.co/en/user"
+      "url": "/contributor-signup"
     },
     {
       "title": "Beta <span class=\"text-nowrap\">Sign-In</span>",

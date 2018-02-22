@@ -1,10 +1,9 @@
 block vars
-  - var body_classes = ['page', 'contributor-signup']
-  - var page = 'contributor-signup'
-  - var title = 'Contributor Signup'
+  - var body_classes = ['page', 'creative-signup']
+  - var page = 'creative-signup'
+  - var title = 'Creative Signup'
 
 extends layouts/default
 
 block content
-  .container(style='padding-top: 140px;')
-    p coming soon
+  include templates/creative-sign-up.html

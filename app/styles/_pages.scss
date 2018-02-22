@@ -102,7 +102,7 @@
     color: #000;
   }
   .dropcap-red {
-    font-family: "AvenirNext-Medium", Didot, Georgia, serif;
+    font-family: 'AvenirNext-Medium', Didot, Georgia, serif;
     color: #e53605;
     float: left;
     font-size: 5em;
@@ -113,6 +113,68 @@
     color: #e53605;
     text-decoration: underline;
   }
+  .inner {
+    max-width: 720px;
+    .row {
+      margin-bottom: 1em;
+    }
+  }
+}
+
+.creative-signup {
+  .inner {
+    max-width: 720px;
+    .row {
+      margin-bottom: 1em;
+    }
+    .form-error {
+      background-color: white;
+      font-weight: bold;
+      color: $supernova;
+    }
+    .alert {
+      margin: 0;
+    }
+  }
+}
+
+.confirmation-page {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  align-items: stretch;
+  .teco {
+    flex: 1;
+    flex-grow: 40;
+  }
+
+  .confirmation {
+    align-self: center;
+    align-content: center;
+    max-width: 500px;
+    max-height: 500px;
+    text-align: center;
+    margin-bottom: 100px;
+    margin: auto;
+
+    h1 {
+      margin-bottom: 50px;
+    }
+    h5.italic {
+      font-size: 1.7em;
+      font-style: italic;
+      font-family: $font-family-serif;
+      line-height: normal;
+      margin: 0 10px 0 10px;
+    }
+  }
+  .footer {
+    flex: 1;
+  }
+}
+
+.form-required {
+  color: #f00;
 }
 
 #frequently-asked-questions,

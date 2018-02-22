@@ -151,4 +151,17 @@ export default function($) {
 
   // iFrameResize
   $('iframe.resizable').iFrameResize();
+
+  //Sign-up Form Validator
+  $('#insightly_web_to_lead').submit(function(event) {
+    $('.form-check .form-error').remove();
+
+    if ($('.form-check-input:checked').size() === 0) {
+      $('.form-check').append(
+        '<div class="form-error alert alert-danger" role="alert">Please tick at least one of the checkboxes.</div>'
+      );
+      return false;
+    }
+    return true;
+  });
 }
