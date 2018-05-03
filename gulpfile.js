@@ -15,6 +15,8 @@ const environments = require('gulp-environments');
 const development = environments.development;
 const production = environments.production;
 
+const package = environments.make('package'); // build for Meteor project
+
 const browserSync = require('browser-sync');
 const reload = browserSync.reload;
 const browserSync_port = 8000;
@@ -33,7 +35,7 @@ gulp.task('styles', () => {
     .pipe(
       $.sass
         .sync({
-          outputStyle: production() ? 'compressed' : 'nested',
+          outputStyle: production() || package() ? 'compressed' : 'nested',
           precision: 10,
           includePaths: ['.']
         })
@@ -74,6 +76,7 @@ gulp.task('scripts', () => {
     )
     .pipe(development($.sourcemaps.write('.')))
     .pipe(production($.uglify()))
+    .pipe(package($.uglify()))
     .pipe(gulp.dest('.tmp/scripts'))
     .pipe(
       reload({
@@ -131,8 +134,8 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
         })
       )
     )
-    .pipe($.if('*.js', $.rev()))
-    .pipe($.if('*.css', $.rev()))
+    .pipe(production($.if('*.js', $.rev())))
+    .pipe(production($.if('*.css', $.rev())))
     .pipe(
       $.revReplace({
         prefix: '/' // absolute URLs
@@ -140,6 +143,16 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
     )
     .pipe(
       production(
+        $.if(
+          '*.html',
+          $.htmlmin({
+            collapseWhitespace: true
+          })
+        )
+      )
+    )
+    .pipe(
+      package(
         $.if(
           '*.html',
           $.htmlmin({
@@ -159,6 +172,21 @@ gulp.task('images', () => {
     .src('app/images/**/*')
     .pipe(
       production(
+        $.imagemin({
+          progressive: true,
+          interlaced: true,
+          // don't remove IDs from SVGs, they are often used
+          // as hooks for embedding and styling
+          svgoPlugins: [
+            {
+              cleanupIDs: false
+            }
+          ]
+        })
+      )
+    )
+    .pipe(
+      package(
         $.imagemin({
           progressive: true,
           interlaced: true,
@@ -339,6 +367,19 @@ gulp.task('sitemap', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
     .pipe(gulp.dest(destination));
 });
 
+gulp.task(
+  'build',
+  ['lint', 'html', 'images', 'fonts', 'extras', 'sitemap'],
+  () => {
+    return gulp.src(destination + '/**/*').pipe(
+      $.size({
+        title: 'build',
+        gzip: true
+      })
+    );
+  }
+);
+
 // deploy to Github pages
 gulp.task('deploy', ['build', 'cname', 'sitemap'], () => {
   environments.current(production);
@@ -355,18 +396,16 @@ gulp.task('deploy', ['build', 'cname', 'sitemap'], () => {
     .pipe($.clean());
 });
 
-gulp.task(
-  'build',
-  ['lint', 'html', 'images', 'fonts', 'extras', 'sitemap'],
-  () => {
-    return gulp.src(destination + '/**/*').pipe(
-      $.size({
-        title: 'build',
-        gzip: true
-      })
-    );
-  }
-);
+// build for Meteor project
+gulp.task('package', ['lint', 'html', 'images', 'fonts'], () => {
+  environments.current(package);
+  return gulp.src(destination + '/**/*').pipe(
+    $.size({
+      title: 'build',
+      gzip: true
+    })
+  );
+});
 
 gulp.task('pre-commit', ['lint', 'styles', 'scripts']);
 
