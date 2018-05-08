@@ -1,5 +1,6 @@
-import Marquee3k from 'marquee3000';
-export default function($) {
+const Marquee3k = require('marquee3000');
+
+export default function ($) {
   // process pagepiling
   // if ($.pagepiling) {
   //   $('#pagepiling').pagepiling();
@@ -10,7 +11,7 @@ export default function($) {
     return iOS;
   }
 
-  $('.front').each(function() {
+  $('.front').each(function () {
     // vimeofy
     // don't render the video in the background on touch devices
     // @FIXME - should use "videoautoplay" but that doesn't seem to be set on desktop
@@ -30,7 +31,7 @@ export default function($) {
     // waypoint - header
     var waypoint = new Waypoint({
       element: document.getElementById('section2'),
-      handler: function(direction) {
+      handler: function (direction) {
         if (direction == 'down') {
           $('.navbar')
             .addClass('going-down')
@@ -47,7 +48,7 @@ export default function($) {
     // waypoint - show bottom bar
     var waypoint2 = new Waypoint({
       element: $('#section2,h2.title').get(0),
-      handler: function(direction) {
+      handler: function (direction) {
         console.log('section2', direction);
         if (direction == 'down') {
           $('.bottom-bar').addClass('show-bar');
@@ -61,7 +62,7 @@ export default function($) {
     // waypoint - remove bottom bar at footer
     var waypoint3 = new Waypoint({
       element: $('#section5').get(0),
-      handler: function(direction) {
+      handler: function (direction) {
         console.log('footer', direction);
         if (direction == 'down') {
           $('.bottom-bar').removeClass('show-bar');
@@ -86,7 +87,7 @@ export default function($) {
   //About page marquee
   Marquee3k.init();
 
-  $('.flex-slider').each(function() {
+  $('.flex-slider').each(function () {
     var $this = $(this),
       opts = {};
 
@@ -153,7 +154,7 @@ export default function($) {
   $('iframe.resizable').iFrameResize();
 
   //Sign-up Form Validator
-  $('#insightly_web_to_lead').submit(function(event) {
+  $('#insightly_web_to_lead').submit(function (event) {
     $('.form-check .form-error').remove();
 
     if ($('.form-check-input:checked').size() === 0) {

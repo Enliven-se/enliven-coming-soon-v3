@@ -24,8 +24,8 @@ const browserSync_port = 8000;
 const destination = 'dist';
 
 gulp.task('set-dev', development.task);
-
 gulp.task('set-prod', production.task);
+gulp.task('set-package', package.task);
 
 gulp.task('styles', () => {
   return gulp
@@ -150,15 +150,6 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
         )
       )
     )
-    // doesn't work!!!!
-// .pipe(
-//       package(
-//         $.if(
-//           '*.html',
-//           $.prefix('/', null, '{{')
-//         )
-//       )
-//     )
     .pipe(
       package(
         $.if(
@@ -167,6 +158,11 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
             collapseWhitespace: true
           })
         )
+      )
+    )
+    .pipe(
+      package(
+        $.prefix('/')
       )
     )
     .pipe(gulp.dest(destination));
@@ -389,9 +385,7 @@ gulp.task(
 );
 
 // deploy to Github pages
-gulp.task('deploy', ['build', 'cname', 'sitemap'], () => {
-  environments.current(production);
-
+gulp.task('deploy', ['set-prod', 'build', 'cname', 'sitemap'], () => {
   return gulp
     .src(destination)
     .pipe(
@@ -405,8 +399,7 @@ gulp.task('deploy', ['build', 'cname', 'sitemap'], () => {
 });
 
 // build for Meteor project
-gulp.task('package', ['lint', 'html', 'images', 'fonts'], () => {
-  environments.current(package);
+gulp.task('package', ['set-package', 'lint', 'html', 'images', 'fonts'], () => {
   return gulp.src(destination + '/**/*').pipe(
     $.size({
       title: 'build',
