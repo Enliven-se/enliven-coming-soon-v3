@@ -134,8 +134,7 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
         })
       )
     )
-    .pipe(production($.if('*.js', $.rev())))
-    .pipe(production($.if('*.css', $.rev())))
+    .pipe(production($.if('*.js|css', $.rev())))
     .pipe(
       $.revReplace({
         prefix: '/' // absolute URLs
@@ -151,6 +150,15 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
         )
       )
     )
+    // doesn't work!!!!
+// .pipe(
+//       package(
+//         $.if(
+//           '*.html',
+//           $.prefix('/', null, '{{')
+//         )
+//       )
+//     )
     .pipe(
       package(
         $.if(
