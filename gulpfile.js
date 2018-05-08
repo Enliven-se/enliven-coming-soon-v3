@@ -34,12 +34,12 @@ gulp.task('styles', () => {
     .pipe(development($.sourcemaps.init()))
     .pipe(
       $.sass
-        .sync({
-          outputStyle: production() || package() ? 'compressed' : 'nested',
-          precision: 10,
-          includePaths: ['.']
-        })
-        .on('error', $.sass.logError)
+      .sync({
+        outputStyle: production() || package() ? 'compressed' : 'nested',
+        precision: 10,
+        includePaths: ['.']
+      })
+      .on('error', $.sass.logError)
     )
     .pipe(
       $.autoprefixer({
@@ -134,7 +134,8 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
         })
       )
     )
-    .pipe(production($.if('*.js|css', $.rev())))
+    .pipe($.if('*.js', $.rev()))
+    .pipe($.if('*.css', $.rev()))
     .pipe(
       $.revReplace({
         prefix: '/' // absolute URLs
@@ -181,11 +182,9 @@ gulp.task('images', () => {
           interlaced: true,
           // don't remove IDs from SVGs, they are often used
           // as hooks for embedding and styling
-          svgoPlugins: [
-            {
-              cleanupIDs: false
-            }
-          ]
+          svgoPlugins: [{
+            cleanupIDs: false
+          }]
         })
       )
     )
@@ -196,11 +195,9 @@ gulp.task('images', () => {
           interlaced: true,
           // don't remove IDs from SVGs, they are often used
           // as hooks for embedding and styling
-          svgoPlugins: [
-            {
-              cleanupIDs: false
-            }
-          ]
+          svgoPlugins: [{
+            cleanupIDs: false
+          }]
         })
       )
     )
@@ -372,8 +369,7 @@ gulp.task('sitemap', ['lint', 'html', 'images', 'fonts', 'extras'], () => {
 });
 
 gulp.task(
-  'build',
-  ['lint', 'html', 'images', 'fonts', 'extras', 'sitemap'],
+  'build', ['lint', 'html', 'images', 'fonts', 'extras', 'sitemap'],
   () => {
     return gulp.src(destination + '/**/*').pipe(
       $.size({
