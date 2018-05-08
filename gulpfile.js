@@ -134,12 +134,12 @@ gulp.task('html', ['views', 'styles', 'scripts'], () => {
         })
       )
     )
-    .pipe($.if('*.js', $.rev()))
-    .pipe($.if('*.css', $.rev()))
+    .pipe(production($.if('*.js', $.rev())))
+    .pipe(production($.if('*.css', $.rev())))
     .pipe(
-      $.revReplace({
+      production($.revReplace({
         prefix: '/' // absolute URLs
-      })
+      }))
     )
     .pipe(
       production(
